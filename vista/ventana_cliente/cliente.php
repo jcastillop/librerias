@@ -197,7 +197,8 @@ function formulario(f) {
                 <option>--Seleccione--</option>
                 <option value="1">Persona Natural</option>
                 <option value="2">Persona Juridica</option>
-              </select></td>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Tipo Sucursal&nbsp;&nbsp;<input type="checkbox" id="ide_suc" name="ide_suc" value="1" /></td>
                </tr>
         <tr>
         <td>Razon Social: </td>
