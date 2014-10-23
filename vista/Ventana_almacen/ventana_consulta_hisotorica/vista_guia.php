@@ -189,7 +189,7 @@ $(document).ready(function() {
     <div class="container_">
     
 		<section>
-			<h1>GUÍA<span></span></h1>
+			<h1>GUÃA<span></span></h1>
 
 			
             <div class="tablas"  align="center" >
@@ -199,7 +199,7 @@ $(document).ready(function() {
 					<tr class="cabecera" >
 						
 						
-                        <th >N�Documento</th>
+                        <th >N.Documento</th>
                         <th >Sucursal</th>
                         <th >Partida</th>
                         <th >Destino</th>
