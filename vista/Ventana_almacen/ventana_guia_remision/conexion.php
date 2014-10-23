@@ -54,6 +54,27 @@ class clientes
 			return $this->cliente;
 	}
 }
+class sucursal
+{
+	
+	private $sucursal;
+	
+	public function __construct()
+		{
+			$this->sucursal=array();
+		}
+
+	public function get_sucursal_por_id($id)
+	{
+		$sql="select var_nom_suc, var_dir_suc, int_cod_pais,int_cod_dept,int_cod_provi from T_cliente where int_cod_cli='".$id."'";
+		$res=mysql_query($sql,Conectar::con());
+		while ($reg=mysql_fetch_assoc($res))
+		{
+			$this->cliente[]=$reg;
+		}
+			return $this->cliente;
+	}
+}
 class Fechas
 {
 	private $fecha_hora;

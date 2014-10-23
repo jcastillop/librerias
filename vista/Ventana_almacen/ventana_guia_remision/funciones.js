@@ -55,7 +55,7 @@
                         //Variables Cabecera Pedido
                     var cod_emp=1;
                     var cod_suc = $("#sucursal").val();
-                    var cod_cli = $("#clienteID").val();
+                    var cod_cli = $("#cliente").val();
                     var fec_pedido=$("#datepicker").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
                     var ped_usu='JCASTILLO';
                     //Variables Cabecera Guia
@@ -201,6 +201,31 @@
                         fn_cantidad(); 
  
                 });
+                $( "#sucursal" ).change(function() {
+                    
+                    $.ajax({
+                        type: "GET",
+                        url: "clientes_buscar.php",
+                        data: "id=" + $("#cliente").val(),
+                        success: function(datos){
+                        
+                        var res = jQuery.parseJSON(datos);
+                       
+                       
+                        $("#ruc").val(res.ruc);
+                        $("#id").val(res.id);
+                        $("#punto_llegada").val(res.direccion + ' - '+ res.distrito);
+                        $("#distrito").val(res.distrito);
+                        $("#telefono").val(res.telefono);
+                        $("#referencia").val(res.referencia);
+                        $("#direccion_compra").focus();
+                        
+                        },
+                        error: function(datos) {
+                        alert("Data not founds");
+                        }
+                    });
+                });                 
                 $( "#cliente" ).change(function() {
                     
                     $.ajax({
@@ -214,7 +239,7 @@
                        
                         $("#ruc").val(res.ruc);
                         $("#id").val(res.id);
-                        $("#direccion").val(res.direccion);
+                        $("#punto_llegada").val(res.direccion + ' - '+ res.distrito);
                         $("#distrito").val(res.distrito);
                         $("#telefono").val(res.telefono);
                         $("#referencia").val(res.referencia);
