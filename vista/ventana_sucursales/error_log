@@ -1,0 +1,48 @@
+[16-Oct-2014 16:33:40] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/sbccperu/public_html/vista/ventana_sucursales/vista_sucursales.php:2) in /home1/sbccperu/public_html/vista/ventana_sucursales/vista_sucursales.php on line 11
+[16-Oct-2014 18:32:32] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/sbccperu/public_html/vista/ventana_sucursales/vista_sucursales.php:2) in /home1/sbccperu/public_html/vista/ventana_sucursales/vista_sucursales.php on line 11
+[20-Oct-2014 07:53:40 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 11
+[20-Oct-2014 07:53:40 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 07:53:40 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:00:24 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/ingresar_sucursal.php on line 3
+[20-Oct-2014 08:01:24 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/ingresar_sucursal.php on line 3
+[20-Oct-2014 08:02:20 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 11
+[20-Oct-2014 08:02:20 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:02:20 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:02:58 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 11
+[20-Oct-2014 08:03:00 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 11
+[20-Oct-2014 08:03:00 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:03:00 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:17:45 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:17:45 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:17:52 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:17:52 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:58:00 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:58:00 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:58:04 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:58:04 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 08:58:37 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 08:58:37 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 09:01:00 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 09:01:00 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 09:02:38 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 09:02:38 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 09:04:51 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 09:04:51 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[20-Oct-2014 09:14:15 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 136
+[20-Oct-2014 09:14:15 America/Denver] PHP Notice:  Undefined offset: 0 in /home1/sbccperu/public_html/vista/ventana_sucursales/mod_sucursales.php on line 40
+[21-Oct-2014 14:55:55 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:55:55 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:56:11 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:56:11 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:56:40 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:56:41 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:57:00 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 83
+[21-Oct-2014 14:57:04 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 83
+[21-Oct-2014 14:57:11 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 14:57:11 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 16:43:58 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 16:43:59 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 16:43:59 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[21-Oct-2014 16:44:00 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[22-Oct-2014 14:37:39 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
+[22-Oct-2014 14:37:39 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92

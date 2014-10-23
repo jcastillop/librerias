@@ -1,0 +1,33 @@
+[16-Oct-2014 16:33:49] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/sbccperu/public_html/vista/ventana_editorial/vista_editorial.php:2) in /home1/sbccperu/public_html/vista/ventana_editorial/vista_editorial.php on line 11
+[16-Oct-2014 18:32:33] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/sbccperu/public_html/vista/ventana_editorial/vista_editorial.php:2) in /home1/sbccperu/public_html/vista/ventana_editorial/vista_editorial.php on line 11
+[20-Oct-2014 08:04:02 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_editorial/ingresar_editorial.php on line 3
+[20-Oct-2014 08:04:14 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_editorial/mod_editorial.php on line 12
+[20-Oct-2014 08:04:14 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 08:04:26 America/Denver] PHP Notice:  Undefined index: usuario in /home1/sbccperu/public_html/vista/ventana_editorial/mod_editorial.php on line 12
+[20-Oct-2014 08:04:26 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 08:04:37 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:04:38 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:19:10 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 08:19:44 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:19:45 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:19:45 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:19:46 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:31:06 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:31:06 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:31:06 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 08:31:07 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 09:01:10 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:01:18 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:01:43 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 09:01:44 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[20-Oct-2014 09:01:47 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:02:19 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:02:23 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:04:31 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[20-Oct-2014 09:14:08 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_editorial.php on line 106
+[21-Oct-2014 14:57:21 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[21-Oct-2014 14:57:21 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[21-Oct-2014 16:44:08 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[21-Oct-2014 16:44:09 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[21-Oct-2014 16:44:09 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
+[21-Oct-2014 16:44:09 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_editorial/eliminar_editorial.php on line 92
