@@ -207,8 +207,9 @@ require_once("../../../conexiones/class_cliente.php");
                 </tbody>
                 <tfoot>
                 	<tr>
-                    	<td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td colspan="2"><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
+                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td><strong>Suma total:</strong> <span id="suma_total">0</span></td>
                     </tr>
                 </tfoot>
             </table>

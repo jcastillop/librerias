@@ -66,13 +66,13 @@ class sucursal
 
 	public function get_sucursal_por_id($id)
 	{
-		$sql="select var_nom_suc, var_dir_suc, int_cod_pais,int_cod_dept,int_cod_provi from T_cliente where int_cod_cli='".$id."'";
+		$sql="select var_nom_suc, var_dir_suc from T_sucursal where int_cod_suc='".$id."' and int_est_suc=1";
 		$res=mysql_query($sql,Conectar::con());
 		while ($reg=mysql_fetch_assoc($res))
 		{
-			$this->cliente[]=$reg;
+			$this->sucursal[]=$reg;
 		}
-			return $this->cliente;
+			return $this->sucursal;
 	}
 }
 class Fechas

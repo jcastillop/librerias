@@ -198,27 +198,22 @@
                         $("#valor_ide").focus();
                         fn_dar_eliminar();
 						fn_cantidad();
-                        fn_cantidad(); 
+                        fn_sumatotal();
  
                 });
                 $( "#sucursal" ).change(function() {
                     
                     $.ajax({
                         type: "GET",
-                        url: "clientes_buscar.php",
-                        data: "id=" + $("#cliente").val(),
+                        url: "sucursal_buscar.php",
+                        data: "id=" + $("#sucursal").val(),
                         success: function(datos){
                         
                         var res = jQuery.parseJSON(datos);
-                       
-                       
-                        $("#ruc").val(res.ruc);
-                        $("#id").val(res.id);
-                        $("#punto_llegada").val(res.direccion + ' - '+ res.distrito);
-                        $("#distrito").val(res.distrito);
-                        $("#telefono").val(res.telefono);
-                        $("#referencia").val(res.referencia);
-                        $("#direccion_compra").focus();
+                        
+                 
+                        $("#punto_partida").val(res.direccion_sucursal);
+                        
                         
                         },
                         error: function(datos) {
@@ -281,7 +276,7 @@
                         $(this).parents("tr").fadeOut("normal", function(){
                             $(this).remove();
                             fn_cantidad(); 
-                         
+                            fn_sumatotal();
                             /*
                                 aqui puedes enviar un conjunto de datos por ajax
                                 $.post("eliminar.php", {ide_usu: id})
