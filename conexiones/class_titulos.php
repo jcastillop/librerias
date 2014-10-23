@@ -64,32 +64,45 @@ class titulos
 		
 	public function add_titulos($nom_tit,$autor_tit,$des_tit,$isbn_tit,$edic_tit,$numpag_tit,$edit_tit,$gen_tit,$pais_tit,$preven_def_tit,$preven_sug_tit,$est_tit,$cod_bar_tit,$usu_crea,$fec_crea,$usu_mod,$fec_mod)
 	{
-		$sql="
-			insert into T_titulos values (null,
-			'$nom_tit',
-			'$autor_tit',
-			'$des_tit',			
-			'$isbn_tit',
-			'$edic_tit',
-			'$numpag_tit',
-			'$edit_tit',
-			'$gen_tit',
-			'$pais_tit',
-			'$preven_def_tit',
-			'$preven_sug_tit',
-			'$est_tit',
-			'$cod_bar_tit',
-			'$usu_crea',
-			'$fec_crea',
-			'$usu_mod',
-			'$fec_mod')	
-					";
-		$res=mysql_query($sql,Conectar::con());
-		echo "<script type='text/javascript'>
-		alert('SE INSERTO CORRECTAMENTE');
-		cerrar();
-		window.location='titulos.php?load=1';
-		</script>";
+
+		$sql="select count(*) as n_contador from T_titulos t where t.var_isbn_tit='$isbn_tit'";
+        $res=mysql_query($sql,Conectar::con());
+        while ($reg=mysql_fetch_assoc($res))
+        {
+        	$this->n_contador[]=$reg;
+        }
+        if ($this->n_contador[0]["n_contador"]>0){
+           echo "<script type='text/javascript'>
+		                 alert('El codigo ISBN Ingresado ya Existe');
+		         </script>"; 
+        } else{
+	    	$sql="
+		    	insert into T_titulos values (null,
+	    		'$nom_tit',
+		    	'$autor_tit',
+			    '$des_tit',			
+    			'$isbn_tit',
+	    		'$edic_tit',
+		     	'$numpag_tit',
+	    		'$edit_tit',
+		    	'$gen_tit',
+    			'$pais_tit',
+		    	'$preven_def_tit',
+    			'$preven_sug_tit',
+	    		'$est_tit',
+		    	'$cod_bar_tit',
+    			'$usu_crea',
+	    		'$fec_crea',
+		    	'$usu_mod',
+			    '$fec_mod')	
+				    	";
+        		$res=mysql_query($sql,Conectar::con());
+        		echo "<script type='text/javascript'>
+                		alert('SE INSERTO CORRECTAMENTE');
+		                cerrar();
+		                window.location='titulos.php?load=1';
+		              </script>";
+		}
 	}
 	public function get_titulos_por_id($id)
 	{
