@@ -62,6 +62,18 @@ class cliente
 		}
 			return $this->cliente;
 	}
+		public function get_combo_cliente()
+	{
+		$sql="select int_cod_cli, var_rsoc_cli from T_cliente where int_est_cli<>0 ORDER BY int_cod_cli";
+		
+		$res=mysql_query($sql,Conectar::con());
+		
+		while ($reg=mysql_fetch_assoc($res))
+		{
+			$this->sucursal[]=$reg;
+		}
+			return $this->sucursal;
+	}
 	
 		
 	public function add_cliente($rsoc,$estado,$ide_suc,$tip_per,$ruc,$dir,$refdom,$cod_pais,$cod_dep,$cod_provi,$dist,$tel,$fax,$dni,$cor,$usu_crea,$fec_crea,$usu_mod,$fec_mod)
