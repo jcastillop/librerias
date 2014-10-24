@@ -1,8 +1,8 @@
 <?php
-require_once("../../conexiones/class_sucursal.php");
-require_once("../../conexiones/conexion.php");
-require_once("../../conexiones/class_usuario.php");
-require_once("../../conexiones/class_cliente.php");
+require_once("../../../conexiones/class_sucursal.php");
+require_once("../../../conexiones/conexion.php");
+require_once("../../../conexiones/class_usuario.php");
+require_once("../../../conexiones/class_cliente.php");
 
 ?>
   
