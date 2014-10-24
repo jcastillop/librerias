@@ -1,0 +1,20 @@
+	#demos{
+		width:800px;
+		margin:10px auto 0 auto;
+		padding:30px;
+		border:1px solid #DFDFDF;
+		font:normal 10px Arial, Helvetica, sans-serif
+	}
+	#demos h3{
+		border-bottom:1px solid #DFDFDF;
+		padding-bottom:7px;
+		margin:10px 0
+	}
+	table{
+		margin-top:15px;
+		width:100%
+	}
+	table td{
+		padding:7px;
+		border:0px solid #CCC
+	}

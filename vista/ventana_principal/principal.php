@@ -148,8 +148,7 @@
                    </li>
                    <li class='active has-sub'><a href='#'><span>Compras</span></a>
                       <ul>
-                         <li><a href='#'><span>Local</span></a></li>
-                         <li><a href='#'><span>Exterior</span></a></li>
+                         <li><a href='../ventana_compras/registro/index.php'><span>Registro</span></a></li>
                       </ul>
                    </li>
                    <li class='active has-sub'><a href='#'><span>Contabilidad</span></a></li>
