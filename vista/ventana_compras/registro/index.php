@@ -18,7 +18,7 @@ require_once("../../../conexiones/class_cliente.php");
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+        <link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
           <style type="text/css">
     .label {width:100px;text-align:right;float:left;padding-right:10px;font-weight:bold;}
