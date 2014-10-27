@@ -164,7 +164,7 @@ $link = $pdf->AddLink();
 
 /**********                 **********/	
 	
-	$pdf->SetXY(160, 30);
+$pdf->SetXY(160, 30);
 	$pdf->Cell(10, 8,	$reg[0]["var_cod_ser"], 0, 'C');
 	$pdf->SetXY(165, 30);
 	$pdf->Cell(10, 8,	'-', 0, 'C');
@@ -173,21 +173,21 @@ $link = $pdf->AddLink();
 
 
 	$pdf->SetXY(5, 40);
-	$pdf->Cell(10, 8, 'Cliente /R. Social: ', 0, 'C');
+	$pdf->Cell(10, 8, 'Suc.Procedencia: ', 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(37, 40);
-	$pdf->Cell(10, 8,	$reg[0]["var_rsoc_cli"], 0, 'C');
+	$pdf->Cell(10, 8,	$reg[0]["var_nom_suc"], 0, 'C');
 	
 	
 	
 	
 	
 	$pdf->SetFontSize(10);
-	$pdf->SetXY(140, 40);
-	$pdf->Cell(10, 8, utf8_decode('R.U.C:'), 0, 'C');
+	$pdf->SetXY(125, 40);
+	$pdf->Cell(10, 8, utf8_decode('Fecha Translado:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(155, 40);
-	$pdf->Cell(10, 8,$reg[0]["var_ruc_cli"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["date_fecenv_guia_cab"], 0, 'C');
 	
 
 	
@@ -195,19 +195,19 @@ $link = $pdf->AddLink();
 /**********                 **********/	
 /**********                 **********/	
 	$pdf->SetXY(5, 47);
-	$pdf->Cell(10, 8, 'Direccion: ', 0, 'C');
+	$pdf->Cell(10, 8, 'Suc.Envio: ', 0, 'C');
 	
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(22, 47);
-	$pdf->Cell(10, 8,$reg[0]["var_dir_cli"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["var_rsoc_cli"], 0, 'C');
 	
 
 
 	$pdf->SetXY(140, 47);
-	$pdf->Cell(10, 8, utf8_decode('Dist.:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('RUC:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(150, 47);
-	$pdf->Cell(10, 8,$reg[0]["var_dist_cli"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["var_ruc_cli"], 0, 'C');
 
 
 	
@@ -216,18 +216,10 @@ $link = $pdf->AddLink();
 
 /**********                 **********/	
 	$pdf->SetXY(5, 54);
-	$pdf->Cell(10, 8, 'Telf: ', 0, 'C');
+	$pdf->Cell(10, 8, 'Direccion: ', 0, 'C');
 	$pdf->SetFontSize(9);
-	$pdf->SetXY(14, 54);
-	$pdf->Cell(10, 8,$reg[0]["var_telf_cli"], 0, 'C');	
-	
-
-
-	$pdf->SetXY(70, 54);
-	$pdf->Cell(10, 8, utf8_decode('Ref. Dom:'), 0, 'C');
-	$pdf->SetFontSize(9);
-	$pdf->SetXY(92, 54);
-	$pdf->Cell(10, 8,$reg[0]["var_refdom_cli"], 0, 'C');	
+	$pdf->SetXY(22, 54);
+	$pdf->Cell(10, 8,$reg[0]["var_dir_cli"], 0, 'C');	
 	
 	
 	
@@ -235,28 +227,20 @@ $link = $pdf->AddLink();
 
 /**********                 **********/	
 	$pdf->SetXY(5, 60);
-	$pdf->Cell(10, 8, 'Dir. Com.:', 0, 'C');
+	$pdf->Cell(10, 8, 'Vendedor:', 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(22, 60);
-	$pdf->Cell(10, 8,$reg[0]["var_dir_env_guia_cab"], 0, 'C');	
+	$pdf->Cell(10, 8,$reg[0]["var_nom_usu"], 0, 'C');	
 
 	$pdf->SetXY(45, 60);
 	$pdf->Cell(10, 8,'', 0, 'L');
 
 	$pdf->SetXY(70, 60);
-	$pdf->Cell(10, 8, utf8_decode('Distrito:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('Condicion:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(92, 60);
-	$pdf->Cell(10, 8,$reg[0]["var_dist_guia_cab"], 0, 'C');	
+	$pdf->Cell(10, 8,$reg[0]["var_desc_mov"], 0, 'C');	
 	
-
-
-	$pdf->SetXY(140, 60);
-	$pdf->Cell(10, 8, utf8_decode('Telf.:'), 0, 'C');
-	$pdf->SetFontSize(9);
-	$pdf->SetXY(150, 60);
-	$pdf->Cell(10, 8,$reg[0]["var_telf_guia_cab"], 0, 'C');	
-
 
 	
 /**********                 **********/	
@@ -270,19 +254,19 @@ $link = $pdf->AddLink();
 	$pdf->Cell(10, 8,$reg[0]["var_telf_guia_cab"], 0, 'C');	*/
 
 	$pdf->SetXY(5, 67);
-	$pdf->Cell(10, 8, utf8_decode('Turno:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('Pto.Partida:'), 0, 'C');
 	$pdf->SetFontSize(9);
-	$pdf->SetXY(15, 67);
-	$pdf->Cell(10, 8,$reg[0]["int_turn_guia_cab"], 0, 'C');
+	$pdf->SetXY(25, 67);
+	$pdf->Cell(10, 8,$reg[0]["var_pun_part_guia_cab"], 0, 'C');
 	
 	$pdf->SetXY(110, 67);
 	$pdf->Cell(10, 8,'', 0, 'L');
 
-	$pdf->SetXY(70, 67);
-	$pdf->Cell(10, 8, utf8_decode('Vendedor:'), 0, 'C');
+	$pdf->SetXY(110, 67);
+	$pdf->Cell(10, 8, utf8_decode('Pto.Llegada:'), 0, 'C');
 	$pdf->SetFontSize(9);
-	$pdf->SetXY(92, 67);
-	$pdf->Cell(10, 8,$reg[0]["var_nom_usu"], 0, 'C');	
+	$pdf->SetXY(132, 67);
+	$pdf->Cell(10, 8,$reg[0]["var_pun_lleg_guia_cab"], 0, 'C');	
 	
 	
 
@@ -294,58 +278,43 @@ $link = $pdf->AddLink();
 
 /**********                 **********/	
 	$pdf->SetXY(5, 75);
-	$pdf->Cell(10, 8, 'Nro. Pedido:', 0, 'C');
+	$pdf->Cell(10, 8, 'Marca/Placa:', 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(25, 75);
-	$pdf->Cell(10, 8,$reg[0]["var_cod_pedi_cab"], 0, 'C');	
+	$pdf->Cell(10, 8,$reg[0]["var_tran_marca_guia_cab"], 0, 'C');	
 	
 
-	$pdf->SetXY(70, 75);
-	$pdf->Cell(10, 8, utf8_decode('Condicion:'), 0, 'C');
+	$pdf->SetXY(60, 75);
+	$pdf->Cell(10, 8, utf8_decode('Const Inscrip:'), 0, 'C');
 	$pdf->SetFontSize(9);
-	$pdf->SetXY(92, 75);
-	$pdf->Cell(10, 8,$reg[0]["var_desc_mov"], 0, 'C');
+	$pdf->SetXY(82, 75);
+	$pdf->Cell(10, 8,$reg[0]["var_tran_constancia_guia_cab"], 0, 'C');
 
 
-	$pdf->SetXY(140, 75);
-	$pdf->Cell(10, 8, utf8_decode('Pto. Llegada:'), 0, 'C');
+	$pdf->SetXY(125, 75);
+	$pdf->Cell(10, 8, utf8_decode('Licencia conducir:'), 0, 'C');
 	$pdf->SetFontSize(9);
-	$pdf->SetXY(160, 75);
-	$pdf->Cell(10, 8,$reg[0]["var_pun_lleg_guia_cab"], 0, 'C');
+	$pdf->SetXY(145, 75);
+	$pdf->Cell(10, 8,$reg[0]["var_tran_licencia_guia_cab"], 0, 'C');
 
 	$pdf->SetXY(5, 82);
-	$pdf->Cell(10, 8, utf8_decode('Transportista:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('Razon Social Transp.:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(28, 82);
-	$pdf->Cell(10, 8,$reg[0]["var_tran_nom_guia_cab"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["var_trans_rs_guia_cab"], 0, 'C');
 	
 	$pdf->SetXY(70, 82);
-	$pdf->Cell(10, 8, utf8_decode('Transportista:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('RUC Transp.:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(92, 82);
-	$pdf->Cell(10, 8,$reg[0]["var_tran_nom_guia_cab"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["var_trans_ruc_guia_cab"], 0, 'C');
 	
 	$pdf->SetXY(140, 82);
-	$pdf->Cell(10, 8, utf8_decode('RUC:'), 0, 'C');
+	$pdf->Cell(10, 8, utf8_decode('Direccion Transp.:'), 0, 'C');
 	$pdf->SetFontSize(9);
 	$pdf->SetXY(150, 82);
-	$pdf->Cell(10, 8,$reg[0]["var_tran_ruc_guia_cab"], 0, 'C');
+	$pdf->Cell(10, 8,$reg[0]["var_trans_dir_guia_cab"], 0, 'C');
 	
-	$pdf->SetXY(5, 89);
-	$pdf->Cell(10, 8, utf8_decode('Vehículo:'), 0, 'C');
-	$pdf->SetFontSize(9);
-	$pdf->SetXY(22, 89);
-	$pdf->Cell(10, 8,$reg[0]["var_tran_veh_guia_cab"], 0, 'C');
-
-	$pdf->SetXY(70, 89);
-	$pdf->Cell(10, 8, utf8_decode('Placa:'), 0, 'C');
-	$pdf->SetFontSize(9);
-	$pdf->SetXY(80, 89);
-	$pdf->Cell(10, 8,$reg[0]["var_tran_plac_guia_cab"], 0, 'C');
-
-
-
-
 
 
 
