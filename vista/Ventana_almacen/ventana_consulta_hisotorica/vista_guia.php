@@ -207,7 +207,8 @@ $(document).ready(function() {
                         <th >Vendedor</th>
                         <th >Fecha Envio.</th>
                         <th >Fecha Guia</th>
-                        <th></th>
+                        <th>Exp.</th>
+                        <th>Anular</th>
 					</tr>
 				</thead>
 				<tbody align="center">
