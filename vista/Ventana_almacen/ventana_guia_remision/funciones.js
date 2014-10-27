@@ -129,6 +129,7 @@
                           url: "insertar_datos.php",
                           data: dataString,
                           cache: false,
+                          
                           success: function(result){
                             /*
                             if(result==0){

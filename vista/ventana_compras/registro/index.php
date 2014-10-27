@@ -44,7 +44,7 @@ require_once("../../../conexiones/class_cliente.php");
     
     <body>	
         <div id="wrapper" style="zoom:90%">
-            <form  id="form" class="login-form" style="margin: 1px auto;" >
+            <div  id="form" class="login-form" style="margin: 1px auto;" >
     
             <h1 align="center">REGISTRO DE COMPRAS</h1>
             <div class="content">
@@ -54,9 +54,9 @@ require_once("../../../conexiones/class_cliente.php");
             <table>
                 <tr>
                     <td>
-                        RUC: <input name="ruc" class="input username" style="width:300px" type="text" id="ruc"/>&nbsp;&nbsp;Cod. Proveedor: <input name="id_prov" class="input username" style="width:20px" type="text" id="id_prov"/> 
+                        RUC: <input name="ruc" class="input username" style="width:300px" type="text" id="ruc"  onkeypress="return tabular(event,this)"/>&nbsp;&nbsp;Cod. Proveedor: <input name="id_prov" class="input username" style="width:20px" type="text" id="id_prov"/> 
                         <input name="prov" class="input username" style="width:250px" type="text" id="prov"/></td>
-                    <td> <input class="button" style="width:80px" type="button" value="CARGAR"/></td>  
+                    <td> <input type="file" name="file" id="file"/> &nbsp; &nbsp; &nbsp; <input class="button" style="width:80px" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/></td>  
 
                 </tr>
                 <tr>
@@ -89,19 +89,46 @@ require_once("../../../conexiones/class_cliente.php");
 
                     <tbody>
                         <tr>
-                            <td>Código</td>
-                            <td><input name="valor_ide" class="input username" style="width:100px" type="text" id="valor_ide" size="10" onkeypress="return tabular(event,this)"/></td>
+                            <td>Código Barras</td>
+                            <td><input name="cod_bar_tit" class="input username" style="width:100px" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
        
-                            <td>Descripción</td>
-                            <td><input name="valor_uno" class="input username"style="width:382px" type="text" id="valor_uno" size="50" class="required"/></td>
-                   
-                            <td>Precio</td>
-                            <td><input name="valor_dos" class="input username" style="width:100px" type="text" id="valor_dos" size="10" class="required"/>
-                                <input type="hidden" id="tituloID" name="tituloID"></input>
-                            </td>
-                                
                             <td>Cantidad</td>
-                            <td><input name="valor_tres" class="input username" style="width:100px" type="text" id="valor_tres" size="10" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="cant_tit" class="input username"style="width:60px" type="text" id="cant_tit" class="required" onkeypress="return tabular(event,this)"/></td>
+                   
+                            <td>Titulo</td>
+                            <td><input name="tit_tit" class="input username" style="width:100px" type="text" id="tit_tit" class="required" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Autor</td>
+                            <td><input name="aut_tit" class="input username" style="width:100px" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
+                                
+                            <td>Descripción</td>
+                            <td><input name="desc_tit" class="input username" style="width:100px" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>ISBN</td>
+                            <td><input name="isbn_tit" class="input username" style="width:80px" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Edición</td>
+                            <td><input name="edic_tit" class="input username" style="width:100px" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
+                        </tr>
+                        <tr>
+                            <td>Nro. Pag</td>
+                            <td><input name="nro_tit" class="input username" style="width:70px" type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Editorial</td>
+                            <td><input name="edi_tit" class="input username" style="width:100px" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Genero</td>
+                            <td><input name="gen_tit" class="input username" style="width:100px" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Pais</td>
+                            <td><input name="pai_tit" class="input username" style="width:100px" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Moneda</td>
+                            <td><input name="mon_tit" class="input username" style="width:100px" type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Precio</td>
+                            <td><input name="pre_tit" class="input username" style="width:80px" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
+
                         </tr>
                        
                     </tbody>
@@ -117,15 +144,19 @@ require_once("../../../conexiones/class_cliente.php");
             <table id="grilla" class="lista" border="1" align="center">
               <thead>
                     <tr>
-                        <th style="width:50px;">Item</th>
-                        <th style="width:150px;">Título</th>
+                        <th style="width:50px;">Cod.Barras</th>
                         <th style="width:50px;">Cantidad</th>
-                        <th style="width:100px;">Precio Uni.</th>
-                       <th style="width:50px;">Desc</th>
-                        <th style="width:100px;">Valor Imp.</th>
-                        <th style="width:100px;">Total</th>
-                        <th style="width:50px;">Editar</th>
-                        <th style="width:50px;">Eliminar</th>
+                        <th style="width:50px;">Título</th>
+                        <th style="width:150px;">Autor</th>
+                        <th style="width:50px;">Descripción</th>
+                        <th style="width:100px;">ISBN</th>
+                       <th style="width:50px;">Edición</th>
+                        <th style="width:100px;">Nro Pag.</th>
+                        <th style="width:100px;">Editorial</th>
+                        <th style="width:50px;">Genero</th>
+                        <th style="width:50px;">Pais</th>
+                        <th style="width:50px;">Moneda</th>
+                        <th style="width:50px;">Precio</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -141,7 +172,7 @@ require_once("../../../conexiones/class_cliente.php");
             </table>
             </div>
             </div>
-</form> 
+</div> 
 
         
     
