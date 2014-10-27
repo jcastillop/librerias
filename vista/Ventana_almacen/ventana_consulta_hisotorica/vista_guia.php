@@ -189,7 +189,7 @@ $(document).ready(function() {
     <div class="container_">
     
 		<section>
-			<h1>GUÃA<span></span></h1>
+			<h1>GUÍAS<span></span></h1>
 
 			
             <div class="tablas"  align="center" >
