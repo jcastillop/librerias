@@ -42,7 +42,7 @@ require_once("../../../conexiones/conexion.php");
     
     <body>	
         <div id="wrapper" style="zoom:90%">
-            <form  id="form" class="login-form">
+            <form  id="form" class="login-form" style="margin: 1px auto;">
     
             <h1 align="center">Guía Remisíon</h1>
             <div class="content">
