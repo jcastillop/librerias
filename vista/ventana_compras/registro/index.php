@@ -48,13 +48,14 @@ require_once("../../../conexiones/class_cliente.php");
     
             <h1 align="center">REGISTRO DE COMPRAS</h1>
             <div class="content">
-            
+           
             <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
 			DATOS<BR>
             <table>
                 <tr>
                     <td>
-                        RUC: <input name="ruc" class="input username" style="width:300px" type="text" id="ruc"  onkeypress="return tabular(event,this)"/>&nbsp;&nbsp;Cod. Proveedor: <input name="id_prov" class="input username" style="width:20px" type="text" id="id_prov"/> 
+                        RUC: <input name="ruc" class="input username" style="width:300px" type="text" id="ruc"  onkeypress="return tabular(event,this)"/>&nbsp;&nbsp;
+                        Cod. Proveedor: <input name="id_prov" class="input username" style="width:20px" type="text" id="id_prov"/> 
                         <input name="prov" class="input username" style="width:250px" type="text" id="prov"/></td>
                     <td> <input type="file" name="file" id="file"/> &nbsp; &nbsp; &nbsp; <input class="button" style="width:80px" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/></td>  
 
@@ -64,20 +65,20 @@ require_once("../../../conexiones/class_cliente.php");
                         <input name ="fecha_recepcion" type="text" id="datepicker" class="input username" style="width:210px" />&nbsp;&nbsp;
                        
 						Fecha de emición:
-                        <input name ="fecha_emicion" type="text" id="datepicker" class="input username" style="width:265px" /></td> 
+                        <input name ="fecha_emision" type="text" id="datepicker" class="input username" style="width:265px" /></td> 
                 </tr>
                 <tr>
                     <td>                    
-                    Cod. Orden de Compra:<input name="punto_partida" class="input username" style="width:190px" type="text" id="punto_partida" >&nbsp;&nbsp;
+                    
                    Fecha de caducidad:
-                        <input name ="fecha_caducidad" type="text" id="datepicker" class="input username" style="width:250px" /></td> 
+                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:250px" /></td> 
                 </tr> 
-<tr>
+                <tr>
                     <td>                    
                     Tipo de cambio:
                      <select  name="cambio" id="cambio"  style="width:100px" class="input username" >
                             <option value="">-Seleccione-</option></select>&nbsp;&nbsp;<input name="tip_c" class="input username" style="width:130px" type="text" id="tip_c" >&nbsp;&nbsp;
-                   Descripciòn:
+                   Descripción:
                         <input name ="descripcion" type="text" id="descripcion" class="input username" style="width:300px" /></td> 
                 </tr> 				
             </table>
