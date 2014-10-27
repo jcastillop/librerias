@@ -17,7 +17,7 @@ class guia_cabecera
 	public function get_guia_por_id($id)
 	{
 		$sql="select 
-			  g.var_cod_guia_cab,
+			 	g.var_cod_guia_cab,
 				s.var_cod_ser,
 				g.int_cod_suc,
 				z.var_nom_suc,
@@ -29,7 +29,7 @@ class guia_cabecera
 				c.var_ruc_cli,
 				c.var_dir_cli,	
 				c.var_dist_cli,
-        		c.var_telf_cli,
+        			c.var_telf_cli,
 				c.var_refdom_cli,
 				g.var_dir_env_guia_cab,
 				g.var_dist_guia_cab,
@@ -45,10 +45,12 @@ class guia_cabecera
 				g.var_dist_guia_cab,				
 				g.int_turn_guia_cab,
 				g.var_telf_guia_cab,
-				g.var_tran_nom_guia_cab,
-				g.var_tran_ruc_guia_cab,
-				g.var_tran_veh_guia_cab,
-				g.var_tran_plac_guia_cab,
+				g.var_tran_marca_guia_cab,
+				g.var_tran_constancia_guia_cab,
+				g.var_tran_licencia_guia_cab,
+				g.var_trans_rs_guia_cab,
+				g.var_trans_ruc_guia_cab,
+				g.var_trans_dir_guia_cab,
 				g.date_fecenv_guia_cab
 				from T_guia_cabecera g
 				inner join T_serie s on s.var_cod_ser=g.var_cod_ser			
@@ -58,7 +60,7 @@ class guia_cabecera
 				inner join T_pedido_cabecera p on p.var_cod_pedi_cab=g.var_cod_pedi_cab
 				inner join T_tipo_movimiento m on m.int_cod_mov=g.int_cod_mov
 				inner join T_usuario u on u.int_cod_usu=g.int_cod_usu
-				where g.var_cod_guia_cab='$id'";		
+				where g.var_cod_guia_cab='$id'";				
 		 
 		$res=mysql_query($sql,Conectar::con());
 		while ($reg=mysql_fetch_assoc($res))
