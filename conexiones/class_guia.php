@@ -38,6 +38,7 @@ class guia_cabecera
 				g.var_pun_lleg_guia_cab,
 				g.int_cod_mov,
 				m.var_desc_mov,
+				g.int_est_guia_cab,
 				date(g.date_fecenv_guia_cab) as date_fecenv_guia_cab,
 				g.date_fecadd_guia_cab
 				from T_guia_cabecera g
@@ -45,7 +46,7 @@ class guia_cabecera
 				inner join T_usuario u on u.int_cod_usu=g.int_cod_usu
 				inner join T_cliente c on c.int_cod_cli=g.int_cod_cli
 				inner join T_tipo_movimiento m on m.int_cod_mov=g.int_cod_mov
-				order by var_cod_guia_cab desc
+				where int_est_guia_cab<>0 order by var_cod_guia_cab desc
 		
 		";	
 		
@@ -241,16 +242,15 @@ class guia_cabecera
 		";	
 	
 	}
-	/*
-	public function eliminar_pedidos($id)
+	public function eliminar_guia($id)
 	{
-		$sql="delete from t_pedido_cabecera where var_cod_pedi_cab='$id'";
+		$sql="update T_guia_cabecera t set t.int_est_guia_cab=0 where var_cod_guia_cab='$id'";
 		$res=mysql_query($sql,Conectar::con());
 		echo "<script type='text/javascript'>
 		
-		window.location='eliminar_pedidos.php?eliminado=1';
+		window.location='eliminar_guia.php?eliminado=1';
 		</script>";
-	}*/
+	}
 }
 
 ?>
