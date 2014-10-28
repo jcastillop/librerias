@@ -180,6 +180,41 @@ $(document).ready(function(){
 
                 });
 
+                $("#cod_bar_tit").change(function() {
+                    
+                    $.ajax({
+                        type: "GET",
+                        url: "titulos_buscar.php",
+                        data: "id=" + $("#cod_bar_tit").val(),
+                        success: function(datos){
+                        
+                        var res = jQuery.parseJSON(datos);
+                        
+                        if(res.nombre===""){
+                            alert("Título no registrado, proceda a agregarlo en el menú correspondiente");
+                        }else{
+
+                        $("#tit_tit").val(res.nombre);
+
+                        $("#tituloID").val(res.codigo);
+
+                        $("#valor_dos").val(res.precio);
+                        
+                        $("#valor_cuatro").val(res.precio);
+                     
+                        $("#valor_tres").focus();
+                        
+                        fn_dar_eliminar();
+                        fn_cantidad(); 
+                        }
+                        
+                        },
+                        error: function(datos) {
+                        alert("Data not found");
+                        }
+                    });
+                });
+
     $("#desc_tit").change(function() {
         cadena = "<tr>";
         cadena = cadena + "<td><input name='cod_bar_des[]' style='width:80px' id='cod_bar_des[]' type='text' value='"+ $("#cod_bar_tit").val() +"' size='15' OnFocus='this.blur()'/></td>";
