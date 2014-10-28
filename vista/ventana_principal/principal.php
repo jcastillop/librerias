@@ -150,6 +150,9 @@
                       <ul>
                          <li><a href='../ventana_compras/registro/index.php'><span>Registro</span></a></li>
                       </ul>
+                      <ul>
+                         <li><a href='../ventana_compras/ventana_consulta_historica/vista_compras.php'><span>Historico de Compras</span></a></li>
+                      </ul>
                    </li>
                    <li class='active has-sub'><a href='#'><span>Contabilidad</span></a></li>
                    <li class='active has-sub'><a href='#'><span>Facturación</span></a></li>
