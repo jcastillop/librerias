@@ -142,7 +142,7 @@
                    </li>
                    <li class='active has-sub'><a href='#'><span>Ventas</span></a>
                       <ul>
-                         <li><a href='../ventana_ventas/registro_venta/index.php'><span>Registro</span></a></li>
+                         <li><a href='../ventana_ventas/registro_ventas/index.php'><span>Registro</span></a></li>
                         <li><a href='../ventana_ventas/ventana_consulta_historica/vista_ventas.php'><span>Historico de Ventas</span></a></li>
                       </ul>
                    </li>
