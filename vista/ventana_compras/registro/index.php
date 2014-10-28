@@ -44,52 +44,63 @@ require_once("../../../conexiones/class_cliente.php");
     
     <body>	
         <div id="wrapper" style="zoom:90%">
-            <div  id="form" class="login-form" style="margin: 1px auto;" >
+            <form  id="form" class="login-form" style="margin: 1px auto;" >
     
-            <h1 align="center">REGISTRO DE COMPRAS</h1>
+            <h1 align="center">Registro de compras</h1>
             <div class="content">
-           
+            
             <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
-			DATOS<BR>
             <table>
+      
+
+            
+
+
+                 <tr>
+                    <td>
+                        <input type="file" name="file" id="file"/>
+                        <input class="button" style="width:80px" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
+                    </td>  
+                </tr>
                 <tr>
                     <td>
-                        RUC: <input name="ruc" class="input username" style="width:300px" type="text" id="ruc"  onkeypress="return tabular(event,this)"/>&nbsp;&nbsp;
-                        Cod. Proveedor: <input name="id_prov" class="input username" style="width:20px" type="text" id="id_prov"/> 
-                        <input name="prov" class="input username" style="width:250px" type="text" id="prov"/></td>
-                    <td> <input type="file" name="file" id="file"/> &nbsp; &nbsp; &nbsp; <input class="button" style="width:80px" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/></td>  
-
+                        Fecha de recepción:<input name ="fecha_registro" type="text" id="fecha_registro" class="input username" style="width:150px" />
+                        Fecha de emisión:<input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:150px" />
+                    </td> 
                 </tr>
                 <tr>
-                    <td>  Fecha de recepción:
-                        <input name ="fecha_recepcion" type="text" id="datepicker" class="input username" style="width:210px" />&nbsp;&nbsp;
-                       
-						Fecha de emición:
-                        <input name ="fecha_emision" type="text" id="datepicker" class="input username" style="width:265px" /></td> 
-                </tr>
-                <tr>
-                    <td>                    
-                    
-                   Fecha de caducidad:
-                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:250px" /></td> 
+                    <td>Sucursal:                 
+                        <select  name="sucursal" id="sucursal"  style="width:350px" class="input username" onChange="from(document.form1.sucursal.value,'midiv','prueba.php')">
+                            <option value="">-Seleccione-</option>
+                            <?php
+                                 $tra=new sucursal();
+                                 $reg=$tra->get_combo_sucursal();
+                                 for ($i=0;$i<count($reg);$i++)
+                                 {
+                             ?>
+                             <option value="<?php echo $reg[$i]["int_cod_suc"];?>"><?php echo $reg[$i]["var_nom_suc"];?></option>
+                            <?php
+                                 }
+                            ?>
+                        </select>
+                        Fecha de caducidad:
+                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:150px" />
+                    </td>
                 </tr> 
                 <tr>
-                    <td>                    
-                    Tipo de cambio:
-                     <select  name="cambio" id="cambio"  style="width:100px" class="input username" >
-                            <option value="">-Seleccione-</option></select>&nbsp;&nbsp;<input name="tip_c" class="input username" style="width:130px" type="text" id="tip_c" >&nbsp;&nbsp;
-                   Descripción:
-                        <input name ="descripcion" type="text" id="descripcion" class="input username" style="width:300px" /></td> 
-                </tr> 				
+                    <td>Descripción:<input name ="descripcion" type="text" id="descripcion" class="input username" style="width:300px" /></td>
+                </tr>   
+
             </table>
             </div>
-            <br />
-             <div id="frm_usu" style="width: 1080px; margin-left: 10px; border-radius: 10px;border: 2px solid #B1B1B1;">
-			DETALLE<br>
+        
+             <br />
+             <h2 align="center">Registro de productos</h2>
+            <div id="frm_usu" style="width: 1080px; margin-left: 10px; border-radius: 10px;border: 2px solid #B1B1B1;">
                 <table border="0" align="center">
 
                     <tbody>
-                        <tr>
+           <tr>
                             <td>Código Barras</td>
                             <td><input name="cod_bar_tit" class="input username" style="width:100px" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
        
@@ -102,8 +113,8 @@ require_once("../../../conexiones/class_cliente.php");
                             <td>Autor</td>
                             <td><input name="aut_tit" class="input username" style="width:100px" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
                                 
-                            <td>Descripción</td>
-                            <td><input name="desc_tit" class="input username" style="width:100px" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td>Proveedor</td>
+                            <td><input name="prov_tit" class="input username" style="width:100px" type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>ISBN</td>
                             <td><input name="isbn_tit" class="input username" style="width:80px" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
@@ -130,6 +141,9 @@ require_once("../../../conexiones/class_cliente.php");
                             <td>Precio</td>
                             <td><input name="pre_tit" class="input username" style="width:80px" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
 
+                            <td>Descripción</td>
+                            <td><input name="desc_tit" class="input username" style="width:100px" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+
                         </tr>
                        
                     </tbody>
@@ -149,7 +163,7 @@ require_once("../../../conexiones/class_cliente.php");
                         <th style="width:50px;">Cantidad</th>
                         <th style="width:50px;">Título</th>
                         <th style="width:150px;">Autor</th>
-                        <th style="width:50px;">Descripción</th>
+                        <th style="width:50px;">Proveedor</th>
                         <th style="width:100px;">ISBN</th>
                        <th style="width:50px;">Edición</th>
                         <th style="width:100px;">Nro Pag.</th>
@@ -158,7 +172,9 @@ require_once("../../../conexiones/class_cliente.php");
                         <th style="width:50px;">Pais</th>
                         <th style="width:50px;">Moneda</th>
                         <th style="width:50px;">Precio</th>
+                        <th style="width:50px;">Desc</th>
                     </tr>
+                </thead>
                 </thead>
                 <tbody>
 
@@ -166,14 +182,15 @@ require_once("../../../conexiones/class_cliente.php");
                 </tbody>
                 <tfoot>
                 	<tr>
-                    	<td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td colspan="2"><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
+                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td><strong>Suma total:</strong> <span id="suma_total">0</span></td>
                     </tr>
                 </tfoot>
             </table>
             </div>
             </div>
-</div> 
+</form> 
 
         
     

@@ -69,7 +69,7 @@
 				$table .= "<tr>";
 				for($h=$start_h; ord($h)<=ord($end_h); pp($h)){
 					$cellValue = get_cell($h.$v, $objPHPExcel);
-					$table .= "<td><input  style='width:70px' type='text' name='".$v.$h."' value='";
+					$table .= "<td><input style='width:70px' type='text' name='".$v.$h."' value='";
 					if($cellValue !== null){
 						$table .= $cellValue;
 					}

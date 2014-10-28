@@ -59,19 +59,19 @@ class proveedor
 	}
 	
 	
-	/*public function get_combo_rol()
+	public function get_combo_proveedor()
 	{
-		$sql="select * from t_rol ORDER BY int_cod_rol";
+		$sql="select  int_cod_prov, var_rsoc_prov from T_proveedor ORDER BY int_cod_prov";
 		
 		$res=mysql_query($sql,Conectar::con());
 		
 		while ($reg=mysql_fetch_assoc($res))
 		{
-			$this->usuario[]=$reg;
+			$this->proveedor[]=$reg;
 		}
-			return $this->usuario;
+			return $this->proveedor;
 	}
-	
+	/*
 	public function get_combo_rol_update($id_rol)
 	{
 		$sql="select * from t_rol where not int_cod_rol='$id_rol'  ORDER BY int_cod_rol";
