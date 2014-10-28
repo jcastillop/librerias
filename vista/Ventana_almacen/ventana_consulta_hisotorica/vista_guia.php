@@ -199,14 +199,14 @@ $(document).ready(function() {
 					<tr class="cabecera" >
 						
 						
-                        <th >N.Documento</th>
-                        <th >Sucursal</th>
-                        <th >Partida</th>
-                        <th >Destino</th>
-                        <th >Condicion</th>
-                        <th >Vendedor</th>
-                        <th >Fecha Envio.</th>
-                        <th >Fecha Guia</th>
+                        <th style=" width:200px;" >N.Documento</th>
+                        <th style=" width:250px;">Sucursal</th>
+                        <th style=" width:300px;">Partida</th>
+                        <th style=" width:300px;">Destino</th>
+                        <th style=" width:100px;">Condicion</th>
+                        <th style=" width:150px;">Vendedor</th>
+                        <th style=" width:200px;">Fecha Envio.</th>
+                        <th style=" width:200px;">Fecha Guia</th>
                         <th>Exp.</th>
                         <th>Anular</th>
 					</tr>
