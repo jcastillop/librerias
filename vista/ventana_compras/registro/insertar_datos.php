@@ -26,10 +26,10 @@
 		$cod_comp_det=$i+1;
 		$cantidad = $array[$i]->cantidad_libro_detalle;
 		$valor = $array[$i]->precio_libro_detalle;
-		$desc_proveedor= $array[$i]->proveedor_libro_detalle;
+		$proveedor= $array[$i]->proveedor_libro_detalle;
 		$cod_bar=$array[$i]->codigo_barras_detalle;//con esto hallar el codigo de titulo
 		
-		$desc_moneda = $array[$i]->moneda_libro_detalle;//con esto hallar el codigo de moneda
+		$moneda = $array[$i]->moneda_libro_detalle;//con esto hallar el codigo de moneda
 		//buscar tipo de cambio segun fecha actual
 		//datos para registrar nuevo titulo
 		$titulo_libro= $array[$i]->titulo_libro_detalle;
@@ -42,12 +42,14 @@
 		$desc_genero_libro = $array[$i]->genero_libro_detalle;//Con esto se hallara el id del genero
 		$desc_pais = $array[$i]->pais_libro_detalle;//Con esto se hallara el codigo del pais
 		//falta codigo de barra del libro
+		$query_call_spcompdet = "CALL proc_insertar_comp_det(".$_cod_emp.",".$_cod_suc.",'"
+																.$codigo_gen_cabecera."',".$cod_comp_det.",".$cantidad.",".$valor.","
+																.$proveedor.",'".$titulo_libro."',".$moneda.",'".$fecha_actual."','"
+																.$_ped_usu."','".$autor_libro."','".$descripcion_libro."','".$cod_bar."','"
+																.$isbn_libro."',".$edicion_libro.",".$nropag_libro.",'".$desc_editorial_libro."','"
+																.$desc_genero_libro."','".$desc_pais."',@n_Flag, @c_msg)";
+																
 
-
-		$query_call_spcompdet = "CALL proc_insertar_comp_cab(".$_cod_emp.",".$_cod_suc.",'"
-	                                                                   .$codigo_gen_cabecera."',".$cod_comp_det.",".$cantidad.",'".$valor."',"
-	                                                                   .$_CODIGOPROVEEDOR.",".$_CODIGOTITULO.",".$_CODIGOMONEDA.",'".$fecha_actual."','"
-	                                                                   .$_ped_usu."',@n_Flag, @c_msg)";
 		mysql_query($query_call_spcompdet,Conectar::con());
 	
 		$array_flag_com_det = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
