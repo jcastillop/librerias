@@ -4,7 +4,7 @@ window.close()
 } 
 </script> 
 <?php
-require_once("../../conexiones/class_cliente.php");
+require_once("../../conexiones/class_cliente1.php");
 require_once("../../conexiones/class_pais.php");
 require_once("../../conexiones/conexion.php");
 ?>
