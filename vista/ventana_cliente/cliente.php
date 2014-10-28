@@ -218,7 +218,7 @@ function formulario(f) {
          <td>País: </td>
           <td>
           <select  name="pais" id="pais" class="input username" style="width: 160px;" onChange="from(document.form1.pais.value,'midiv','cliente_dep.php')">
-          <option>--Seleccione--</option>
+          <option value="999">--Seleccione--</option>
           <?php
 			$tra=new pais();
 			$reg=$tra->get_combo_pais();
@@ -238,7 +238,7 @@ function formulario(f) {
        <td>Departamento:</td>
           <td>
           <div id='midiv'><select style="width: 200px;" class="input username">
-          <option>--Seleccione--</option>
+          <option value="99999">--Seleccione--</option>
          </select></div>
           </td>
            </tr>
@@ -246,7 +246,7 @@ function formulario(f) {
         <td>Provincia: </td>
           <td>
           <div id="madiv"><select style="width: 200px;" class="input username">
-          <option>--Seleccione--</option>
+          <option value="999">--Seleccione--</option>
           </select></div>
           </td>		
            </tr>
