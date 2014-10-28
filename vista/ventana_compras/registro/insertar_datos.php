@@ -2,17 +2,28 @@
 	require_once("conexion.php");
 	$_cod_emp=$_POST['cod_emp'];
 	$_cod_suc=$_POST['cod_suc'];
-	$_fec_reg=$_POST['fec_reg'];
+	$_fec_rec=$_POST['fec_rec'];
 	$_fec_emi=$_POST['fec_emi'];
 	$_fec_cad=$_POST['fec_cad'];
 	$_desc=$_POST['desc'];
-	$fecha_hora_actual =Fechas::mifechagmt(time(),-5);
+	$_ped_usu='JCASTILLO';
+	$fecha_actual =Fechas::mifechagmtactual(time(),-5);
 	$array = json_decode($_POST['compra_detalle']);
-
-	echo $_cod_emp."\n";
-	echo count($array)."\n";
+	
+	$query_call_spcompcab = "CALL proc_insertar_comp_cab(".$_cod_suc.",".$_cod_emp.",'"
+	                                                                   .$_desc."','".$_fec_rec."','".$_fec_emi."','".$_fec_cad."','"
+	                                                                   .$_ped_usu."',@n_Flag, @c_msg, @cod_generado)";
+	mysql_query($query_call_spcompcab,Conectar::con());
+	
+	$array_flag_com_cab = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
+	$array_codgen_com_cab = mysql_fetch_array(mysql_query("Select @cod_generado",Conectar::con()));
+	$codigo_flag_cabecera = $array_flag_com_cab["@n_Flag"];
+	$codigo_gen_cabecera = $array_codgen_com_cab["@cod_generado"]; 
+		//Ejecucion del Procedimiento Insertar Cabecera
+	
 
 	for($i=0;$i<count($array);$i++){ 
+		$cod_comp_det=$i+1;
 		$cantidad = $array[$i]->cantidad_libro_detalle;
 		$valor = $array[$i]->precio_libro_detalle;
 		$desc_proveedor= $array[$i]->proveedor_libro_detalle;
@@ -31,7 +42,22 @@
 		$desc_genero_libro = $array[$i]->genero_libro_detalle;//Con esto se hallara el id del genero
 		$desc_pais = $array[$i]->pais_libro_detalle;//Con esto se hallara el codigo del pais
 		//falta codigo de barra del libro
-		echo $cantidad."\n";
+
+
+		$query_call_spcompdet = "CALL proc_insertar_comp_cab(".$_cod_emp.",".$_cod_suc.",'"
+	                                                                   .$codigo_gen_cabecera."',".$cod_comp_det.",".$cantidad.",'".$valor."',"
+	                                                                   .$_CODIGOPROVEEDOR.",".$_CODIGOTITULO.",".$_CODIGOMONEDA.",'".$fecha_actual."','"
+	                                                                   .$_ped_usu."',@n_Flag, @c_msg)";
+		mysql_query($query_call_spcompdet,Conectar::con());
+	
+		$array_flag_com_det = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
+		$array_codgen_com_det = mysql_fetch_array(mysql_query("Select @cod_generado",Conectar::con()));
+		$codigo_flag_cabecera = $array_flag_com_det["@n_Flag"];
+		
+	
+
+	
+	
 	}
 		
 

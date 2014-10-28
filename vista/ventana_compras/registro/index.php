@@ -64,7 +64,7 @@ require_once("../../../conexiones/class_cliente.php");
                 </tr>
                 <tr>
                     <td>
-                        Fecha de recepción:<input name ="fecha_registro" type="text" id="fecha_registro" class="input username" style="width:150px" />
+                        Fecha de recepción:<input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:150px" />
                         Fecha de emisión:<input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:150px" />
                     </td> 
                 </tr>

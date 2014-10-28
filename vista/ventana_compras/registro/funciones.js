@@ -1,6 +1,6 @@
 $(document).ready(function(){
 //Iniciando el datepicker
-    $( "#fecha_registro" ).datepicker();
+    $( "#fecha_recepcion" ).datepicker();
     $( "#fecha_emision" ).datepicker();
     $( "#fecha_caducidad" ).datepicker();
 //Validaciones y envio del formulario
@@ -13,7 +13,7 @@ $(document).ready(function(){
         file: {
             required: true
         },
-        fecha_registro: {
+        fecha_recepcion: {
             required: true
         },
         fecha_emision: {
@@ -34,7 +34,7 @@ $(document).ready(function(){
         file: {
             required: "*"
         },
-        fecha_registro: {
+        fecha_recepcion: {
             required: "*"
         },
         fecha_emision: {
@@ -57,7 +57,7 @@ $(document).ready(function(){
         
         var cod_emp=1;
         var cod_suc = $("#sucursal").val();
-        var fec_reg = $("#fecha_registro").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
+        var fec_rec = $("#fecha_recepcion").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
         var fec_emi = $("#fecha_emision").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
         var fec_cad = $("#fecha_caducidad").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
         var desc = $("#descripcion").val();
@@ -67,8 +67,8 @@ $(document).ready(function(){
             compra_detalle = compra_detalle + 
             '{"codigo_barras_detalle":"' 
             + document.getElementById('grilla').rows[i].cells[0].childNodes[0].value + '", '
-            + '"cantidad_libro_detalle":'
-            + document.getElementById('grilla').rows[i].cells[1].childNodes[0].value + ', '
+            + '"cantidad_libro_detalle":"'
+            + document.getElementById('grilla').rows[i].cells[1].childNodes[0].value + '", '
             + '"titulo_libro_detalle":"'
             + document.getElementById('grilla').rows[i].cells[2].childNodes[0].value + '", '
             + '"autor_libro_detalle":"'
@@ -79,8 +79,8 @@ $(document).ready(function(){
             + document.getElementById('grilla').rows[i].cells[5].childNodes[0].value + '", '   
             + '"edicion_libro_detalle":"'
             + document.getElementById('grilla').rows[i].cells[6].childNodes[0].value + '", '   
-            + '"nropag_libro_detalle":'
-            + document.getElementById('grilla').rows[i].cells[7].childNodes[0].value + ', '   
+            + '"nropag_libro_detalle":"'
+            + document.getElementById('grilla').rows[i].cells[7].childNodes[0].value + '", '   
             + '"editorial_libro_detalle":"'
             + document.getElementById('grilla').rows[i].cells[8].childNodes[0].value + '", '   
             + '"genero_libro_detalle":"'
@@ -89,8 +89,8 @@ $(document).ready(function(){
             + document.getElementById('grilla').rows[i].cells[10].childNodes[0].value + '", '
             + '"moneda_libro_detalle":"'
             + document.getElementById('grilla').rows[i].cells[11].childNodes[0].value + '", '             
-            + '"precio_libro_detalle":'
-            + document.getElementById('grilla').rows[i].cells[12].childNodes[0].value + ", "    
+            + '"precio_libro_detalle":"'
+            + document.getElementById('grilla').rows[i].cells[12].childNodes[0].value + '", '    
             + '"descripcion_libro_detalle":"'
             + document.getElementById('grilla').rows[i].cells[13].childNodes[0].value + '"}'
 
@@ -106,16 +106,16 @@ $(document).ready(function(){
                        
             alert("Registre detalle de la compra");
         } else {
-            alert(compra_detalle);
+            
         //Datos compras cabecera
         var dataString= 'cod_emp='+cod_emp+
                         '&cod_suc='+cod_suc+
-                        '&fec_reg='+fec_reg+
+                        '&fec_rec='+fec_rec+
                         '&fec_emi='+fec_emi+
                         '&fec_cad='+fec_cad+
                         '&desc='+desc+
-                        //Datos compras detalle
                         '&compra_detalle='+compra_detalle;
+                       
                         $.ajax({
                           type: "POST",
                           url: "insertar_datos.php",
