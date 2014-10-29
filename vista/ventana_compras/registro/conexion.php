@@ -11,7 +11,7 @@ class titulos
 		}
 	public function get_titulo_por_id($id)
 	{
-		$sql="select t.var_nom_tit,t.dec_preven_def_tit, t.dec_preven_sug_tit, t.int_cod_tit from T_titulos t where t.var_cod_bar_tit='".$id."'";
+		$sql="select t.*, e.var_nom_edit, p.var_nom_pais, g.var_nom_gen from T_titulos t, T_editoriales e, T_pais p, T_generos g where t.int_cod_edit=e.int_cod_edit and t.int_cod_pais=p.int_cod_pais and t.int_cod_gen=g.int_cod_gen and t.var_cod_bar_tit='".$id."'";
 		$res=mysql_query($sql,Conectar::con());
 		while ($reg=mysql_fetch_assoc($res))
 		{
