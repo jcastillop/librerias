@@ -99,6 +99,8 @@
                                         '&cod_ser='+cod_ser+
                                         '&cod_usu='+cod_usu+
                                         '&pedido_detalle='+pedido_detalle;
+
+                                                          
                                                               
                         $.ajax({
                           type: "POST",
@@ -114,8 +116,10 @@
                                alert("Error al registrar guia: " + result);
                             } 
                             */
-							limpiarformulario("#form");
+
                             alert(result); 
+							
+                            limpiarformulario("#contact-form");
 
                           },
                           error: function(result){
@@ -195,7 +199,7 @@
                     }
                 });
 
-                $("#cliente").focusout(function() {
+                $("#cliente").change(function() {
                    
                     
                     $.ajax({
@@ -272,8 +276,8 @@
                 $(this).val('');
             });
                $('#grilla tbody').empty();
-                               fn_cantidad(); 
-                            fn_sumatotal();
+                fn_cantidad(); 
+                fn_sumatotal();
             }
             function sumar(){
         

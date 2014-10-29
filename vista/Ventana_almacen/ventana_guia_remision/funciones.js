@@ -53,7 +53,7 @@
                     },
                     submitHandler: function(form) {
                         //Variables Cabecera Pedido
-                        alert("wapetones");
+                        
                     var cod_emp=1;
                     var cod_suc = $("#sucursal").val();
                     var cod_cli = $("#cliente").val();

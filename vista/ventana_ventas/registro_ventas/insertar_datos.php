@@ -14,6 +14,7 @@ $_cod_ser=$_POST['cod_ser'];
 $_cod_usu=$_POST['cod_usu'];
 $_tipo_doc=$_POST['tipo_doc'];
 $fecha_hora_actual =Fechas::mifechagmt(time(),-5);
+
 $array = json_decode($_POST['pedido_detalle']);
 //creando query del PA insertar pedido cabecera
 $query_call_spcabped = "CALL proc_insertar_pedi_cab(".$_cod_emp.",".$_cod_suc.","
@@ -38,6 +39,7 @@ $query_call_spcabgui = "CALL proc_insertar_guia_cab(".$_cod_suc.",".$_cod_emp.",
                                                                        .$_fec_pedido."','".$_ped_usu."',@n_Flag1, @c_msg1, @cod_generado1)";
 
 mysql_query($query_call_spcabgui,Conectar::con());
+
 $codigo_msg1 = "";
 $array_flag1 = mysql_fetch_array(mysql_query("Select @n_Flag1",Conectar::con()));
 $array_codgen1 = mysql_fetch_array(mysql_query("Select @cod_generado1",Conectar::con()));
@@ -52,6 +54,7 @@ $query_call_spfact = "CALL proc_insertar_fact_cab(".$_cod_suc.",".$_cod_emp.",'"
                                                                        .$_fec_pedido."','".$_tipo_doc."','".$_ped_usu."',@n_Flag3, @c_msg3, @cod_generado3)";
 
 mysql_query($query_call_spfact,Conectar::con());
+
 $codigo_msg3 = "";
 $array_flag3 = mysql_fetch_array(mysql_query("Select @n_Flag3",Conectar::con()));
 $array_codgen3 = mysql_fetch_array(mysql_query("Select @cod_generado3",Conectar::con()));
@@ -147,8 +150,9 @@ $var_fact_detalle=$var_fact_detalle.'(lpad("'.$var_cod_fact_det.'",6,"0"),'
    }
    $query_call_spfactd = "CALL proc_insertar_fact_det(".$var_fact_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
- 
+
    mysql_query($query_call_spfactd,Conectar::con());
+   
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
    $codigo_msg1 = $array_msg["@c_msg"];}
