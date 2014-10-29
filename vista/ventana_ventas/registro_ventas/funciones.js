@@ -1,9 +1,46 @@
             $(document).ready(function(){
-         
-                $("#boton").click(function() {
-                    alert("hola");
+               
+                                        
+
+              $("#boton").click(function() {
+                var tip_per=$("#tip_per").val();
+                var rsoc=$("#rsoc").val();
+                var ruc=$("#ruc").val();
+                var direccion=$("#direccion").val();
+                var usuario="JCASTILLOP";
+                var dataString= 'tip_per='+tip_per+
+                                        '&rsoc='+rsoc+
+                                        '&ruc='+ruc+
+                                        '&direccion='+direccion+
+                                        '&usuario='+usuario;
+                                        alert(dataString);
+                    $.ajax({
+                          type: "POST",
+                          url: "insertar_datos_cliente.php",
+                          data: dataString,
+                          cache: false,
+                          success: function(result){
+                            /*
+                            if(result==0){
+                               limpiarformulario("#form");
+                               alert("Guia registrada correctamente");
+                            } else {
+                               alert("Error al registrar guia: " + result);
+                            } 
+                            */
+
+                            alert(result); 
+                            
+                           
+
+                          },
+                          error: function(result){
+
+                            alert("error");
+                          }
+                        });
                 });
-         
+
                 //Iniciando el datepicker
                 $( "#datepicker" ).datepicker();
                 //Iniciando las validaciones del formulario
@@ -230,6 +267,7 @@
                     });
                     
                 });
+
        
        
       

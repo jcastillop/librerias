@@ -35,8 +35,8 @@
       <td colspan="2"><input name="rsoc" type="text"   id="rsoc"  onkeypress="return tab(event,this)" /></td>
       </tr>
     <tr>
-      <td><label id="ruc" class="ruc">RUC:</label></td>
-      <td ><input name="ruc" type="text"   id="ruc" onkeyup="return ValNumero(this);" onKeyPress="return tab(event,this)"   /></td>
+      <td><label id="rucs" class="rucs">RUC:</label></td>
+      <td ><input name="ruc" type="text" id="ruc" onkeyup="return ValNumero(this);" onKeyPress="return tab(event,this)"   /></td>
       </tr>
     <tr>
       <td>DIRECCION:</td>
