@@ -95,19 +95,20 @@ $(document).ready(function(){
             + document.getElementById('grilla').rows[i].cells[13].childNodes[0].value + '"}'
 
             if (i==document.getElementById('grilla').rows.length-2){
-                alert(i);
+              
                 compra_detalle = compra_detalle + "]";
             }else{
                 compra_detalle = compra_detalle + ','; 
             }       
         }
-
+       
         if(compra_detalle=="["){
                        
             alert("Registre detalle de la compra");
         } else {
             
         //Datos compras cabecera
+        
         var dataString= 'cod_emp='+cod_emp+
                         '&cod_suc='+cod_suc+
                         '&fec_rec='+fec_rec+
@@ -131,7 +132,7 @@ $(document).ready(function(){
                                alert("Error al registrar guia: " + result);
                             } 
                             */
-                            //limpiarformulario("#form");
+                            limpiarformulario("#form");
                             alert(result);   
                           },
                           error: function(result){
@@ -196,14 +197,22 @@ $(document).ready(function(){
 
                         $("#tit_tit").val(res.nombre);
 
-                        $("#tituloID").val(res.codigo);
+                        $("#aut_tit").val(res.autor);
 
-                        $("#valor_dos").val(res.precio);
+                        $("#isbn_tit").val(res.isbn);
                         
-                        $("#valor_cuatro").val(res.precio);
+                        $("#edic_tit").val(res.edicion);
+
+                        $("#nro_tit").val(res.nropag);
+//
+                        $("#edi_tit").val(res.editorial);
+
+                        $("#gen_tit").val(res.genero);
+
+                        $("#pai_tit").val(res.pais);
+
+                        $("#desc_tit").val(res.descripcion);
                      
-                        $("#valor_tres").focus();
-                        
                         fn_dar_eliminar();
                         fn_cantidad(); 
                         }
@@ -215,7 +224,7 @@ $(document).ready(function(){
                     });
                 });
 
-    $("#desc_tit").change(function() {
+    $("#cant_tit").change(function() {
         cadena = "<tr>";
         cadena = cadena + "<td><input name='cod_bar_des[]' style='width:80px' id='cod_bar_des[]' type='text' value='"+ $("#cod_bar_tit").val() +"' size='15' OnFocus='this.blur()'/></td>";
         cadena = cadena + "<td><input name='cant_des[]' style='width:70px' id='cant_des[]' type='text' value='"+ $("#cant_tit").val() +"' size='30' OnFocus='this.blur()'/></td>";
@@ -305,6 +314,8 @@ $(document).ready(function(){
    $(formulario).find('textarea').each(function(){
       $(this).val('');
    });
-   $('#grilla').empty();
+   $('#grilla tbody').empty();
+                               fn_cantidad(); 
+                            fn_sumatotal();
 }
 

@@ -51,12 +51,7 @@ require_once("../../../conexiones/class_cliente.php");
             
             <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
             <table>
-      
-
-            
-
-
-                 <tr>
+                <tr>
                     <td>
                         <input type="file" name="file" id="file"/>
                         <input class="button" style="width:80px" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>

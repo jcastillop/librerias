@@ -20,7 +20,7 @@
 	$codigo_flag_cabecera = $array_flag_com_cab["@n_Flag"];
 	$codigo_gen_cabecera = $array_codgen_com_cab["@cod_generado"]; 
 		//Ejecucion del Procedimiento Insertar Cabecera
-	
+	$contador = 0; 
 
 	for($i=0;$i<count($array);$i++){ 
 		$cod_comp_det=$i+1;
@@ -53,14 +53,18 @@
 		mysql_query($query_call_spcompdet,Conectar::con());
 	
 		$array_flag_com_det = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
-		$array_codgen_com_det = mysql_fetch_array(mysql_query("Select @cod_generado",Conectar::con()));
-		$codigo_flag_cabecera = $array_flag_com_det["@n_Flag"];
+		$array_mensaje_com_det = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
+		$codigo_flag_detalle = $array_flag_com_det["@n_Flag"];
 		
-	
+		if ($codigo_flag_detalle==0) {
+		$contador=$contador+1; 
+		
+   		};
 
-	
-	
+
 	}
+	echo "Numero de registros insertados: ".$contador;
+
 		
 
 		

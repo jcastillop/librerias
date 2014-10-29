@@ -311,6 +311,8 @@
    $(formulario).find('textarea').each(function(){
       $(this).val('');
    });
-   $('#grilla').empty();
+      $('#grilla tbody').empty();
+                               fn_cantidad(); 
+                            fn_sumatotal();
 }
 
