@@ -11,6 +11,7 @@ $fecha_hora_actual =Fechas::mifechagmt(time(),-5);
 $query_call_spcabped = "CALL proc_ingresar_cliente('".$_rsoc."',".$_tip_per.",'"
 	                                                .$_direccion."','".$_ruc."','"
 	                                                .$_usuario."','".$fecha_hora_actual."',@n_Flag, @c_msg, @n_cod)";
+mysql_query($query_call_spcabped,Conectar::con());
 
 $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
 $array_codgen = mysql_fetch_array(mysql_query("Select @n_cod",Conectar::con()));
