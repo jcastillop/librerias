@@ -249,14 +249,7 @@ $(document).ready(function(){
         fn_sumatotal();
  
     });
-                             
-              	
-
-  
-
- 
-                });
-				
+		
 				
 				
 			
