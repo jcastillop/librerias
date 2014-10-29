@@ -18,7 +18,7 @@ $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
 
 $codigo_flag = $array_flag["@n_Flag"];
 $codigo_gen = $array_codgen["@n_cod"]; 
-$codi_msg = $array_codgen["@c_msg"]; 
+$codi_msg = $array_msg["@c_msg"];
 echo $codi_msg;
 
 ?>
