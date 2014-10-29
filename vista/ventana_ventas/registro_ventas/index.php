@@ -89,7 +89,7 @@ if(id_cliente=="")
 	document.getElementById("ruc").disabled=true;	
 var r = confirm("CLIENTE NO EXISTE, DESEA AGREGAR UNO NUEVO!");
 if (r == true) {
-   Abrir_ventana('popup.html');
+   Abrir_ventana('cliente_nuevo.php');
    document.getElementById("cliente").value='';
    	document.getElementById("cliente").style.borderColor = "#ff0000";
 	document.getElementsByName('cliente')[0].placeholder='Ingrese Correctamente un Cliente ';
