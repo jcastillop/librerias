@@ -1,5 +1,37 @@
             $(document).ready(function(){
          
+         
+         $("#boton").click(function() {
+						$.ajax({
+                        type: "GET",
+                        url: "insertar_datos.php",
+                        data: "tip_per=" + $("#tip_per").val(),
+                        success: function(datos){
+                        
+                        //var res = jQuery.parseJSON(datos);
+                        var variable=27;
+                        if(res.cliente===""){
+                            alert("cliente vacio");
+                        }else{
+
+                        $("#ruc").val(res.ruc);
+						$("#direccion").val(res.direccion);
+
+                     
+                        $("#valor_tres").focus();
+                        
+                        fn_dar_eliminar();
+                        fn_cantidad(); 
+                        }
+                        
+                        },
+                        error: function(datos) {
+                        alert("Data not found");
+                        }
+                    });
+         
+         
+         
                 //Iniciando el datepicker
                 $( "#datepicker" ).datepicker();
                 //Iniciando las validaciones del formulario
