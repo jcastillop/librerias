@@ -49,7 +49,7 @@
   
     </tr>
     <tr>
-      <td colspan="2" align="center"><input type="button"  name="boton" id="boton" value="GUARDAR" /></td>
+      <td colspan="2" align="center"><input type="button" name="boton" id="boton" value="GUARDAR" /></td>
       </tr>
   </table>
 
