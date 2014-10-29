@@ -193,8 +193,8 @@ require_once("../../../conexiones/class_cliente.php");
                 </table>
             </div>
             	
-			<div align="center" style="height:250px;overflow:scroll;">
-            <table id="grilla" class="lista" border="1" align="center">
+		<div align="center" style="height:250px;overflow:scroll;">
+            <table id="grilla" class="lista" border="0" align="center">
               <thead>
                     <tr>
                         <th>Codigo</th>
