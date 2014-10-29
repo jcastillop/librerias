@@ -17,8 +17,7 @@ require_once("../../../conexiones/class_cliente.php");
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+        <link href="../../../paquetes/responsive/css/style.css" rel="stylesheet">
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
           <style type="text/css">
     .label {width:100px;text-align:right;float:left;padding-right:10px;font-weight:bold;}
@@ -49,12 +48,11 @@ require_once("../../../conexiones/class_cliente.php");
             <h1 align="center">Guía Remisíon</h1>
             <div class="content">
             
-            <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
-            <table>
+             <table class="mi_tabla">
                 <tr>
                     <td>
                         Sucursal procedencia    : 
-                        <select  name="sucursal" id="sucursal"  style="width:350px" class="input username" onChange="from(document.form1.sucursal.value,'midiv','prueba.php')">
+                        <select  name="sucursal" id="sucursal"  style="width:150px" class="menu">
                             <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new sucursal();
@@ -67,39 +65,19 @@ require_once("../../../conexiones/class_cliente.php");
                                  }
                             ?>
                         </select>
-                        Fecha de inicio de traslado:
+                        &nbsp;&nbsp;Fecha de inicio de traslado:
                         <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
+												 &nbsp;&nbsp;Condición:
+                        <input name="condiciones" class="condiciones" style="width:120px"type="text"  id="condiciones" value="Transacción"  OnFocus="this.blur()"></input>
+                                      
                          </td>
 
                 </tr>
                 <tr>
-                    <td>Sucursal de envio:
-					 <select  name="cliente" id="cliente"  style="width:350px" class="input username">
-                            <option value="">-Seleccione-</option>
-                            <?php
-                                 $tra=new cliente();
-                                 $reg=$tra->get_combo_cliente();
-                                 for ($i=0;$i<count($reg);$i++)
-                                 {
-                             ?>
-                             <option value="<?php echo $reg[$i]["int_cod_cli"];?>"><?php echo $reg[$i]["var_rsoc_cli"];?></option>
-                            <?php
-                                 }
-                            ?>
-                        </select>
-                    R.U.C:
-                    <input name="ruc" class="input username" style="width:200px" type="text" id="ruc" onkeypress="" /></td>
-                </tr>
-                    <tr>
-                    <td>Dirección alternativa:
-                    <input name="direccion_compra" class="input username" style="width:500px" type="text" id="direccion_compra"/>
-                    </td>  
-                </tr>
-                <tr>    
+				
                     <td>
-                    
-                    Vendedor:
-                    <select  name="vendedor" id="vendedor"  style="width:350px" class="input username">
+					 Vendedor:
+                    <select  name="vendedor" id="vendedor"  style="width:200px" class="menu">
                         <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new usuario();
@@ -112,17 +90,41 @@ require_once("../../../conexiones/class_cliente.php");
                                  }
                             ?>
                         </select>
-						 Condición:
-                        <input name="condiciones" class="input username" type="text" style="width:230px" id="condiciones" value="Transacción"  OnFocus="this.blur()"></input>
-                                      </td> 
+					&nbsp;&nbsp;Sucursal de envio:
+					 <select  name="cliente" id="cliente"  style="width:150px" class="menu">
+                            <option value="">-Seleccione-</option>
+                            <?php
+                                 $tra=new cliente();
+                                 $reg=$tra->get_combo_cliente();
+                                 for ($i=0;$i<count($reg);$i++)
+                                 {
+                             ?>
+                             <option value="<?php echo $reg[$i]["int_cod_cli"];?>"><?php echo $reg[$i]["var_rsoc_cli"];?></option>
+                            <?php
+                                 }
+                            ?>
+                        </select>
+                    &nbsp;&nbsp;R.U.C:
+                    <input name="ruc" class="input username" style="width:200px" type="text" id="ruc" onkeypress="" /></td>
+                </tr>
+                    <tr>
+                    <td>Dirección alternativa:
+                    <input name="direccion_compra" class="input username" style="width:500px" type="text" id="direccion_compra"/>
+                    </td>  
+                </tr>
+                <tr>    
+                    <td>
+                    
+                   
+</td> 
                 </tr>
                 <tr>
                     <td>                    
                     Punto de partida:
-                    <input name="punto_partida" class="input username" style="width:400px" type="text" id="punto_partida" ></input>
-                    Punto de llegada:
-                    <input name="punto_llegada" class="input username" style="width:400px" type="text" id="punto_llegada" ></input></td>
+                    <input name="punto_partida" class="input username" style="width:300px" type="text" id="punto_partida" >&nbsp;&nbsp;Punto de llegada:
+                    <input name="punto_llegada" class="input username" style="width:300px" type="text" id="punto_llegada" ></td>
                 </tr>                                                     
+                                                                     
             </table>
             </div>
             <br />
@@ -132,9 +134,11 @@ require_once("../../../conexiones/class_cliente.php");
                 <table>
                     <tr>
                         <td>
-						    Marca y Número de Placa:<input name="transporte_mn" class="input username" style="width:130px" type="text" id="transporte_mn"/>
-                            Nª de constancia de inscripción :<input name="transporte_c" class="input username" style="width:150px" type="text" id="transporte_c"/>
-                            Nº de licencia de conducir:<input name="transporte_l" class="input username" style="width:130px" type="text" id="transporte_l"/>
+						    Marca y Número de Placa:&nbsp;&nbsp;<input name="transporte_mn" class="input username" style="width:200px" type="text" id="transporte_mn"/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nª de constancia de inscripción :&nbsp;&nbsp;<input name="transporte_c" class="input username" style="width:150px" type="text" id="transporte_c"/>
+                             </td>
+                    </tr><tr>
+                        <td>Nº de licencia de conducir:&nbsp;&nbsp;<input name="transporte_l" class="input username" style="width:130px" type="text" id="transporte_l"/>
                            </td>
                     </tr>
                 </table>
@@ -146,13 +150,13 @@ require_once("../../../conexiones/class_cliente.php");
                 <table>
                     <tr>
                         <td>
-						    Razon Social de Transportista:<input name="transportista_rs" class="input username" style="width:400px" type="text" id="transportista_rs"/>
-                            RUC :<input name="transportista_ruc" class="input username" style="width:150px" type="text" id="transportista_ruc"/>
+						    Razon Social de Transportista:&nbsp;&nbsp;<input name="transportista_rs" class="input username" style="width:400px" type="text" id="transportista_rs"/>
+                            &nbsp;&nbsp;RUC :&nbsp;&nbsp;<input name="transportista_ruc" class="input username" style="width:150px" type="text" id="transportista_ruc"/>
                             </td>
                     </tr>
 					 <tr>
                         <td>
-						Dirección:<input name="transportista_dir" class="input username" style="width:400px" type="text" id="transportista_dir"/>
+						Dirección:&nbsp;&nbsp;<input name="transportista_dir" class="input username" style="width:400px" type="text" id="transportista_dir"/>
                            </td>
                     </tr>
                 </table>
@@ -208,7 +212,7 @@ require_once("../../../conexiones/class_cliente.php");
                 <tfoot>
                 	<tr>
                         <td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="enviar" value="Enviar" type="submit"></td>
                         <td><strong>Suma total:</strong> <span id="suma_total">0</span></td>
                     </tr>
                 </tfoot>
