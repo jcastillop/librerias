@@ -52,110 +52,120 @@ require_once("../../../conexiones/class_cliente.php");
             <h1 align="center">Registro de compras</h1>
             <div class="content">
             
-            <div  class="form">
-            <table>
-                <tr>
-                  <td>
-                      <input type="file"  name="file" id="file"/>
-                      <input class="button"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
-                      Fecha de recepción:
-                      <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" />
-                      Fecha de emisión:
-                      <input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:100px" />
-                  </td>  
+            <table class="mi_tabla">
+      
+
+            
+
+
+                 <tr>
+                    <td>
+                        <input type="file" class="enviar" name="file" id="file"/>
+                        <input class="enviar" type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
+                    </td>  
                 </tr>
                 <tr>
                     <td>
-                        Sucursal:
-                        <select  name="sucursal" id="sucursal"   class="menu" onchange="from(document.form1.sucursal.value,'midiv','prueba.php')">
-                          <option value="">-Seleccione-</option>
-                          <?php
+                        Fecha de recepción:&nbsp;&nbsp;<input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:110px" />
+                        &nbsp;&nbsp;Fecha de emisión:&nbsp;&nbsp;<input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:110px" />
+						&nbsp;&nbsp;Fecha de caducidad:&nbsp;&nbsp; <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:110px" />
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Sucursal:   &nbsp;&nbsp;              
+                        <select  name="sucursal" id="sucursal"  style="width:300px" class="menu" >
+                            <option value="">-Seleccione-</option>
+                            <?php
                                  $tra=new sucursal();
                                  $reg=$tra->get_combo_sucursal();
                                  for ($i=0;$i<count($reg);$i++)
                                  {
                              ?>
-                          <option value="<?php echo $reg[$i]["int_cod_suc"];?>"><?php echo $reg[$i]["var_nom_suc"];?></option>
-                          <?php
+                             <option value="<?php echo $reg[$i]["int_cod_suc"];?>"><?php echo $reg[$i]["var_nom_suc"];?></option>
+                            <?php
                                  }
                             ?>
                         </select>
-                        Fecha de caducidad:
-                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username"  />
-                        Descripción:
-                        <input name ="descripcion" type="text" id="descripcion" class="input username"  />
-                      </td> 
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
+                         &nbsp;&nbsp;Descripción:&nbsp;&nbsp;<input name ="descripcion" type="text" id="descripcion" class="input username" style="width:300px" />
+                    </td>
                 </tr> 
-              </table>
+                <tr>
+                   
+                </tr>   
+
+            </table>
             </div>
         
              <br />
-              <h2 align="center">Registro de productos</h2>
-            <div id="frm_usu">
-                <table border="0" class="table_css" align="center">
+             <h2 align="center">Registro de productos</h2>
+            <div id="frm_usu" style="width: 1050px; margin-left: 5px; border-radius: 10px;border: 2px solid #B1B1B1;">
+                <table border="0" align="center">
 
                     <tbody>
            <tr>
-             <td colspan="10">
-            </td>
-             </tr>
-           <tr>
                             <td>Código Barras</td>
-                            <td><input name="cod_bar_tit" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="cod_bar_tit" class="input username" style="width:100px" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
        
-                            <td>Edición</td>
-                            <td><input name="edic_tit" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td>Cantidad</td>
+                            <td><input name="cant_tit" class="input username"style="width:60px" type="text" id="cant_tit" class="required" onkeypress="return tabular(event,this)"/></td>
                    
                             <td>Titulo</td>
-                            <td><input name="tit_tit"   type="text" id="tit_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="tit_tit" class="input username" style="width:100px" type="text" id="tit_tit" class="required" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Autor</td>
-                            <td><input name="aut_tit" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="aut_tit" class="input username" style="width:100px" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
                                 
-                            <td>ISBN</td>
-                            <td><input name="isbn_tit" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
-                        </tr>
-                        <tr>
-                            <td>Nro. Pag</td>
-                            <td><input name="nro_tit" type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
+                            
 
+                             </tr>
+						<tr>
+						<td>Proveedor</td>
+                            <td><input name="prov_tit" class="input username" style="width:100px" type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
+							
+						<td>ISBN</td>
+                            <td><input name="isbn_tit" class="input username" style="width:80px" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Edición</td>
+                            <td><input name="edic_tit" class="input username" style="width:100px" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
+                        <td>Nro. Pag</td>
+                            <td><input name="nro_tit" class="input username" style="width:70px" type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
+
+                           
+						 </tr>
+                        <tr>
                             <td>Editorial</td>
-                            <td><input name="edi_tit" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="edi_tit" class="input username" style="width:100px" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Genero</td>
-                            <td><input name="gen_tit" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="gen_tit" class="input username" style="width:100px" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Pais</td>
-                            <td><input name="pai_tit" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="pai_tit" class="input username" style="width:100px" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
 
+                            
                             <td>Descripción</td>
-                            <td><input name="desc_tit" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="desc_tit" class="input username" style="width:100px" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
 
                         </tr>
-                        <tr>
-                          <td>Proveedor</td>
-                          <td><input name="prov_tit" type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Moneda</td>
-                          <td><input name="mon_tit" type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Precio</td>
-                          <td><input name="pre_tit" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Cantidad</td>
-                          <td><input name="cant_tit"  type="text" id="cant_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                       
+						<tr>
+						<td>Moneda</td>
+                            <td><input name="mon_tit" class="input username" style="width:100px" type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
+
+                            <td>Precio</td>
+                            <td><input name="pre_tit" class="input username" style="width:80px" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
+
+                       </tr>
                     </tbody>
                     <tfoot>
+                        <tr>
+                            
+                        </tr>
                     </tfoot>
                 </table>
             </div>
             	
 			<div align="center" style="height:250px;overflow:scroll;">
-            <table id="grilla" class="lista"  align="center">
+            <table id="grilla" class="lista" border="0" align="center">
               <thead>
                     <tr>
                         <th style="width:50px;">Cod.Barras</th>
@@ -182,7 +192,7 @@ require_once("../../../conexiones/class_cliente.php");
                 <tfoot>
                 	<tr>
                         <td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="enviar" value="Enviar" type="submit"></td>
                         <td><strong>Suma total:</strong> <span id="suma_total">0</span></td>
                     </tr>
                 </tfoot>
