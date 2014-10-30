@@ -53,21 +53,19 @@ require_once("../../../conexiones/class_cliente.php");
             <div class="content">
             
             <div  class="form">
-            <table  class="table_css">
+            <table>
                 <tr>
                   <td>
-                        <input type="file"  name="file" id="file"/>
+                      <input type="file"  name="file" id="file"/>
                       <input class="button"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
                       Fecha de recepción:
                       <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" />
                       Fecha de emisión:
                       <input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:100px" />
-                    </td>  
+                  </td>  
                 </tr>
                 <tr>
                     <td>
-                        
-                        
                         Sucursal:
                         <select  name="sucursal" id="sucursal"   class="menu" onchange="from(document.form1.sucursal.value,'midiv','prueba.php')">
                           <option value="">-Seleccione-</option>
@@ -81,11 +79,12 @@ require_once("../../../conexiones/class_cliente.php");
                           <?php
                                  }
                             ?>
-                  </select>
+                        </select>
                         Fecha de caducidad:
                         <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username"  />
-Descripción:
-<input name ="descripcion" type="text" id="descripcion" class="input username"  /></td> 
+                        Descripción:
+                        <input name ="descripcion" type="text" id="descripcion" class="input username"  />
+                      </td> 
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -105,46 +104,46 @@ Descripción:
              </tr>
            <tr>
                             <td>Código Barras</td>
-                            <td><input name="cod_bar_tit" class="required"  type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="cod_bar_tit" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
        
                             <td>Edición</td>
-                            <td><input name="edic_tit" class="required"  type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="edic_tit" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
                    
                             <td>Titulo</td>
-                            <td><input name="tit_tit"   type="text" id="tit_tit" class="required" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="tit_tit"   type="text" id="tit_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Autor</td>
-                            <td><input name="aut_tit" class="required"  type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="aut_tit" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
                                 
                             <td>ISBN</td>
-                            <td><input name="isbn_tit" class="required"  type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="isbn_tit" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
                         </tr>
                         <tr>
                             <td>Nro. Pag</td>
-                            <td><input name="nro_tit" class="required"  type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="nro_tit" type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Editorial</td>
-                            <td><input name="edi_tit" class="required"  type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="edi_tit" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Genero</td>
-                            <td><input name="gen_tit" class="required"  type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="gen_tit" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Pais</td>
-                            <td><input name="pai_tit" class="required"  type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="pai_tit" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Descripción</td>
-                            <td><input name="desc_tit" class="required"  type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="desc_tit" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
 
                         </tr>
                         <tr>
                           <td>Proveedor</td>
-                          <td><input name="prov_tit" class="required"  type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
+                          <td><input name="prov_tit" type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
                           <td>Moneda</td>
-                          <td><input name="mon_tit" class="required"  type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
+                          <td><input name="mon_tit" type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
                           <td>Precio</td>
-                          <td><input name="pre_tit" class="required"  type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
+                          <td><input name="pre_tit" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
                           <td>Cantidad</td>
-                          <td><input name="cant_tit"  type="text" id="cant_tit" class="required" onkeypress="return tabular(event,this)"/></td>
+                          <td><input name="cant_tit"  type="text" id="cant_tit" onkeypress="return tabular(event,this)"/></td>
                           <td>&nbsp;</td>
                           <td>&nbsp;</td>
                         </tr>

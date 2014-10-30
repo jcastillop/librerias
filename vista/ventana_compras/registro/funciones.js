@@ -51,10 +51,10 @@ $(document).ready(function(){
         },
                         
                        
-                    },
+    },
     submitHandler: function(form) {
         //Variables Cabecera Pedido
-        
+       
         var cod_emp=1;
         var cod_suc = $("#sucursal").val();
         var fec_rec = $("#fecha_recepcion").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
@@ -116,7 +116,7 @@ $(document).ready(function(){
                         '&fec_cad='+fec_cad+
                         '&desc='+desc+
                         '&compra_detalle='+compra_detalle;
-                       
+                      
                         $.ajax({
                           type: "POST",
                           url: "insertar_datos.php",
@@ -145,8 +145,8 @@ $(document).ready(function(){
         }
     });
                 //Carga xls a la tabla
-    $( "#cargarxls" ).click(function() {
-
+    $("#cargarxls").click(function() {
+       
                     
         var formData = new FormData();
         formData.append('file', $('#file').get(0).files[0]);
@@ -250,7 +250,7 @@ $(document).ready(function(){
  
     });
 		
-				
+});			
 				
 			
 			function fn_cantidad(){
