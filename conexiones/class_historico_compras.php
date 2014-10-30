@@ -27,22 +27,19 @@ class ordcomp_cabecera
 		}
 	public function get_ordcomp_cabecera()
 	{
+			$sk=mysql_query("set @a:=0;");
 			$sql="select 
-					d.var_cod_comp_det,
-					d.var_cod_comp_cab,
-					c.date_fec_emi_comp_cab,
-					d.int_cod_suc,
+					@a11:=@a+1 as id,
+					c.var_cod_comp_cab,
+					c.int_cod_suc,
 					z.var_nom_suc,
-					d.int_cod_emp,
+					c.int_cod_emp,
 					e.var_nom_emp,
-					d.int_cod_prov,
-					p.var_rsoc_prov
-					from T_ordcomp_det d 
-					inner join T_sucursal z on z.int_cod_suc=d.int_cod_suc
-					inner join T_proveedor p on p.int_cod_prov=d.int_cod_prov
-					inner join T_empresa e on e.int_cod_emp=d.int_cod_emp
-					inner join T_ordcomp_cab c on c.var_cod_comp_cab=d.var_cod_comp_cab
-					order by var_cod_comp_det desc
+					c.date_fec_emi_comp_cab
+					from T_ordcomp_cab  c
+					inner join T_sucursal z on z.int_cod_suc=c.int_cod_suc
+					inner join T_empresa e on e.int_cod_emp=c.int_cod_emp
+					order by var_cod_comp_cab desc
 		
 		";	
 		
