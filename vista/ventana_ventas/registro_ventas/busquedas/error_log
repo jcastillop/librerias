@@ -89,19 +89,3 @@
 [10-Dec-2013 11:24:27] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/avicolad/public_html/ventana_ventas/datos/busquedas/autoCompleteMain.php on line 24
 [22-Jan-2014 18:06:59] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/avicolad/public_html/ventana_ventas/datos/busquedas/autoCompleteMain.php on line 12
 [28-Jan-2014 12:01:32] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/avicolad/public_html/ventana_ventas/datos/busquedas/autoCompleteMain.php on line 12
-[30-Oct-2014 14:34:49 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:34:51 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:35:00 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:35:10 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:35:12 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:35:13 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:36:38 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:36:44 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:36:45 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:36:47 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:37:09 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:39:40 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:40:21 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:40:22 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:40:53 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80
-[30-Oct-2014 14:40:54 America/Denver] PHP Fatal error:  Class 'Conectar' not found in /home1/sbccperu/public_html/conexiones/class_cliente.php on line 80

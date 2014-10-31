@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once("../../../conexiones/class_sucursal.php");
 require_once("../../../conexiones/conexion.php");
 require_once("../../../conexiones/class_usuario.php");
@@ -8,16 +8,8 @@ require_once("../../../conexiones/class_cliente.php");
   
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-<?php
-header('Content-Type: text/html; charset=UTF-8'); 
-?>
         <title>jQuery - agregar y eliminar filas en una tabla</title>
         <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     
@@ -61,21 +53,19 @@ header('Content-Type: text/html; charset=UTF-8');
             <div class="content">
             
             <div  class="form">
-            <table  class="table_css">
+            <table>
                 <tr>
                   <td>
-                        <input type="file"  name="file" id="file"/>
+                      <input type="file"  name="file" id="file"/>
                       <input class="button"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
                       Fecha de recepción:
                       <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" />
                       Fecha de emisión:
                       <input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:100px" />
-                    </td>  
+                  </td>  
                 </tr>
                 <tr>
                     <td>
-                        
-                        
                         Sucursal:
                         <select  name="sucursal" id="sucursal"   class="menu" onchange="from(document.form1.sucursal.value,'midiv','prueba.php')">
                           <option value="">-Seleccione-</option>
@@ -89,11 +79,12 @@ header('Content-Type: text/html; charset=UTF-8');
                           <?php
                                  }
                             ?>
-                  </select>
+                        </select>
                         Fecha de caducidad:
                         <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username"  />
-Descripción:
-<input name ="descripcion" type="text" id="descripcion" class="input username"  /></td> 
+                        Descripción:
+                        <input name ="descripcion" type="text" id="descripcion" class="input username"  />
+                      </td> 
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -119,7 +110,7 @@ Descripción:
                             <td><input name="edic_tit" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
                    
                             <td>Titulo</td>
-                            <td><input name="tit_tit" type="text" id="tit_tit" onkeypress="return tabular(event,this)"/></td>
+                            <td><input name="tit_tit"   type="text" id="tit_tit" onkeypress="return tabular(event,this)"/></td>
 
                             <td>Autor</td>
                             <td><input name="aut_tit" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
@@ -207,4 +198,3 @@ Descripción:
      
     </body>
 </html>
-

@@ -166,7 +166,7 @@ $(document).ready(function() {
     <div class="container_">
     
 		<section>
-			<h1>VENTAS<span></span></h1>
+			<h1>GUÍA<span></span></h1>
 
 			
             <div class="tablas"  align="center" >
@@ -176,7 +176,6 @@ $(document).ready(function() {
 					<tr class="cabecera" >
 						
 						
-                        <th >#</th>
                         <th >N°Documento</th>
                         <th >T.Documento</th>
                         <th >Suc. Procedencia</th>
@@ -192,8 +191,7 @@ $(document).ready(function() {
 					for ($i=0;$i<count($reg);$i++)
 					{
 				 ?>  
-					<tr>    
-                    	<td><?php echo $reg[$i]["id"];?></td>              
+					<tr>                     
 						<td><?php echo '00'.$reg[$i]["var_cod_ser"]."-".$reg[$i]["var_cod_fact_cab"];?></td> 
                         <td><?php echo $reg[$i]["int_tip_doc_fact"];?></td>
                         <td><?php echo $reg[$i]["var_nom_suc"];?></td>

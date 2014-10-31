@@ -1,6 +1,7 @@
 <?php
 require_once("../../../conexiones/class_sucursal.php");
 require_once("../../../conexiones/class_usuario.php");
+require_once("../../../conexiones/class_cliente.php");
 require_once("../../../conexiones/conexion.php");
 ?>
 
@@ -8,11 +9,10 @@ require_once("../../../conexiones/conexion.php");
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>VENTAS</title>
-        <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.j"></script>
-        <script type="text/javascript" src="busquedas/js/jquery-1.4.2.js"></script>
+        <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script language="javascript" type="text/javascript" src="funciones.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        
+        <script type="text/javascript" src="busquedas/js/jquery-1.4.2.j"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
      
@@ -42,8 +42,6 @@ $().ready(function() {
 	$("#cliente").result(function(event, data, formatted) {
 		$("#clienteID").val(data[1]);
 		$("#ruc").val(data[2]);
-		$("#direccion").val(data[3]);
-		$("#distrito").val(data[4]);
 	
 	});
 });
@@ -67,7 +65,7 @@ $(document).ready(function () {
 			  
 
 function Abrir_ventana (pagina) {
-var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=525, top=15, left=140";
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=365, top=85, left=140";
 window.open(pagina,"",opciones);
 }
 function detectar_tecla(){
@@ -85,51 +83,25 @@ function detectar_tecla(){
 }
 function validar_cliente()
 {
-	
-	var factura = document.getElementById("tipo_doc").value;
-
-	
-	
 var id_cliente=document.getElementById("clienteID").value ;
-
-
 if(id_cliente=="")
 {
 	document.getElementById("ruc").disabled=true;	
 var r = confirm("CLIENTE NO EXISTE, DESEA AGREGAR UNO NUEVO!");
-
 if (r == true) {
    Abrir_ventana('cliente_nuevo.php');
    document.getElementById("cliente").value='';
    	document.getElementById("cliente").style.borderColor = "#ff0000";
 	document.getElementsByName('cliente')[0].placeholder='Ingrese Correctamente un Cliente ';
 	document.getElementById("ruc").disabled=false;
-
 	
-} 
-
- else{
-	 if (factura==2)
-	 {
-		 alert('NO SE PUEDE CREAR UNA FACTURA SIN CLIENTE')
-		 document.getElementById("cliente").style.borderColor = "#ff0000";
-		 document.getElementById("cliente").value="";
-   
-	document.getElementsByName('cliente')[0].placeholder='Ingrese Correctamente un Cliente ';
-	document.getElementById("ruc").disabled=true;
-	 }
-	 else
-	 {
-	document.getElementById("clienteID").value="999";
-	document.getElementById("cliente").value="PRUEBA";
+} else {
+	document.getElementById("clienteID").value="";
+	document.getElementById("cliente").value="";
    
 	document.getElementById("ruc").disabled=false;
-	document.getElementById("cliente").style.borderColor = "#0066CC";
-	//document.getElementById("cliente").style.borderColor = "#ff0000";
-	//document.getElementsByName('cliente')[0].placeholder='Ingrese Correctamente un Cliente ';
-
-	 }
-
+	document.getElementById("cliente").style.borderColor = "#ff0000";
+	document.getElementsByName('cliente')[0].placeholder='Ingrese Correctamente un Cliente ';
 }	
 }
 else
@@ -203,7 +175,7 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                         </select>
                         Fecha:
                         <input name ="fecha_registro" type="text" id="datepicker" class="fecha"  />
-                        Condicion:
+                        Condición:
                         <input name="condiciones" class="condiciones" type="text"  id="condiciones" value="Transaccion"  readonly="readonly"/>
                     </td>
 
@@ -211,14 +183,14 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                 <tr>
              
                     <td>Cliente:
-                    <input name="cliente" class="cliente"  type="text" id="cliente"  onKeyDown ="detectar_tecla (event)"  />
+                    <input name="cliente" class="cliente"  type="text" id="cliente"  onKeyDown ="detectar_tecla (event)" onkeypress="return tabular(event,this)" />
                    
                     R.U.C:
-                    <input name="ruc" class="input username" style="width:200px" type="text"  id="ruc"  onFocus="validar_cliente()" /></td>
+                    <input name="ruc" class="input username" style="width:200px" type="text"  id="ruc" onkeypress="" onFocus="validar_cliente()" /></td>
                 </tr>
                 <tr>
-                    <td>Direccion:
-                      <input name="direccion" class="input username"  type="text" id="direccion"  />
+                    <td>Dirección:
+                    <input name="direccion" class="input username"  type="text" id="direccion"  />
                     Distrito:
                     <input name="distrito" class="input username"  type="text" id="distrito" ></input>
                      
@@ -249,14 +221,14 @@ document.getElementById("cliente").style.borderColor = "#FFF";
 
                     <tbody>
                         <tr>
-                            <td>Codigo</td>
+                            <td>Código</td>
                             <td><input name="valor_ide"  style="width:100px" type="text" id="valor_ide" size="10" onkeypress="return tabular(event,this)"/></td>
        
-                            <td>Descripcion</td>
-                            <td><input name="valor_uno" style="width:382px" type="text" id="valor_uno" size="50" class='input username'/></td>
+                            <td>Descripción</td>
+                            <td><input name="valor_uno" style="width:382px" type="text" id="valor_uno" size="50"/></td>
                    
                             <td>Precio</td>
-                            <td><input name="valor_dos" style="width:100px" type="text"  id="valor_dos" size="10"  class='input username'/>
+                            <td><input name="valor_dos" style="width:100px" type="text" id="valor_dos" size="10"/>
                                 <input type="hidden" id="tituloID" name="tituloID"></input>
                             </td>
                                 
@@ -272,13 +244,13 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                     </tfoot>
                 </table>
             </div>
-            	
+<br />            	
 			<div align="center" style="height:250px;overflow:scroll;">
             <table id="grilla" class="lista" border="0" align="center">
               <thead>
                     <tr>
                         <th>Codigo</th>
-                        <th>Descripcion</th>
+                        <th>Descripción</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
                         <th>Descuento</th>
@@ -292,7 +264,7 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                 <tfoot>
                 	<tr>
                     	<td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td colspan="2">&nbsp;</td>
+                      <td colspan="2">&nbsp;</td>
                     </tr>
                 	<tr>
                 	  <td colspan="5" align="center"><input id="submit" name="Submit" class="enviar" value="GUARDAR DATOS" type="submit" /></td>

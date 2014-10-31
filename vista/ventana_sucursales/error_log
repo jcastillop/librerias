@@ -46,11 +46,3 @@
 [21-Oct-2014 16:44:00 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
 [22-Oct-2014 14:37:39 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
 [22-Oct-2014 14:37:39 America/Denver] PHP Notice:  Undefined index: id in /home1/sbccperu/public_html/vista/ventana_sucursales/eliminar_sucursales.php on line 92
-[29-Oct-2014 21:34:58 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 80
-[29-Oct-2014 21:34:58 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 84
-[29-Oct-2014 21:35:07 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 80
-[29-Oct-2014 21:35:07 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 84
-[30-Oct-2014 11:01:07 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 80
-[30-Oct-2014 11:01:07 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 84
-[30-Oct-2014 15:58:40 America/Denver] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 80
-[30-Oct-2014 15:58:40 America/Denver] PHP Notice:  Undefined property: sucursal::$usuario in /home1/sbccperu/public_html/conexiones/class_sucursal.php on line 84
