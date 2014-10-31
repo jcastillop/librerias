@@ -12,11 +12,13 @@ for ($i=0;$i<count($reg);$i++)
 {
        
 
-	$cid = $reg[$i]["int_cod_cli"];
+$cid = $reg[$i]["int_cod_cli"];
 	$cname = $reg[$i]["var_rsoc_cli"];
 	$ruc = $reg[$i]["var_ruc_cli"];
+	$dir = $reg[$i]["var_dir_cli"];
+	$dis = $reg[$i]["var_dist_cli"];
 	
-		echo "$cname|$cid|$ruc\n";
+		echo "$cname|$cid|$ruc|$dir|$dis\n";
 
 }
 ?>

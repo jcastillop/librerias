@@ -27,7 +27,10 @@ class guia_cabecera
 		}
 	public function get_guia_cabecera()
 	{
+
+		$sk=mysql_query("set @a:=0;");
 		$sql="select 
+				@a11:=@a+1 as id,
 			   	g.var_cod_guia_cab,
 				g.var_cod_ser,
 				g.int_cod_cli,

@@ -197,6 +197,7 @@ $(document).ready(function() {
 			<table id="example"  class="display" cellspacing="0" width="100%">
 				<thead>
 					<tr class="cabecera" >
+<th >#</th>
 						
 						
                         <th style=" width:200px;" >N.Documento</th>
@@ -218,7 +219,8 @@ $(document).ready(function() {
 					for ($i=0;$i<count($reg);$i++)
 					{
 				 ?>  
-					<tr>                     
+					<tr>     
+<td><?php echo $reg[$i]["id"];?></td>                  
 						<td><?php echo '00'.$reg[$i]["var_cod_ser"]."-".$reg[$i]["var_cod_guia_cab"];?></td> 
 						<td><?php echo $reg[$i]["var_rsoc_cli"];?></td>
                         <td><?php echo $reg[$i]["var_pun_part_guia_cab"];?></td>

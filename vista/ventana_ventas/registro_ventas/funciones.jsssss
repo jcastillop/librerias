@@ -225,8 +225,52 @@
  
                 });
 
-                
-                
+                $("#cliente").autocomplete({
+                    source:'autocompletar_clientes.php',
+                    minLength:1,
+                    focus: function( event, ui ) {
+                        $( "#cliente" ).val(ui.item.label);
+                        return false;
+                    },
+                    select: function( event, ui ) {
+                        $( "#cliente" ).val( ui.item.label );
+                        $("#clienteID").val(ui.item.id);
+                        
+                    return false;
+                    }
+                });
+
+                $("#cliente").change(function() {
+                   
+                    
+                    $.ajax({
+                        type: "GET",
+                        url: "clientes_buscar.php",
+                        data: "id=" + $("#cliente").val(),
+                        success: function(datos){
+
+                       
+                        var res = jQuery.parseJSON(datos);
+                     
+                        $("#ruc").val(res.ruc);
+                        $("#id").val(res.id);
+                        $("#direccion").val(res.direccion);
+                        $("#distrito").val(res.distrito);
+                        $("#telefono").val(res.telefono);
+                        $("#referencia").val(res.referencia);
+                        $("#direccion_compra").focus();
+                        
+                        },
+                        error: function(datos) {
+                        alert("Data not founds");
+                        }
+                    });
+                    
+                });
+
+       
+       
+      
             });
 				
 				
