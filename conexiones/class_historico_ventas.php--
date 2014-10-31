@@ -16,31 +16,34 @@
 <?php
 require("conexion.php");
 //******************************************************************
-class ordcomp_cabecera
+class factura_cabecera
 {
 	//private $titulos=array();
-	private $ordcomp_cabecera;
+	private $factura_cabecera;
 	
 	public function __construct()
 		{
-			$this->ordcomp_cabecera=array();
+			$this->factura_cabecera=array();
 		}
-	public function get_ordcomp_cabecera()
+	public function get_factura_cabecera()
 	{
-			
-			$sk=mysql_query("set @a:=0;");
 			$sql="select 
-					@a11:=@a+1 as id,
-					c.var_cod_comp_cab,
-					c.int_cod_suc,
-					z.var_nom_suc,
-					c.int_cod_emp,
-					e.var_nom_emp,
-					c.date_fec_emi_comp_cab
-					from T_ordcomp_cab  c
-					inner join T_sucursal z on z.int_cod_suc=c.int_cod_suc
-					inner join T_empresa e on e.int_cod_emp=c.int_cod_emp
-					order by var_cod_comp_cab desc
+					f.var_cod_fact_cab,
+					f.var_cod_ser,
+					case when f.int_tip_doc_fact=1 then 'Boleta' ELSE 'Factura' END int_tip_doc_fact,
+					f.int_cod_suc,
+					z.var_nom_suc,				
+					f.int_cod_cli,
+					c.var_rsoc_cli,
+					f.int_cod_usu,
+					u.var_nom_usu,
+					date(f.date_fecenv_fact_cab) as date_fecenv_fact_cab
+					from T_factura_cabecera f
+					inner join T_serie s on s.var_cod_ser=f.var_cod_ser	
+					inner join T_sucursal z on z.int_cod_suc=f.int_cod_suc
+					inner join T_usuario u on u.int_cod_usu=f.int_cod_usu
+					inner join T_cliente c on c.int_cod_cli=f.int_cod_cli
+				order by var_cod_fact_cab desc
 		
 		";	
 		
@@ -48,9 +51,9 @@ class ordcomp_cabecera
 		
 		while ($reg=mysql_fetch_assoc($res))
 		{
-			$this->ordcomp_cabecera[]=$reg;
+			$this->factura_cabecera[]=$reg;
 		}
-			return $this->ordcomp_cabecera;
+			return $this->factura_cabecera;
 	}
 	
 	/*

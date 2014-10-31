@@ -27,7 +27,11 @@ class factura_cabecera
 		}
 	public function get_factura_cabecera()
 	{
+		
+		$sk=mysql_query("set @a:=0;");
+		
 			$sql="select 
+					@a11:=@a+1 as id,
 					f.var_cod_fact_cab,
 					f.var_cod_ser,
 					case when f.int_tip_doc_fact=1 then 'Boleta' ELSE 'Factura' END int_tip_doc_fact,

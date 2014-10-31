@@ -175,11 +175,10 @@ $(document).ready(function() {
 				<thead>
 					<tr class="cabecera" >
 						
-						
+				    	<th ></th>
                         <th >N°Documento</th>
                         <th style="width: 200px;">Sucursal</th>
                         <th style="width: 200px;">Empresa</th>
-                        <th style="width: 300px;">Proveedor</th>
                         <th style="width: 300px;">Fecha Emis.</th>
 					</tr>
 				</thead>
@@ -190,11 +189,11 @@ $(document).ready(function() {
 					for ($i=0;$i<count($reg);$i++)
 					{
 				 ?>  
-					<tr>                     
+					<tr>    
+						<td><?php echo $reg[$i]["id"];?></td>                  
 						<td><?php echo $reg[$i]["var_cod_comp_cab"];?></td>
                         <td><?php echo $reg[$i]["var_nom_suc"];?></td>
                         <td><?php echo $reg[$i]["var_nom_emp"];?></td>
-						<td><?php echo $reg[$i]["var_rsoc_prov"];?></td>
                         <td><?php echo $reg[$i]["date_fec_emi_comp_cab"];?></td>
 
 					</tr>

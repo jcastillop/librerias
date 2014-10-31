@@ -13,9 +13,7 @@
 	$query_call_spcompcab = "CALL proc_insertar_comp_cab(".$_cod_suc.",".$_cod_emp.",'"
 	                                                                   .$_desc."','".$_fec_rec."','".$_fec_emi."','".$_fec_cad."','"
 	                                                                   .$_ped_usu."',@n_Flag, @c_msg, @cod_generado)";
-	echo $query_call_spcompcab."\n";
 	mysql_query($query_call_spcompcab,Conectar::con());
-	
 	
 	$array_flag_com_cab = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
 	$array_codgen_com_cab = mysql_fetch_array(mysql_query("Select @cod_generado",Conectar::con()));
@@ -60,9 +58,7 @@
 		
 		if ($codigo_flag_detalle==0) {
 		$contador=$contador+1; 
-		echo "Bueno".$query_call_spcompdet."\n";
-   		}else{
-   		echo "Malo".$query_call_spcompdet."\n";
+		
    		};
 
 
