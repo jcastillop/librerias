@@ -114,7 +114,7 @@ function formulario(f) {
           <td><input name="desc_edit" type="text" maxlength="100" style="width: 400px;" class="input username" onKeyPress="return tab(event,this)" /></td>	
         </tr>
         <tr>
-          <td><input name="estado" id="estado" type="hidden" value="1" class="input username"  /></td>
+          <td><input name="est_edit" id="est_edit" type="hidden" value="1" class="input username"  /></td>
         </tr>
       </table>
     </div>
