@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=UTF-8');
 var newwindow;
 function poptastic(url)
 {
-	newwindow=window.open(url,'name','height=400,width=623,left=100,padding=500');
+	newwindow=window.open(url,'name','height=400,width=623,left=400');
 	if (window.focus) {newwindow.focus()}
 }
 var newwindow;
