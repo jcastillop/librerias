@@ -18,7 +18,7 @@ class guia_cabecera
 	{
 		$sql="select 
 			 	g.var_cod_guia_cab,
-				s.var_cod_ser,
+				g.var_cod_ser,
 				g.int_cod_suc,
 				z.var_nom_suc,
 				g.int_cod_emp,
@@ -52,8 +52,7 @@ class guia_cabecera
 				g.var_trans_ruc_guia_cab,
 				g.var_trans_dir_guia_cab,
 				g.date_fecenv_guia_cab
-				from T_guia_cabecera g
-				inner join T_serie s on s.var_cod_ser=g.var_cod_ser			
+				from T_guia_cabecera g			
 				inner join T_sucursal z on z.int_cod_suc=g.int_cod_suc
 				inner join T_empresa e on e.int_cod_emp=g.int_cod_emp
 				inner join T_cliente c on c.int_cod_cli=g.int_cod_cli
