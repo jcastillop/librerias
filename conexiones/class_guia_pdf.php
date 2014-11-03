@@ -75,7 +75,7 @@ class guia_cabecera
 	
 	public function get_guia_detalle_por_id($id)
 	{
-		$sql="select d.var_cod_guia_det, d.int_cod_tit,t.var_nom_tit,d.int_cant_guia_det,d.dec_vtotal_guia_det  from T_guia_detalle d
+		$sql="select d.var_cod_guia_det, d.int_cod_tit,t.var_nom_tit,d.int_cant_guia_det,d.dec_pvent_guia_det,d.dec_vtotal_guia_det  from T_guia_detalle d
 INNER JOIN T_titulos t on  t.int_cod_tit=d.int_cod_tit where d.var_cod_guia_cab='$id'";		
 		 
 		$res=mysql_query($sql,Conectar::con());
