@@ -81,8 +81,6 @@ function formulario(f) {
 	f.ap_pat.focus(); return false; } 
 	if (f.ap_mat.value   == '') { alert ('El campo Apellido Materno esta vacío, ingrese un dato porfavor!!');  
 	f.ap_mat.focus(); return false; } 
-	if (f.estado.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.estado.focus(); return false; } 
  return true; } 
  
  
