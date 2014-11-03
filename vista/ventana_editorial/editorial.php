@@ -70,9 +70,7 @@ function validar(e) { // 1
 } 
 function formulario(f) {
 	if (f.nom_edit.value   == '') { alert ('El campo Nombre esta vacío, ingrese un dato porfavor!!');  
-	f.nom_edit.focus(); return false; }   
-	if (f.est_edit.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.est_edit.focus(); return false; }
+	f.nom_edit.focus(); return false; } 
 	
  return true; } 
  
@@ -116,12 +114,7 @@ function formulario(f) {
           <td><input name="desc_edit" type="text" maxlength="100" style="width: 400px;" class="input username" onKeyPress="return tab(event,this)" /></td>	
         </tr>
         <tr>
-          <td>Estado: </td>
-          <td><select class="input username" style="width: 160px;" name="est_edit" id="est_edit" onKeyPress="return tab(event,this)">
-         	<option>--Seleccione--</option>
-            <option value="1">Activo</option>
-            <option value="2">Inactivo</option>            
-          </select></td>
+          <td><input name="estado" id="estado" type="hidden" value="1" class="input username"  /></td>
         </tr>
       </table>
     </div>
