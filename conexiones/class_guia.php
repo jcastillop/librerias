@@ -44,8 +44,7 @@ class guia_cabecera
 				g.int_est_guia_cab,
 				date(g.date_fecenv_guia_cab) as date_fecenv_guia_cab,
 				g.date_fecadd_guia_cab
-				from T_guia_cabecera g
-				inner join T_serie s on s.var_cod_ser=g.var_cod_ser	
+				from T_guia_cabecera g	
 				inner join T_usuario u on u.int_cod_usu=g.int_cod_usu
 				inner join T_cliente c on c.int_cod_cli=g.int_cod_cli
 				inner join T_tipo_movimiento m on m.int_cod_mov=g.int_cod_mov
