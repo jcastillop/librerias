@@ -160,7 +160,7 @@ function formulario(f) {
           <td><input name="ap_mat" type="text" maxlength="50" class="input username" style="width: 200px;"  onKeyPress="return validar(event)" /></td>
         </tr>
         <tr>
-          <td><input name="estado" id="estado" type="hidden" value="1" class="input username" style="width: 150px;" onKeyPress="return tab(event,this)" /></td>
+          <td><input name="estado" id="estado" type="hidden" value="1" class="input username"  /></td>
         </tr>
       </table>
     </div>
