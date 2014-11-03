@@ -80,6 +80,8 @@
                         pedido_detalle = pedido_detalle + 
                             '{"codigo_libro":' 
                             + document.getElementById('grilla').rows[i].cells[0].childNodes[1].value + ", "
+                            + '"precio_libro":'
+                            + document.getElementById('grilla').rows[i].cells[2].childNodes[0].value + ", "                            
                             + '"cantidad_libro":'
                             + document.getElementById('grilla').rows[i].cells[3].childNodes[0].value + ", "
                              + '"valor_impuesto":'

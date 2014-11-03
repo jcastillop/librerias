@@ -27,9 +27,12 @@ $_trans_dir=$_POST['trans_dir'];
 $fecha_hora_actual =Fechas::mifechagmt(time(),-5);
 $array = json_decode($_POST['pedido_detalle']);
 //creando query del PA insertar pedido cabecera
+
 $query_call_spcabped = "CALL proc_insertar_pedi_cab(".$_cod_emp.",".$_cod_suc.","
 	                                                                   .$_cod_cli.",'".$_fec_pedido."','"
 	                                                                   .$_ped_usu."',@n_Flag, @c_msg, @cod_generado)";
+
+
 
 
 //Ejecucion del Procedimiento Insertar Cabecera
@@ -47,7 +50,9 @@ $query_call_spcabgui = "CALL proc_insertar_guia_cab(".$_cod_suc.",".$_cod_emp.",
                                                                        .$_cod_usu.",'".$_dist_gui."',".$_turn_gui.",'".$_telef_gui."','"
                                                                        .$_tran_mn."','".$_tran_c."','".$_tran_l."','".$_trans_rs."','".$_trans_ruc."','".$_trans_dir."','"
                                                                        .$_fec_pedido."','".$_ped_usu."',@n_Flag, @c_msg, @cod_generado1)";
+
 mysql_query($query_call_spcabgui,Conectar::con());
+
 $codigo_msg = "";
 $array_codgen1 = mysql_fetch_array(mysql_query("Select @cod_generado1",Conectar::con()));
 $codigo_gen1 = $array_codgen1["@cod_generado1"]; 
@@ -78,7 +83,7 @@ $var_ped_detalle=$var_ped_detalle.'(lpad("'.$var_cod_ped_det.'",6,"0"),'
    $query_call_sppedd = "CALL proc_insertar_pedi_det(".$var_ped_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
  
-
+   
    mysql_query($query_call_sppedd,Conectar::con());
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
@@ -88,7 +93,8 @@ if ($codigo_flag==0) {
    $var_guia_detalle="'";
    for($i=0;$i<count($array);$i++){ 
        $var_cod_guia_det=$i+1;
-	   $codigo_libro=$array[$i]->codigo_libro;
+	     $codigo_libro=$array[$i]->codigo_libro;
+       $precio_libro=$array[$i]->precio_libro;
        $cantidad_libro = $array[$i]->cantidad_libro;
        $valor_impuesto = $array[$i]->valor_impuesto;
        $valor_descuento = $array[$i]->valor_descuento;
@@ -97,7 +103,7 @@ if ($codigo_flag==0) {
        $costo_total_libro = $array[$i]->costo_total_libro;
 $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
        										  .'"'.$codigo_gen1.'"'.", ".$_cod_ser.", ".$_cod_suc.", ".$_cod_emp.", ". 
-       	                                       $codigo_libro.", ".$cantidad_libro.", ".$porcentaje_impuesto.", ".$valor_impuesto. ", ".
+       	                                       $codigo_libro.", ".$cantidad_libro.", ".$precio_libro.", ".$porcentaje_impuesto.", ".$valor_impuesto. ", ".
        	                                       $costo_total_libro. ", ".$porcentaje_descuento.",".$valor_descuento.", ".$costo_total_libro.
        	                                       ',"'.$_ped_usu.'","'.$fecha_hora_actual.'")';
 
