@@ -117,6 +117,7 @@ function formulario(f) {
           <td><input name="est_edit" id="est_edit" type="hidden" value="1" class="input username"  /></td>
         </tr>
       </table>
+      <br>
     </div>
     <!--END CONTENT-->
     
