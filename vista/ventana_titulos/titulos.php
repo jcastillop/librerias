@@ -86,8 +86,6 @@ function formulario(f) {
 	f.genero.focus(); return false; } 
 	if (f.pais.value   == '--Seleccione--') { alert ('El campo País esta vacío, ingrese un dato porfavor!!');  
 	f.pais.focus(); return false; } 
-	if (f.estado.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.estado.focus(); return false; } 
 	
  return true; } 
  
@@ -203,14 +201,10 @@ function formulario(f) {
           <input name="pre_sugerido" type="text" maxlength="10" style="width: 120px;" class="input username" onkeyUp="return decimal(this);" /></td>	
         </tr>
         <tr>
-          <td>Estado: </td>
-          <td><select class="input username" style="width: 155px;" name="estado" id="estado" onKeyPress="return tab(event,this)">
-          	<option>--Seleccione--</option>
-            <option value="1">Activo</option>
-            <option value="2">Inactivo</option>            
-          </select>
-          Cod.Barra: 
-          <input name="cod_barra" type="text" maxlength="80" style="width: 160px;" class="input username" onKeyPress="return tab(event,this)" /></td>	
+          <td><input name="estado" id="estado" type="hidden" value="1" class="input username"  />
+          Cod.Barra: </td>
+          <td>
+          <input name="cod_barra" type="text" maxlength="80" style="width: 200px;" class="input username" onKeyPress="return tab(event,this)" /></td>	
         </tr>
       </table>
     </div>
