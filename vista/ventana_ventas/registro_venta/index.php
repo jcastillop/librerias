@@ -73,7 +73,7 @@ require_once("../../../conexiones/conexion.php");
                         Fecha:
                         <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
                         Condición:
-                        <input name="condiciones" class="input username" type="text" style="width:150px" id="condiciones" value="Transacción"  OnFocus="this.blur()"></input>
+                        <input name="condiciones" class="input username" type="text" style="width:150px" id="condiciones" value="Venta"  OnFocus="this.blur()"></input>
                     </td>
 
                 </tr>
