@@ -142,8 +142,6 @@ function formulario(f) {
 	f.provincia.focus(); return false; } 
 	if (f.telf.value   == '') { alert ('El campo Teléfono esta vacío, ingrese un dato porfavor!!');  
 	f.telf.focus(); return false; }
-	if (f.estado.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.estado.focus(); return false; }
 
 	
  return true; } 
@@ -246,13 +244,7 @@ function formulario(f) {
         <tr>
           <td>Telefono :</td>
           <td><input name="telf" id="telf" maxlength="15" style="width: 160px;" type="text" class="input username" onkeyUp="return ValNumero(this);" />
-          Estado: 
-          <select class="input username" style="width: 160px;" name="estado" id="estado" onKeyPress="return tab(event,this)">
-          	<option>--Seleccione--</option>
-            <option value="1">Activo</option>
-            <option value="2">Inactivo</option>
-            
-          </select></td>
+          <input name="estado" id="estado" type="hidden" value="1" class="input username"  /></td>
         </tr>        
       </table>
     </div>
