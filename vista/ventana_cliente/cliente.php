@@ -141,8 +141,6 @@ function formulario(f) {
    }  
 	if (f.rsoc.value   == '') { alert ('El campo Razon Social esta vacío, ingrese un dato porfavor!!');  
 	f.rsoc.focus(); return false; }  
-	if (f.estado.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.estado.focus(); return false; }
   if (f.ruc.value  != '' && f.ruc.value.length < 11) { alert ('El campo RUC tiene menos de 11 Digitos, Complete los digitos porfavor!!');
   f.ruc.focus(); return false; }
 	if (f.pais.value   == '--Seleccione--') { alert ('El campo País esta vacío, ingrese un dato porfavor!!');  
@@ -205,14 +203,10 @@ function formulario(f) {
           <td><input name="rsoc" type="text" maxlength="50" class="input username" style="width: 400px;" id="rsoc"  onKeyPress="return tab(event,this)" /></td>
         </tr>
         <tr>
-        <td>Estado: </td>
-          <td><select class="input username"  name="estado" style="width: 155px;" id="estado" onKeyPress="return tab(event,this)">
-          		<option>--Seleccione--</option>
-                <option value="1">Activo</option>
-                <option value="2">Inactivo</option>
-            </select>
-          RUC: 
-          <input name="ruc" type="text" maxlength="11" class="input username" style="width: 180px;" id="ruc" onkeyUp="return ValNumero(this);"   /></td> 	
+        <td><input name="estado" id="estado" type="hidden" value="1" class="input username" />
+        	RUC: </td>
+            <td>
+          	<input name="ruc" type="text" maxlength="11" class="input username" style="width: 180px;" id="ruc" onkeyUp="return ValNumero(this);" /></td> 	
          </tr>
         <tr>
          <td>País: </td>
