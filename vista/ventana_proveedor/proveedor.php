@@ -145,9 +145,6 @@ function formulario(f) {
 	f.direccion.focus(); return false; }
 	if (f.telefono.value   == '') { alert ('El campo Teléfono esta vacío, ingrese un dato porfavor!!');  
 	f.telefono.focus(); return false; }
-	if (f.estado.value   == '--Seleccione--') { alert ('El campo Estado esta vacío, ingrese un dato porfavor!!');  
-	f.estado.focus(); return false; }
-
 	
  return true; } 
 </script>
@@ -246,12 +243,7 @@ function formulario(f) {
         <tr>
           <td>Fax: </td>
           <td><input name="fax" type="text" maxlength="15" style="width: 160px;" class="input username" onkeyUp="return ValNumero(this);" />
-          Estado:
-          <select class="input username" name="estado" style="width: 155px;"	 id="estado" onKeyPress="return tab(event,this)">
-          		<option>--Seleccione--</option>
-                <option value="1">Activo</option>
-                <option value="2">Inactivo</option>  
-              </select></td>
+          <input name="estado" id="estado" type="hidden" value="1" class="input username"  /></td>
         </tr>
       </table>
     </div>
