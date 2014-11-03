@@ -347,7 +347,8 @@ $tra= new guia_cabecera();
 						$pdf->Cell(25, 5,$reg[$i]["int_cod_tit"], 1,0, 'C');
 						$pdf->Cell(25, 5,$reg[$i]["int_cant_guia_det"], 1,0, 'C');
 						$pdf->Cell(85, 5,$reg[$i]["var_nom_tit"], 1,0, 'C');
-						$pdf->Cell(25, 5,'0', 1,0, 'C');
+						$pdf->Cell(25, 5,$reg[$i]["dec_pvent_guia_det"], 1,0, 'C');
+						
 						$pdf->Cell(25, 5,$reg[$i]["dec_vtotal_guia_det"], 1,1, 'C');
 					}
 
