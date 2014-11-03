@@ -92,8 +92,11 @@ header('Content-Type: text/html; charset=UTF-8');
                   </select>
                         Fecha de caducidad:
                         <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username"  />
-Descripción:
-<input name ="descripcion" type="text" id="descripcion" class="input username"  /></td> 
+			Descripción:
+			<input name ="descripcion" type="text" id="descripcion" class="input username"  />
+			Condición:
+                        <input name="condiciones" type="text" class="input username"  id="condiciones" style="width:100px" value="Compra"></input>
+			</td> 
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
