@@ -1,4 +1,4 @@
- </script>
+</script>
         <script type="text/javascript">
         function cerrar() {
             var data = window.document.getElementById('val1').value;
@@ -113,8 +113,12 @@ class sucursal
 				'$usu_crea',
 				'$fec_crea',
 				'$usu_mod',
-				'$fec_mod')
+				'$fec_mod');
 		";
+		$res=mysql_query($sql,Conectar::con());
+		$sql="insert into T_cliente (var_rsoc_cli, int_est_cli, int_iden_suc_cli, int_tipper_cli, var_dir_cli, int_cod_pais, int_cod_dept, 
+              	                       int_cod_provi, var_usuadd_cli, date_fecadd_cli)
+                               values ('$nom_suc','1','1','1','$dir_suc','$pais_suc','$dept_suc','$prov_suc','$usu_crea','$fec_crea')";
 		$res=mysql_query($sql,Conectar::con());
 		echo "<script type='text/javascript'>
 		alert('SE INSERTO CORRECTAMENTE $cod_emp');
