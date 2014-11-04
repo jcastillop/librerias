@@ -4,9 +4,9 @@ window.close()
 } 
 </script> 
 <?php
-require_once("../../conexiones/class_cliente1.php");
-require_once("../../conexiones/class_pais.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_cliente1.php");
+require_once("../../../conexiones/class_pais.php");
+require_once("../../../conexiones/conexion.php");
 ?>
   
 
@@ -34,7 +34,7 @@ header('Content-Type: text/html; charset=UTF-8');
 <title>CLIENTE</title>
 
 <!--STYLESHEETS-->
-<link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+<link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>

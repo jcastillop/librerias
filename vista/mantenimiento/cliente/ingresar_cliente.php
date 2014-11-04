@@ -2,8 +2,8 @@
  @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../conexiones/class_cliente1.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_cliente1.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_POST);nick_usu
 $tra=new cliente();
 if(isset($_POST['ide_suc'])){$ide_suc=$_POST['ide_suc'];

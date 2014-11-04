@@ -58,13 +58,13 @@ function elim(url)
 	if (window.focus) {newwindow.focus()}
 }
 </script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.js"></script>
     
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/dataTables.tableTools.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/js/TableTools.j"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/resources/syntax/shCore.js"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes//resources/demo.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/dataTables.tableTools.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/js/TableTools.j"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes//resources/demo.js"></script>
 
 
 	
