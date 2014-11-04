@@ -19,10 +19,6 @@ require_once("../../../conexiones/class_cliente.php");
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
         <link href="../../../paquetes/responsive/css/style.css" rel="stylesheet">
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-          <style type="text/css">
-    .label {width:100px;text-align:right;float:left;padding-right:10px;font-weight:bold;}
-    #register-form label.error, .output {color:#FF0000;font-weight:bold;}
-  </style>
 
     </head>
 <script>
@@ -40,20 +36,38 @@ require_once("../../../conexiones/class_cliente.php");
     };
 
 </script> 
+
+       <style type="text/css">
+  label, input, select {
+     display: block;
+     width: 150px;
+     float: left;
+     margin-bottom: 10px;
+     position: relative;
+}
+        label {
+              text-align: right; width: 75px; padding-right: 20px;
+            
+           }     
+           br {
+              clear: left;
+           }
+           div.container {
+  border: 2px dashed #333;
+  background-color: #ffe;
+  }
+  </style>
     
     <body>	
-        <div id="wrapper" style="zoom:90%">
-            <form  id="form" class="login-form" style="margin: 1px auto;" >
-    
-            <h1 align="center">Guía Remisíon</h1>
-            <div class="content">
             
-             <table class="mi_tabla">
-                <tr>
-                    <td>
-                        Sucursal procedencia    : 
-                        <select  name="sucursal" id="sucursal"  style="width:150px" class="menu">
-                            <option value="">-Seleccione-</option>
+            <form  id="form">
+    <div class="container">
+        asd
+            <h1 align="center">Guía Remisíon</h1>
+            <br>
+            <label for="lblsucursal_procedencia">Sucursal procedencia:</label>
+            <select  name="sucursal" id="sucursal"  style="width:150px" class="menu">
+                <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new sucursal();
                                  $reg=$tra->get_combo_sucursal();
@@ -64,20 +78,28 @@ require_once("../../../conexiones/class_cliente.php");
                             <?php
                                  }
                             ?>
+            </select>
+            <label for="lblsucursal_envio">Sucursal envio:</label>
+              
+                <select  name="cliente" id="cliente"  style="width:150px" class="menu">
+                    <option value="">-Seleccione-</option>
+                        <?php
+                            $tra=new cliente();
+                            $reg=$tra->get_combo_cliente();
+                               for ($i=0;$i<count($reg);$i++)
+                                 {
+                            ?>
+                            <option value="<?php echo $reg[$i]["int_cod_cli"];?>"><?php echo $reg[$i]["var_rsoc_cli"];?></option>
+                            <?php
+                                 }
+                            ?>
                         </select>
-                        &nbsp;&nbsp;Fecha de inicio de traslado:
-                        <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
-												 &nbsp;&nbsp;Condición:
-                        <input name="condiciones" class="condiciones" style="width:120px"type="text"  id="condiciones" value="Transacción"  OnFocus="this.blur()"></input>
-                                      
-                         </td>
-
-                </tr>
-                <tr>
-				
-                    <td>
-					 Vendedor:
-                    <select  name="vendedor" id="vendedor"  style="width:200px" class="menu">
+            <label for="lblcondicion">Condición:</label>
+            <input name="condiciones" class="condiciones" style="width:120px"type="text"  id="condiciones" value="Transacción"  OnFocus="this.blur()"/>
+            <label for="lblfecha">Fecha traslado:</label>
+            <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
+            <label for="lblvendedor">Vendedor:</label>
+            <select  name="vendedor" id="vendedor"  style="width:200px" class="menu">
                         <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new usuario();
@@ -89,47 +111,19 @@ require_once("../../../conexiones/class_cliente.php");
                             <?php
                                  }
                             ?>
-                        </select>
-					&nbsp;&nbsp;Sucursal de envio:
-					 <select  name="cliente" id="cliente"  style="width:150px" class="menu">
-                            <option value="">-Seleccione-</option>
-                            <?php
-                                 $tra=new cliente();
-                                 $reg=$tra->get_combo_cliente();
-                                 for ($i=0;$i<count($reg);$i++)
-                                 {
-                             ?>
-                             <option value="<?php echo $reg[$i]["int_cod_cli"];?>"><?php echo $reg[$i]["var_rsoc_cli"];?></option>
-                            <?php
-                                 }
-                            ?>
-                        </select>
-                    &nbsp;&nbsp;R.U.C:
-                    <input name="ruc" class="input username" style="width:200px" type="text" id="ruc" onkeypress="" /></td>
-                </tr>
-                    <tr>
-                    <td>Dirección alternativa:
-                    <input name="direccion_compra" class="input username" style="width:500px" type="text" id="direccion_compra"/>
-                    </td>  
-                </tr>
-                <tr>    
-                    <td>
-                    
-                   
-</td> 
-                </tr>
-                <tr>
-                    <td>                    
-                    Punto de partida:
-                    <input name="punto_partida" class="input username" style="width:300px" type="text" id="punto_partida" >&nbsp;&nbsp;Punto de llegada:
-                    <input name="punto_llegada" class="input username" style="width:300px" type="text" id="punto_llegada" ></td>
-                </tr>                                                     
-                                                                     
-            </table>
-            </div>
+            </select>
+		    <label for="lblruc">R.U.C:</label>
+            <input name="ruc" class="input username" style="width:200px" type="text" id="ruc" onkeypress="" />
+            <label for="lbldireccion">Dirección alternativa:</label>
+            <input name="direccion_compra" class="input username" style="width:500px" type="text" id="direccion_compra"/>
+            <label for="lblpartida">Punto de partida:</label>
+            <input name="punto_partida" class="input username" style="width:300px" type="text" id="punto_partida" >
+            <label for="lblllegada">Punto de llegada:</label>
+            <input name="punto_llegada" class="input username" style="width:300px" type="text" id="punto_llegada" >
+     </div>
             <br />
             <h2 align="center">Unidad de transporte</h2>
-            <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
+         
 
                 <table>
                     <tr>
@@ -142,10 +136,10 @@ require_once("../../../conexiones/class_cliente.php");
                            </td>
                     </tr>
                 </table>
-            </div>
+            
 			
 			<h2 align="center">Empresa de transporte</h2>
-            <div  style="width: 1095px; margin-left: 10px; border-radius: 10px; border: 2px solid #B1B1B1;">
+            <div>
 
                 <table>
                     <tr>
@@ -164,8 +158,8 @@ require_once("../../../conexiones/class_cliente.php");
             
              <br />
              <h2 align="center">Registro de productos</h2>
-            <div id="frm_usu" style="width: 1080px; margin-left: 10px; border-radius: 10px;border: 2px solid #B1B1B1;">
-                <table border="0" align="center">
+            <div id="frm_usu">
+                <table>
 
                     <tbody>
                         <tr>
@@ -193,8 +187,8 @@ require_once("../../../conexiones/class_cliente.php");
                 </table>
             </div>
             	
-		<div align="center" style="height:250px;overflow:scroll;">
-            <table id="grilla" class="lista" border="0" align="center">
+		<div>
+            <table id="grilla">
               <thead>
                     <tr>
                         <th>Codigo</th>
