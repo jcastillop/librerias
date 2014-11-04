@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<LINK REL="SHORTCUT ICON" HREF="img/ordecupe.ico">
+<link href="img/ordecupe.ico" type="image/x-icon" rel="shortcut icon" />
+    <meta charset="utf-8">
+    <title>SISTEMA WEB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <meta name="author" content="">
+    <!-- css -->
+    <link href="css/menu.css" rel="stylesheet">
+</head>
+
+	<!-- start header -->
+	<header>	
+
+		<div class="container">
+        
+			<div class="navbar navbar-static-top">
+            <img src="../../css/images/ordecupe_logo_final.png" width="60" height="30">
+				<div class="navigation">
+				<nav>
+					<ul class="nav topnav bold">
+						<li class="dropdown active">
+							<a >MANTENIMIENTO <i class="icon-angle-down"></i></a>
+								<ul class="dropdown-menu bold">
+									<li><a class="" onClick="addTab('Usuario','vista/1_mantenimiento/1_usuario/vista_usuario.php')">USUARIO</a></li>
+									<li><a class="" onClick="addTab('Cliente','vista/1_mantenimiento/2_cliente/vista_cliente.php')">CLIENTES</a></li>
+									<li><a class="" onClick="addTab('Proveedor','vista/1_mantenimiento/3_proveedor/vista_proveedor.php')">PROVEEDOR</a></li>
+									<li><a class="" onClick="addTab('Titulos','vista/1_mantenimiento/4_titulos/vista_titulos.php')">TITULOS</a></li>
+									<li><a class="" onClick="addTab('Sucursales','vista/1_mantenimiento/5_sucursales/vista_sucursales.php')">SUCURSALES</a></li>
+									<li><a class="" onClick="addTab('Editoriales','vista/1_mantenimiento/6_editorial/vista_editorial.php')">EDITORIALES</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+							<a >AlMACEN <i class="icon-angle-down"></i></a>
+								<ul class="dropdown-menu bold">
+									<li><a class="" onClick="addTab('Transacciones','vista/2_almacen/registro/index.php')">REGISTRO</a></li>
+									<li><a class="" onClick="addTab('Histórico transacciones','vista/2_almacen/consulta/vista_guia.php')">HISTÓRICO</a></li>
+              					</ul>
+						</li>
+                        <li class="dropdown">
+							<a>VENTAS <i class="icon-angle-down"></i></a>
+								<ul class="dropdown-menu bold">
+									<li><a onClick="addTab('Registro Ventas','vista/3_ventas/registro/index.php')">REGISTRO</a></li>
+									<li><a onClick="addTab('Histórico Ventas','vista/3_ventas/consulta/vista_ventas.php')">HISTÓRICO</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+							<a >COMPRAS<i class="icon-angle-down"></i></a>
+								<ul class="dropdown-menu bold">
+									<li><a onClick="addTab('Registro Compras','vista/4_compras/registro/index.php')">REGISTRO</a></li>
+									<li><a onClick="addTab('Histórico Compras','vista/4_compras/consulta/vista_compras.php')">HISTÓRICO</a></li>
+								</ul>
+							</li>
+						<li class="dropdown">
+							<a href="#">SALIR <i class="icon-angle-down"></i></a>
+						        <ul class="dropdown-menu bold">
+									<li><a href="../../conexiones/logout.php">CERRAR SESION</a></li>
+								</ul>
+						</li>
+					</ul>
+				</nav>
+				</div>
+					<!-- end navigation -->
+				</div>
+			</div>
+			</div>
+		</div>
+	</header>	
+	<!-- end header -->
+	
+
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	<script src="js/custom.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+
+<script>
+		function addTab(title, url){
+			if ($('#tt').tabs('exists', title)){
+				$('#tt').tabs('select', title);
+			} else {
+				var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:90%;"></iframe>';
+				$('#tt').tabs('add',{
+					title:title,
+					content:content,
+					closable:true
+				});
+			}
+		}
+	</script>
+    
+    
+    
+  <body>
+   <div id="tt" class="easyui-tabs" >
+		<div align="center" title="INICIO">
+        <p style="padding:80px;">
+        <img src="../../css/images/ordecupe_logo.png">
+        <p style="padding:60px;">
+        
+		</div>
+
+	</div>  
+ 
+
+</body>
+
+
+
+
+</html>
