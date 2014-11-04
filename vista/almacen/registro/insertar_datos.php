@@ -34,7 +34,6 @@ $query_call_spcabped = "CALL proc_insertar_pedi_cab(".$_cod_emp.",".$_cod_suc.",
 
 
 
-echo $query_call_spcabped."\n";
 //Ejecucion del Procedimiento Insertar Cabecera
 mysql_query($query_call_spcabped,Conectar::con());
 
@@ -45,17 +44,18 @@ $codigo_flag = $array_flag["@n_Flag"];
 $codigo_gen = $array_codgen["@cod_generado"]; 
 
 //creando query del PA insertar guia cabecera
-$query_call_spcabgui = "CALL proc_insertar_guia_cab(".$_cod_suc.",".$_cod_emp.",'".$_cod_ser."','".$_dir_env."',"
+$query_call_spcabgui = "CALL proc_insertar_guia_cab(".$_cod_suc.",".$_cod_emp.",'".$_dir_env."',"
                                                                        .$_cod_cli.",'".$codigo_gen."', 1, 1,'".$_pun_part."','".$_pun_lleg."',"
                                                                        .$_cod_usu.",'".$_dist_gui."',".$_turn_gui.",'".$_telef_gui."','"
                                                                        .$_tran_mn."','".$_tran_c."','".$_tran_l."','".$_trans_rs."','".$_trans_ruc."','".$_trans_dir."','"
-                                                                       .$_fec_pedido."','".$_ped_usu."',@n_Flag, @c_msg, @cod_generado1)";
-echo $query_call_spcabgui."\n";
+                                                                       .$_fec_pedido."','".$_ped_usu."',@n_Flag, @c_msg, @cod_generado1,@c_serie)";
 mysql_query($query_call_spcabgui,Conectar::con());
 
 $codigo_msg = "";
 $array_codgen1 = mysql_fetch_array(mysql_query("Select @cod_generado1",Conectar::con()));
+$array_codser = mysql_fetch_array(mysql_query("Select @c_serie",Conectar::con()));
 $codigo_gen1 = $array_codgen1["@cod_generado1"]; 
+$codigo_ser = $array_codser["@c_serie"];
 
 if ($codigo_flag==0) {
    $var_ped_detalle="'";
@@ -63,10 +63,10 @@ if ($codigo_flag==0) {
        $var_cod_ped_det=$i+1;
 	   $codigo_libro=$array[$i]->codigo_libro;
        $cantidad_libro = $array[$i]->cantidad_libro;
-       $valor_impuesto = $array[$i]->valor_impuesto;
-       $valor_descuento = $array[$i]->valor_descuento;
-       $porcentaje_impuesto = $array[$i]->porcentaje_impuesto;
-       $porcentaje_descuento = $array[$i]->porcentaje_descuento;
+       $valor_impuesto = number_format($array[$i]->valor_impuesto, 2, '.', '');
+       $valor_descuento = number_format($array[$i]->valor_descuento, 2, '.', '');
+       $porcentaje_impuesto = number_format($array[$i]->porcentaje_impuesto, 2, '.', '');
+       $porcentaje_descuento = number_format($array[$i]->porcentaje_descuento, 2, '.', '');
        $costo_total_libro = $array[$i]->costo_total_libro;
 $var_ped_detalle=$var_ped_detalle.'(lpad("'.$var_cod_ped_det.'",6,"0"),'
        										  .'"'.$codigo_gen.'"'.", ".$_cod_suc.", ".$_cod_emp.", ". 
@@ -82,8 +82,7 @@ $var_ped_detalle=$var_ped_detalle.'(lpad("'.$var_cod_ped_det.'",6,"0"),'
    }
    $query_call_sppedd = "CALL proc_insertar_pedi_det(".$var_ped_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
- 
-   echo $query_call_sppedd."\n";
+
    mysql_query($query_call_sppedd,Conectar::con());
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
@@ -94,15 +93,15 @@ if ($codigo_flag==0) {
    for($i=0;$i<count($array);$i++){ 
        $var_cod_guia_det=$i+1;
 	     $codigo_libro=$array[$i]->codigo_libro;
-       $precio_libro=$array[$i]->precio_libro;
+       $precio_libro=number_format($array[$i]->precio_libro, 2, '.', '');
        $cantidad_libro = $array[$i]->cantidad_libro;
-       $valor_impuesto = $array[$i]->valor_impuesto;
-       $valor_descuento = $array[$i]->valor_descuento;
-       $porcentaje_impuesto = $array[$i]->porcentaje_impuesto;
-       $porcentaje_descuento = $array[$i]->porcentaje_descuento;
-       $costo_total_libro = $array[$i]->costo_total_libro;
+       $valor_impuesto = number_format($array[$i]->valor_impuesto, 2, '.', '');
+       $valor_descuento = number_format($array[$i]->valor_descuento, 2, '.', '');
+       $porcentaje_impuesto = number_format($array[$i]->porcentaje_impuesto, 2, '.', '');
+       $porcentaje_descuento = number_format($array[$i]->porcentaje_descuento, 2, '.', '');
+       $costo_total_libro = number_format($array[$i]->costo_total_libro, 2, '.', '');
 $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
-       										  .'"'.$codigo_gen1.'"'.", ".$_cod_ser.", ".$_cod_suc.", ".$_cod_emp.", ". 
+       										  .'"'.$codigo_gen1.'"'.", ".'"'.$codigo_ser.'"'.", ".$_cod_suc.", ".$_cod_emp.", ". 
        	                                       $codigo_libro.", ".$cantidad_libro.", ".$precio_libro.", ".$porcentaje_impuesto.", ".$valor_impuesto. ", ".
        	                                       $costo_total_libro. ", ".$porcentaje_descuento.",".$valor_descuento.", ".$costo_total_libro.
        	                                       ',"'.$_ped_usu.'","'.$fecha_hora_actual.'")';
@@ -115,8 +114,6 @@ $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
    }
    $query_call_spguid = "CALL proc_insertar_guia_det(".$var_guia_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
- 
-   echo $query_call_spguid."\n";
    mysql_query($query_call_spguid,Conectar::con());
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
