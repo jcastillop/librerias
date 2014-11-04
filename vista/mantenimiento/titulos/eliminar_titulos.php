@@ -101,8 +101,8 @@ alert('Has dicho que no');
 if (isset($_GET['dato']))
 {
 //echo "entro";
-require_once("../../conexiones/class_titulos.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_titulos.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_GET);
 $tra=new titulos();
 $tra->eliminar_titulos($_GET["dato"]);

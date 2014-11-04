@@ -103,8 +103,8 @@ alert('Has dicho que no');
 if (isset($_GET['dato']))
 {
 
-require_once("../../conexiones/class_sucursal.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_sucursal.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_GET);
 $tra=new sucursal();
 $tra->eliminar_sucursal($_GET["dato"]);

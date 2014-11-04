@@ -1,5 +1,5 @@
 <?php
-require_once("../../conexiones/class_proveedor.php");
+require_once("../../../conexiones/class_proveedor.php");
 
 	?>
 

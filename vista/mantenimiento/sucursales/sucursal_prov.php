@@ -1,6 +1,6 @@
 <?php
-require_once("../../conexiones/class_provincia.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_provincia.php");
+require_once("../../../conexiones/conexion.php");
 
 	?>
 

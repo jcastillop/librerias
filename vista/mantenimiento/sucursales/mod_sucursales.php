@@ -10,9 +10,9 @@ window.close()
 @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../conexiones/class_sucursal.php");
-require_once("../../conexiones/class_empresa.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_sucursal.php");
+require_once("../../../conexiones/class_empresa.php");
+require_once("../../../conexiones/conexion.php");
 ?>
   
 
@@ -69,12 +69,12 @@ www.amitjakhu.com
 <title>Modificación Sucursales</title>
 
 <!--STYLESHEETS-->
-<link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+<link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
  <script type="text/javascript" src="js/validar.js"></script>
- <script type="text/javascript" src="../../paquetes/js/validar.js"></script>
+ <script type="text/javascript" src="../../../paquetes/js/validar.js"></script>
 <!--Slider-in icons-->
 <script type="text/javascript">
 $(document).ready(function() {

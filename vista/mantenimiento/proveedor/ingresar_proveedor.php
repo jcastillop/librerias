@@ -2,8 +2,8 @@
  @session_start();
  $user=$_SESSION['usuario'];/*captura la variable de session del usuario que ingresa al sistema*/
  $fecha_actual= date("Y-m-d");
-require_once("../../conexiones/class_proveedor.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_proveedor.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_POST);nick_usu
 $tra=new proveedor();
 $tra->add_proveedor($_POST["raz_soc"],

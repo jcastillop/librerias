@@ -17,33 +17,19 @@ header('Content-Type: text/html; charset=UTF-8');
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
 
 	<title>USUARIOS</title>
-	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/jquery.dataTables.css">
-    	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/dataTables.tableTools.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/jquery.dataTables.css">
+    	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/dataTables.tableTools.css">
         
 
-	<link rel="stylesheet" type="text/css" href="../../paquetes/syntax/shCore.css">
-	<link rel="stylesheet" type="text/css" href="../../paquetes/resources/demo.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/resources/demo.css">
     
     
     
 	
     
    
-	<style type="text/css" class="init">
 
-	th, td { white-space: nowrap; }
-	div.dataTables_wrapper {
-		width: 97%;
-		margin: 0 auto;
-		margin-left: 10px;
-	}
-	tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-
-	</style>
     <script type="text/javascript">
 var newwindow;
 function poptastic(url)
@@ -58,13 +44,13 @@ function elim(url)
 	if (window.focus) {newwindow.focus()}
 }
 </script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.js"></script>
     
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/dataTables.tableTools.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/js/TableTools.js"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/resources/syntax/shCore.js"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes//resources/demo.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/dataTables.tableTools.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/js/TableTools.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes//resources/demo.js"></script>
 
 
 	
@@ -203,7 +189,7 @@ $(document).ready(function() {
 				<thead>
 					<tr class="cabecera" >
 						
-						<th width="14%"><a href="javascript:poptastic('usuario.php');"><img src="../../css/images/list-add.png" width="98" height="30" /> </a></th>
+						<th width="14%"><a href="javascript:poptastic('usuario.php');"><img src="../../../css/images/list-add.png" width="98" height="30" /> </a></th>
 						<th width="13%">Nick Usu</th>
                         <th width="9%">Nombres</th>
 						<th width="32%">Apellido Pat.</th>

@@ -80,7 +80,7 @@ header('Content-Type: text/html; charset=UTF-8');
 <title>Modificacion Cliente</title>
 
 <!--STYLESHEETS-->
-<link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+<link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>

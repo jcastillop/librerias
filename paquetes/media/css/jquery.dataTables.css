@@ -301,8 +301,8 @@ table.dataTable td {
 .dataTables_wrapper {
   position: relative;
   clear: both;
-  *zoom: 1;
-  zoom: 1;
+  *zoom: 1.08;
+  zoom: 1.08;
 }
 .dataTables_wrapper .dataTables_length {
   float: left;
@@ -632,7 +632,7 @@ text-align:left;
 
 
 .tablas {
-	width:95%;
+	width:100%;
 -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -655,3 +655,14 @@ text-align:left;
 	
 
 }		
+  th, td { white-space: nowrap; }
+  div.dataTables_wrapper {
+    width: 97%;
+    margin: 0 auto;
+    margin-left: 10px;
+  }
+  tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }

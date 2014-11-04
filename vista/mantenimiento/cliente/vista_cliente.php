@@ -29,21 +29,7 @@ header('Content-Type: text/html; charset=UTF-8');
     
 	
     
-   
-	<style type="text/css" class="init">
 
-	th, td { white-space: nowrap; }
-	div.dataTables_wrapper {
-		width: 90%;
-		margin: 0 auto;
-	}
-	tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-
-	</style>
     <script type="text/javascript">
 var newwindow;
 function poptastic(url)

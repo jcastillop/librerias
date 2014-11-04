@@ -83,10 +83,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Eliminar Usuario</title>
- <script type="text/javascript" src="paquetes/alertas/lib/alertify.js"></script>
+ <script type="text/javascript" src="../../../paquetes/alertas/lib/alertify.js"></script>
     
-		<link rel="stylesheet" href="paquetes/alertas/themes/alertify.core.css" />
-		<link rel="stylesheet" href="paquetes/alertas/themes/alertify.default.css" />
+		<link rel="stylesheet" href="../../../paquetes/alertas/themes/alertify.core.css" />
+		<link rel="stylesheet" href="../../../paquetes/alertas/themes/alertify.default.css" />
 </head>
 <script language="Javascript"> 
 function confirmar(){ 
@@ -106,8 +106,8 @@ alert('Has dicho que no');
 
 if (isset($_GET['dato']))
 {
-require_once("../../conexiones/class_usuario.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_usuario.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_GET);
 $tra=new usuario();
 $tra->eliminar_usuario($_GET["dato"]);

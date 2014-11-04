@@ -5,11 +5,11 @@ window.close()
 } 
 </script> 
 <?php
-require_once("../../conexiones/class_titulos.php");
-require_once("../../conexiones/class_editorial.php");
-require_once("../../conexiones/class_genero.php");
-require_once("../../conexiones/class_pais.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_titulos.php");
+require_once("../../../conexiones/class_editorial.php");
+require_once("../../../conexiones/class_genero.php");
+require_once("../../../conexiones/class_pais.php");
+require_once("../../../conexiones/conexion.php");
 ?>
   
 
@@ -36,11 +36,11 @@ www.amitjakhu.com
 <title>Títulos</title>
 
 <!--STYLESHEETS-->
-<link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+<link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<script type="text/javascript" src="../../paquetes/js/validar.js"></script>
+<script type="text/javascript" src="../../../paquetes/js/validar.js"></script>
  <script type="text/javascript" src="js/validar.js"></script>
   
 <!--Slider-in icons-->

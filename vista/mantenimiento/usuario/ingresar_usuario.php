@@ -2,8 +2,8 @@
  @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../conexiones/class_usuario.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_usuario.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_POST);nick_usu
 $tra=new usuario();
 $tra->add_usuario($_POST["nombres_usu"],

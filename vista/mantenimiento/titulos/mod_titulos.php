@@ -9,11 +9,11 @@ window.close()
 @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../conexiones/class_titulos.php");
-require_once("../../conexiones/class_editorial.php");
-require_once("../../conexiones/class_genero.php");
-require_once("../../conexiones/class_pais.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_titulos.php");
+require_once("../../../conexiones/class_editorial.php");
+require_once("../../../conexiones/class_genero.php");
+require_once("../../../conexiones/class_pais.php");
+require_once("../../../conexiones/conexion.php");
 
 
 
@@ -89,12 +89,12 @@ header('Content-Type: text/html; charset=UTF-8');
 <title>Modificación Titulo</title>
 
 <!--STYLESHEETS-->
-<link href="../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
+<link href="../../../paquetes/css ventanas/style_ventana.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
  <script type="text/javascript" src="js/validar.js"></script>
-  <script type="text/javascript" src="../../paquetes/js/validar.js"></script>
+  <script type="text/javascript" src="../../../paquetes/js/validar.js"></script>
 <!--Slider-in icons-->
 <script type="text/javascript">
 $(document).ready(function() {
