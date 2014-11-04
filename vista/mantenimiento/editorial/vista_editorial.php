@@ -17,12 +17,12 @@ header('Content-Type: text/html; charset=UTF-8');
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
 
 	<title>TITULOS</title>
-	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/jquery.dataTables.css">
-    	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/dataTables.tableTools.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/jquery.dataTables.css">
+    	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/dataTables.tableTools.css">
         
 
-	<link rel="stylesheet" type="text/css" href="../../paquetes/syntax/shCore.css">
-	<link rel="stylesheet" type="text/css" href="../../paquetes/resources/demo.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/resources/demo.css">
     
     
     
@@ -57,13 +57,13 @@ function elim(url)
 	if (window.focus) {newwindow.focus()}
 }
 </script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.js"></script>
     
-	<script type="text/javascript" language="javascript" src="../../paquetes/media/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/dataTables.tableTools.js"></script>
-    <script type="text/javascript" language="javascript" src="../../paquetes/media/js/js/TableTools.j"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes/resources/syntax/shCore.js"></script>
-	<script type="text/javascript" language="javascript" src="../../paquetes//resources/demo.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/dataTables.tableTools.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../paquetes/media/js/js/TableTools.j"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes/resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../paquetes//resources/demo.js"></script>
 
 
 	
@@ -239,7 +239,7 @@ $(document).ready(function() {
 				<thead>
 					<tr class="cabecera" >
 						
-						<th width="20%"><a href="javascript:poptastic('editorial.php');"><img src="../../css/images/list-add.png" width="98" height="30" /></th>
+						<th width="20%"><a href="javascript:poptastic('editorial.php');"><img src="../../../css/images/list-add.png" width="98" height="30" /></th>
                         <th width="25%">Nombre</th>
                         <th width="35%">Descripción</th>
                         <th width="14%">Estado</th>

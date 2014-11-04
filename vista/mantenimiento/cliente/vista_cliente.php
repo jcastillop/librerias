@@ -18,12 +18,12 @@ header('Content-Type: text/html; charset=UTF-8');
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
 
 	<title>CLIENTES</title>
-	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/jquery.dataTables.css">
-    	<link rel="stylesheet" type="text/css" href="../../paquetes/media/css/dataTables.tableTools.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/jquery.dataTables.css">
+    	<link rel="stylesheet" type="text/css" href="../../../paquetes/media/css/dataTables.tableTools.css">
         
 
-	<link rel="stylesheet" type="text/css" href="../../paquetes/syntax/shCore.css">
-	<link rel="stylesheet" type="text/css" href="../../paquetes/resources/demo.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../../../paquetes/resources/demo.css">
     
     
     
@@ -211,7 +211,7 @@ $(document).ready(function() {
 			<table id="example"  class="display" cellspacing="0" width="100%">
 				<thead>
 					<tr class="cabecera" >						
-						<th><a href="javascript:poptastic('cliente.php');"><img src="../../css/images/list-add.png" width="80" height="30" /></th>        
+						<th><a href="javascript:poptastic('cliente.php');"><img src="../../../css/images/list-add.png" width="80" height="30" /></th>        
                         <th>T. Persona</th>
                         <th>R Social</th>
                         <th>Estado</th>

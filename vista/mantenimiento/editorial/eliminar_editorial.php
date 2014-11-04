@@ -101,8 +101,8 @@ alert('Has dicho que no');
 if (isset($_GET['dato']))
 {
 //echo "entro";
-require_once("../../conexiones/class_editorial.php");
-require_once("../../conexiones/conexion.php");
+require_once("../../../conexiones/class_editorial.php");
+require_once("../../../conexiones/conexion.php");
 //print_r($_GET);
 $tra=new editorial();
 $tra->eliminar_editorial($_GET["dato"]);
