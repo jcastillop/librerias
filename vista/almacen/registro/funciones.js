@@ -1,5 +1,5 @@
             $(document).ready(function(){
-         
+                    
                 //Iniciando el datepicker
                 $( "#datepicker" ).datepicker();
                 //Iniciando las validaciones del formulario
@@ -143,7 +143,8 @@
                             } 
                             */
 							limpiarformulario("#form");
-                            alert(result);   
+                            alert(result);
+                            $("#condiciones").val("Transacción");   
                           },
                           error: function(result){
                             alert("error");
@@ -316,5 +317,7 @@
       $('#grilla tbody').empty();
                                fn_cantidad(); 
                             fn_sumatotal();
+                            
 }
+  
 

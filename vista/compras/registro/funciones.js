@@ -10,9 +10,6 @@ $(document).ready(function(){
         distrito: {
             required: true
         },
-        file: {
-            required: true
-        },
         fecha_recepcion: {
             required: true
         },
@@ -31,9 +28,6 @@ $(document).ready(function(){
     },
     // Especificandolos mensaje
     messages: {
-        file: {
-            required: "*"
-        },
         fecha_recepcion: {
             required: "*"
         },
@@ -134,6 +128,7 @@ $(document).ready(function(){
                             */
                             limpiarformulario("#form");
                             alert(result);   
+                            $("#condiciones").val("Compra"); 
                           },
                           error: function(result){
                             alert("error");

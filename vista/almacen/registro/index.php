@@ -20,6 +20,8 @@ require_once("../../../conexiones/class_cliente.php");
         <link href="../../../paquetes/responsive/css/style.css" rel="stylesheet">
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 
+
+
     </head>
 <script>
     function tabular(e,obj) {
@@ -95,7 +97,7 @@ require_once("../../../conexiones/class_cliente.php");
                             ?>
                         </select>
             <label for="lblcondicion">Condición:</label>
-            <input name="condiciones" class="condiciones" style="width:120px"type="text"  id="condiciones" value="Transacción"  OnFocus="this.blur()"/>
+            <input name="condiciones" class="condiciones" style="width:120px"type="text" id="condiciones" value="Transacción"  OnFocus="this.blur()"/>
             <label for="lblfecha">Fecha traslado:</label>
             <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
             <label for="lblvendedor">Vendedor:</label>
