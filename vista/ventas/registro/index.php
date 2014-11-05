@@ -27,6 +27,19 @@ require_once("../../../conexiones/conexion.php");
 <link rel="stylesheet" type="text/css" href="busquedas/js/jquery.autocomplete.css" />
         
  <script type="text/javascript">
+
+ function validaCondicion(b_valida)
+ {
+    document.forms['contact-form'].condiciones.disabled=!b_valida;
+    if(!b_valida){
+      document.forms['contact-form'].condiciones.value=0;
+    }
+    else{
+      document.forms['contact-form'].condiciones.value='';
+    } 
+
+ }
+
 $().ready(function() {
 	$("#cliente").autocomplete("busquedas/autoCompleteMain.php", {
 		width: 260,
@@ -204,7 +217,8 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                         Fecha:
                         <input name ="fecha_registro" type="text" id="datepicker" class="fecha"  />
                         Condicion:
-                        <input name="condiciones" class="condiciones" type="text"  id="condiciones" value="Transaccion"  readonly="readonly"/>
+                        <label name="lbl_ventas" id="lbl_ventas"><input name="ventas" type="checkbox" onclick="javascript:validaCondicion(this.checked)" id="ventas"/>Venta a Plazo</label>
+                        <input name="condiciones" class="condiciones" value="0" disabled type="text" id="condiciones">   
                     </td>
 
                 </tr>
