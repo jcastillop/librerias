@@ -209,6 +209,7 @@ $(document).ready(function() {
                         <th style=" width:200px;">Fecha Envio.</th>
                         <th style=" width:200px;">Fecha Guia</th>
                         <th>Exp.</th>
+                        <th>Impr.</th>
                         <th>Anular</th>
 					</tr>
 				</thead>
@@ -230,6 +231,7 @@ $(document).ready(function() {
                         <td><?php echo $reg[$i]["date_fecenv_guia_cab"];?></td>
 						<td><?php echo $reg[$i]["date_fecadd_guia_cab"];?></td>
 						<td align='center' ><a href=" javascript:poptastic('reporte_historial.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='images/pdf.png' width='15px' height='15px'></a></td>
+						<td align='center' ><a href=" javascript:poptastic('reporte_historial_1.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='images/impresora.png' width='15px' height='15px'></a></td>
 						<td align='center' ><a href=" javascript:poptastic('eliminar_guia.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='images/close_delete.png' width='15px' height='15px'></a></td>
 					
 					</tr>
