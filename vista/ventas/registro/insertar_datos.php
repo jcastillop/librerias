@@ -13,6 +13,8 @@ $_ped_usu=$_POST['ped_usu'];
 $_cod_ser=$_POST['cod_ser'];
 $_cod_usu=$_POST['cod_usu'];
 $_tipo_doc=$_POST['tipo_doc'];
+$_tip_ven=$_POST['tip_ven'];
+$_con_ven=$_POST['con_ven'];
 $fecha_hora_actual =Fechas::mifechagmt(time(),-5);
 
 $array = json_decode($_POST['pedido_detalle']);
@@ -52,7 +54,8 @@ $cod_sergui = $array_codsergui["@c_serie"];
 //creando query del PA insertar Factura cabecera
 $query_call_spfact = "CALL proc_insertar_fact_cab(".$_cod_suc.",".$_cod_emp.",".$_cod_cli.",'".$codigo_gen1."',"
                                                                        .$_cod_usu.",'"
-                                                                       .$_fec_pedido."',".$_tipo_doc.",'".$_ped_usu.
+                                                                       .$_fec_pedido."',".$_tipo_doc.",".$_tip_ven.","
+                                                                       .$_con_ven.",'".$_ped_usu.
                                                                        "',@n_Flag3, @c_msg3, @cod_generado3,@cod_ser)";
 
 mysql_query($query_call_spfact,Conectar::con());
@@ -165,3 +168,4 @@ $var_fact_detalle=$var_fact_detalle.'(lpad("'.$var_cod_fact_det.'",6,"0"),'
    
 echo $codigo_msg1;
 ?> 
+
