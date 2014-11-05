@@ -1,4 +1,4 @@
-            $(document).ready(function(){
+       $(document).ready(function(){
                
                                         
 
@@ -90,6 +90,8 @@
 					var tipo_doc= $("#tipo_doc").val();
                     var cod_suc = $("#sucursal").val();
                     var cod_cli = $("#clienteID").val();
+                    var tip_ven = $("#ventas:checked").val()? 2:1;
+                    var con_ven = $("#condiciones").val();
                     var fec_pedido=$("#datepicker").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
                     var ped_usu='JCASTILLO';
                     //Variables Cabecera Guia
@@ -136,6 +138,8 @@
 										'&tipo_doc='+tipo_doc+
                                         '&fec_pedido='+fec_pedido+
                                         '&ped_usu='+ped_usu+
+                                        '&tip_ven='+tip_ven+
+                                        '&con_ven='+con_ven+
                                         //Datos Cabecera Guia
                                         '&cod_ser='+cod_ser+
                                         '&cod_usu='+cod_usu+
