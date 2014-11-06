@@ -162,8 +162,9 @@
                             } 
                             */
 
-                            alert(result); 
-							
+							var res = jQuery.parseJSON(result);
+                            alert(res.mensaje)
+                            alert(res.codigo);
                             limpiarformulario("#contact-form");
 
                           },
