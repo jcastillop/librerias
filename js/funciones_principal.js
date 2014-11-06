@@ -12,7 +12,7 @@ $(document).ready(function() {
                 		if(res.indicador==0){
                 			
                 		}else{
-                			notificacion(result);	
+                			notificacion(res.mensaje);	
                 		}
                              
                 	},
@@ -39,6 +39,6 @@ $(document).ready(function() {
 		}
 
 		function notificacion(param){
-        	alertify.log("Tipo de cambio no registrado " + param); 
+        	alertify.log("Tipo de cambio no actualizado" + param); 
         	return false;
         }
