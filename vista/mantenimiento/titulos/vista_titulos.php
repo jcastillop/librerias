@@ -249,7 +249,7 @@ $(document).ready(function() {
 					{
 				 ?>  
 					<tr>
-                  <td align='center' ><a href=" javascript:poptastic('mod_titulos.php?id=<?php echo $reg[$i]["int_cod_tit"];?>'); " ><img src='images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
+                  <td align='center' ><a href=" javascript:poptastic('mod_titulos.php?id=<?php echo $reg[$i]["int_cod_tit"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["var_nom_tit"];?></td>
                         <td><?php echo $reg[$i]["var_autor_tit"];?></td> 
@@ -265,7 +265,7 @@ $(document).ready(function() {
 						<td><?php echo $reg[$i]["int_est_tit"];?></td>
 						<td><?php echo $reg[$i]["var_cod_bar_tit"];?></td>
 		
-                       <td align='center' ><a href=" javascript:elim('eliminar_titulos.php?id=<?php echo $reg[$i]["int_cod_tit"];?>'); " ><img src='images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
+                       <td align='center' ><a href=" javascript:elim('eliminar_titulos.php?id=<?php echo $reg[$i]["int_cod_tit"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 
 						
 					</tr>

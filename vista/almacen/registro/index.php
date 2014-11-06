@@ -11,16 +11,14 @@ require_once("../../../conexiones/class_cliente.php");
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>jQuery - agregar y eliminar filas en una tabla</title>
-        <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+          <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     
         <script language="javascript" type="text/javascript" src="funciones.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
-        <link href="../../../paquetes/responsive/css/style.css" rel="stylesheet">
+        <link href="../../../css/estilo.css" rel="stylesheet" type="text/css" />
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-
-
 
     </head>
 <script>
@@ -39,36 +37,15 @@ require_once("../../../conexiones/class_cliente.php");
 
 </script> 
 
-       <style type="text/css">
-  label, input, select {
-     display: block;
-     width: 150px;
-     float: left;
-     margin-bottom: 10px;
-     position: relative;
-}
-        label {
-              text-align: right; width: 75px; padding-right: 20px;
-            
-           }     
-           br {
-              clear: left;
-           }
-           div.container {
-  border: 2px dashed #333;
-  background-color: #ffe;
-  }
-  </style>
     
-    <body>	
+    
+        <body>	
             
             <form  id="form">
-    <div class="container">
-        asd
-            <h1 align="center">Guía Remisíon</h1>
-            <br>
-            <label for="lblsucursal_procedencia">Sucursal procedencia:</label>
-            <select  name="sucursal" id="sucursal"  style="width:150px" class="menu">
+    <div class="container" >
+            <h4 align="center" >Guía Remisión</h4>
+            <label for="lblsucursal_procedencia" >Sucursal procedencia:</label>
+            <select  name="sucursal" id="sucursal"  style="width:150px;margin-left:0px;;margin-top:0px" class="menu" >
                 <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new sucursal();
@@ -81,9 +58,9 @@ require_once("../../../conexiones/class_cliente.php");
                                  }
                             ?>
             </select>
-            <label for="lblsucursal_envio">Sucursal envio:</label>
+            <label for="lblsucursal_envio" >Sucursal envio:</label>
               
-                <select  name="cliente" id="cliente"  style="width:150px" class="menu">
+                <select  name="cliente" id="cliente"  style="width:150px;margin-top:0px" class="menu" >
                     <option value="">-Seleccione-</option>
                         <?php
                             $tra=new cliente();
@@ -96,12 +73,9 @@ require_once("../../../conexiones/class_cliente.php");
                                  }
                             ?>
                         </select>
-            <label for="lblcondicion">Condición:</label>
-            <input name="condiciones" class="condiciones" style="width:120px"type="text" id="condiciones" value="Transacción"  OnFocus="this.blur()"/>
-            <label for="lblfecha">Fecha traslado:</label>
-            <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px" />
-            <label for="lblvendedor">Vendedor:</label>
-            <select  name="vendedor" id="vendedor"  style="width:200px" class="menu">
+						
+			<label for="lblvendedor">Vendedor:</label>
+            <select  name="vendedor" id="vendedor"  style="width:200px;margin-top:0px" class="menu">
                         <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new usuario();
@@ -113,70 +87,55 @@ require_once("../../../conexiones/class_cliente.php");
                             <?php
                                  }
                             ?>
-            </select>
-		    <label for="lblruc">R.U.C:</label>
-            <input name="ruc" class="input username" style="width:200px" type="text" id="ruc" onkeypress="" />
-            <label for="lbldireccion">Dirección alternativa:</label>
-            <input name="direccion_compra" class="input username" style="width:500px" type="text" id="direccion_compra"/>
+            </select><br>
+            <label for="lblcondicion">Condición:</label>
+            <input name="condiciones" class="condiciones" style="width:150px;margin-top:5px;margin-left:80px;"type="text"  id="condiciones" value="Transacción"  OnFocus="this.blur()"/>
+            <label for="lblfecha" style="margin-left:5px;" >Fecha traslado:</label>
+            <input name ="fecha_registro" type="text" id="datepicker" class="input username" style="width:150px;margin-top:5px;" />           
+		    <label for="lblruc"  style="margin-left:30px;">R.U.C:</label>
+            <input name="ruc" class="input username" style="width:200px; margin-top:5px" type="text" id="ruc" onkeypress="" /> <br>
+            <label for="lbldireccion" style="width:150px">Dirección alternativa:</label>
+            <input name="direccion_compra" class="input username" style="width:750px;margin-top:10px;" type="text" id="direccion_compra"/><br>
             <label for="lblpartida">Punto de partida:</label>
-            <input name="punto_partida" class="input username" style="width:300px" type="text" id="punto_partida" >
+            <input name="punto_partida" class="input username" style="width:300px;margin-top:10px;margin-left:35px;" type="text" id="punto_partida" >
             <label for="lblllegada">Punto de llegada:</label>
-            <input name="punto_llegada" class="input username" style="width:300px" type="text" id="punto_llegada" >
-     </div>
-            <br />
-            <h2 align="center">Unidad de transporte</h2>
+            <input name="punto_llegada" class="input username" style="width:300px;margin-top:10px;margin-left:0px" type="text" id="punto_llegada" ></div>
+			    <div class="container1" >
+            <h4 align="center" >Unidad de transporte</h4>
          
 
-                <table>
-                    <tr>
-                        <td>
-						    Marca y Número de Placa:&nbsp;&nbsp;<input name="transporte_mn" class="input username" style="width:200px" type="text" id="transporte_mn"/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nª de constancia de inscripción :&nbsp;&nbsp;<input name="transporte_c" class="input username" style="width:150px" type="text" id="transporte_c"/>
-                             </td>
-                    </tr><tr>
-                        <td>Nº de licencia de conducir:&nbsp;&nbsp;<input name="transporte_l" class="input username" style="width:130px" type="text" id="transporte_l"/>
-                           </td>
-                    </tr>
-                </table>
-            
-			
-			<h2 align="center">Empresa de transporte</h2>
-            <div>
+                
+						    <label for="lblplaca" style="width:180px">Marca y Placa:</label><input name="transporte_mn" class="input username" style="width:180px" type="text" id="transporte_mn"/>
+                            <label for="lblconstancia" style="width:220px">Nª de constancia: </label><input name="transporte_c" class="input username" style="width:180px" type="text" id="transporte_c"/>
+                            <label for="lblcondruc" style="width:180px">Nº de licencia :</label><input name="transporte_l" class="input username" style="width:180px" type="text" id="transporte_l"/><br>
+							   </div><div class="container2" >
+							<h4 align="center">Empresa de transporte</h4>
+           
 
-                <table>
-                    <tr>
-                        <td>
-						    Razon Social de Transportista:&nbsp;&nbsp;<input name="transportista_rs" class="input username" style="width:400px" type="text" id="transportista_rs"/>
-                            &nbsp;&nbsp;RUC :&nbsp;&nbsp;<input name="transportista_ruc" class="input username" style="width:150px" type="text" id="transportista_ruc"/>
-                            </td>
-                    </tr>
-					 <tr>
-                        <td>
-						Dirección:&nbsp;&nbsp;<input name="transportista_dir" class="input username" style="width:400px" type="text" id="transportista_dir"/>
-                           </td>
-                    </tr>
-                </table>
-            </div>
-            
-             <br />
-             <h2 align="center">Registro de productos</h2>
+						   <label for="lbltransrs" style="width:150px"> Razon Social de Transportista:</label><input name="transportista_rs" class="input username" style="width:400px" type="text" id="transportista_rs"/>
+                            <label for="lbltransruc" style="width:150px">R.U.C.</label><input name="transportista_ruc" class="input username" style="width:220px" type="text" id="transportista_ruc"/>
+                            
+						<br><label for="lbltransdir" style="width:150px">Dirección de Transportista</label><input name="transportista_dir" class="input username" style="width:700px;margin-left:30px;margin-top:10px" type="text" id="transportista_dir"/>
+          </div>  
+     <div class="container3" >
+             <h4 align="center">Registro de productos</h4>
             <div id="frm_usu">
                 <table>
 
                     <tbody>
                         <tr>
-                            <td>Código</td>
+                            <td> <label for="lblcod" style="width:180px">Código</label></td>
                             <td><input name="valor_ide" class="input username" style="width:100px" type="text" id="valor_ide" size="10" onkeypress="return tabular(event,this)"/></td>
        
-                            <td>Descripción</td>
-                            <td><input name="valor_uno" class="input username"style="width:382px" type="text" id="valor_uno" size="50" class="required"/></td>
+                            <td><label for="lbldesc" style="width:180px">Descripción</label></td>
+                            <td><input name="valor_uno" class="input username"style="width:300px" type="text" id="valor_uno" size="50" class="required"/></td>
                    
-                            <td>Precio</td>
+                            <td><label for="lbldesc" style="width:180px">Precio</label></td>
                             <td><input name="valor_dos" class="input username" style="width:100px" type="text" id="valor_dos" size="10" class="required"/>
                                 <input type="hidden" id="tituloID" name="tituloID"></input>
                             </td>
                                 
-                            <td>Cantidad</td>
+                            <td><label for="lbldesc" style="width:180px">Cantidad</label></td>
                             <td><input name="valor_tres" class="input username" style="width:100px" type="text" id="valor_tres" size="10" onkeypress="return tabular(event,this)"/></td>
                         </tr>
                        
@@ -187,9 +146,8 @@ require_once("../../../conexiones/class_cliente.php");
                         </tr>
                     </tfoot>
                 </table>
-            </div>
-            	
-		<div>
+            </div>    </div>
+				<div class="container4">
             <table id="grilla">
               <thead>
                     <tr>
@@ -214,12 +172,13 @@ require_once("../../../conexiones/class_cliente.php");
                 </tfoot>
             </table>
             </div>
-            </div>
-</form> 
-
-        
-    
-        </div>
+	
+           
+                           
+           
+            	
+	
+         
 
      
     </body>

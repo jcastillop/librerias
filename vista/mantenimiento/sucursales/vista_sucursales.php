@@ -202,7 +202,7 @@ for ($i=0;$i<count($reg);$i++)
 
 
 					<tr>
-                  <td align='center' ><a href=" javascript:poptastic('mod_sucursales.php?id=<?php echo $reg[$i]["int_cod_suc"];?>'); " ><img src='images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
+                  <td align='center' ><a href=" javascript:poptastic('mod_sucursales.php?id=<?php echo $reg[$i]["int_cod_suc"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["var_nom_emp"];?></td>
 						<td><?php echo $reg[$i]["var_nom_suc"];?></td>
@@ -215,7 +215,7 @@ for ($i=0;$i<count($reg);$i++)
                         <td><?php echo $reg[$i]["var_telf_suc"];?></td>
 						
 		
-                       <td align='center' ><a href=" javascript:elim('eliminar_sucursales.php?id=<?php echo $reg[$i]["int_cod_suc"];?>'); " ><img src='images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
+                       <td align='center' ><a href=" javascript:elim('eliminar_sucursales.php?id=<?php echo $reg[$i]["int_cod_suc"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 
 						
 					</tr>

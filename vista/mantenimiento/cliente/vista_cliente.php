@@ -222,7 +222,7 @@ for ($i=0;$i<count($reg);$i++)
 {
 ?>                 
 					<tr align="center">
-                  <td align='center' ><a href=" javascript:poptastic('mod_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
+                  <td align='center' ><a href=" javascript:poptastic('mod_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["int_tipper_cli"];?></td>
                          
@@ -240,7 +240,7 @@ for ($i=0;$i<count($reg);$i++)
                              <td><?php echo $reg[$i]["var_fax_cli"];?></td>
 							<td><?php echo $reg[$i]["var_cor_cli"];?></td>
 		
-                       <td align='center' ><a href=" javascript:elim('eliminar_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
+                       <td align='center' ><a href=" javascript:elim('eliminar_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 	
 					</tr>
 				

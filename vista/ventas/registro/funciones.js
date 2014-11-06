@@ -165,7 +165,7 @@
                             alert(result); 
 							
                             limpiarformulario("#contact-form");
-
+                            
                           },
                           error: function(result){
 

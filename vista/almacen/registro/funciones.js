@@ -16,7 +16,7 @@
                             cliente: {
                                required: true
                             },
-                            direccion_compra: {
+                            ruc: {
                                required: true
                             },
                             distrito: {
@@ -40,7 +40,7 @@
                         sucursal: "*",
                         fecha_registro: "*",
                         cliente: "*",
-                        direccion_compra: "*",
+                        ruc: "*",
                         vendedor: "*",
                         punto_partida: {
                             required: "*"

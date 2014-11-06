@@ -255,14 +255,14 @@ $(document).ready(function() {
 					{
 				 ?>  
 					<tr>
-                  <td align='center' ><a href=" javascript:poptastic('mod_editorial.php?id=<?php echo $reg[$i]["int_cod_edit"];?>'); " ><img src='images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
+                  <td align='center' ><a href=" javascript:poptastic('mod_editorial.php?id=<?php echo $reg[$i]["int_cod_edit"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["var_nom_edit"];?></td> 
 						<td><?php echo $reg[$i]["var_desc_edit"];?></td>
 						<td><?php echo $reg[$i]["int_est_edit"];?></td>
 						
 		
-                       <td align='center' ><a href=" javascript:elim('eliminar_editorial.php?id=<?php echo $reg[$i]["int_cod_edit"];?>'); " ><img src='images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
+                       <td align='center' ><a href=" javascript:elim('eliminar_editorial.php?id=<?php echo $reg[$i]["int_cod_edit"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 
 						
 					</tr>

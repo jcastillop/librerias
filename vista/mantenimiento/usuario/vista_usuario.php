@@ -209,14 +209,14 @@ for ($i=0;$i<count($reg);$i++)
 
 
 					<tr>
-                  <td align='center' ><a href=" javascript:poptastic('mod_usuario.php?id=<?php echo $reg[$i]["int_cod_usu"];?>'); " ><img src='images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
+                  <td align='center' ><a href=" javascript:poptastic('mod_usuario.php?id=<?php echo $reg[$i]["int_cod_usu"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["var_nick_usu"];?></td>
 						<td><?php echo $reg[$i]["var_nom_usu"];?></td>
 						<td><?php echo $reg[$i]["var_appat_usu"];?></td>
 						<td><?php echo $reg[$i]["var_apmat_usu"];?></td>
 						<td><?php echo $reg[$i]["int_est_usu"];?></td>
-                       <td align='center' ><a href=" javascript:elim('eliminar_usuario.php?id=<?php echo $reg[$i]["int_cod_usu"];?>'); " ><img src='images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
+                       <td align='center' ><a href=" javascript:elim('eliminar_usuario.php?id=<?php echo $reg[$i]["int_cod_usu"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 		
 					</tr>			 
   <?php
