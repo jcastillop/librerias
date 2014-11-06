@@ -13,7 +13,7 @@
                                         '&ruc='+ruc+
                                         '&direccion='+direccion+
                                         '&usuario='+usuario;
-                                        alert(dataString);
+                                        
                     $.ajax({
                           type: "POST",
                           url: "insertar_datos_cliente.php",
@@ -162,10 +162,11 @@
                             } 
                             */
 
-							var res = jQuery.parseJSON(result);
-                            alert(res.mensaje)
-                            alert(res.codigo);
+							//var res = jQuery.parseJSON(result);
+                            alert(result);
+                            //alert(res.codigo);
                             limpiarformulario("#contact-form");
+                             $("#condiciones").val(0); 
 
                           },
                           error: function(result){
