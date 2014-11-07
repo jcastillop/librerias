@@ -93,7 +93,7 @@ class cliente
 	}
 		public function get_combo_cliente()
 	{
-		$sql="select int_cod_cli, var_rsoc_cli from T_cliente where int_est_cli<>0 and int_iden_suc_cli=1 ORDER BY int_cod_cli";
+		$sql="select int_cod_cli, var_rsoc_cli from T_cliente where int_est_cli<>0 ORDER BY int_cod_cli";
 		
 		$res=mysql_query($sql,Conectar::con());
 		
@@ -106,13 +106,12 @@ class cliente
 		
 	
 		
-	public function add_cliente($rsoc,$estado,$ide_suc,$tip_per,$ruc,$dir,$refdom,$cod_pais,$cod_dep,$cod_provi,$dist,$tel,$fax,$dni,$cor,$usu_crea,$fec_crea,$usu_mod,$fec_mod)
+	public function add_cliente($rsoc,$estado,$tip_per,$ruc,$dir,$refdom,$cod_pais,$cod_dep,$cod_provi,$dist,$tel,$fax,$dni,$cor,$usu_crea,$fec_crea,$usu_mod,$fec_mod)
 	{
 		$sql="insert into T_cliente values 
 				(null,
 				'$rsoc',
 				'$estado',
-				'$ide_suc',
 				'$tip_per',
 				'$ruc',
 				'$dir',
