@@ -25,6 +25,10 @@ $query_call_spcabped = "CALL proc_insertar_pedi_cab(".$_cod_emp.",".$_cod_suc.",
 	                                                                   .$_ped_usu."',@n_Flag, @c_msg, @cod_generado)";
 
 
+<<<<<<< HEAD
+=======
+echo $query_call_spcabped;
+>>>>>>> origin/master
 //Ejecucion del Procedimiento Insertar Cabecera
 mysql_query($query_call_spcabped,Conectar::con());
 
@@ -39,7 +43,7 @@ $query_call_spcabgui = "CALL proc_insertar_guia_cab(".$_cod_suc.",".$_cod_emp.",
                                                                        .$_cod_cli.",'".$codigo_gen."', 2, 1,'','',"
                                                                        .$_cod_usu.",'',0,'','','','','','','','"
                                                                        .$_fec_pedido."','".$_ped_usu."',@n_Flag1, @c_msg1, @cod_generado1, @c_serie)";
-
+echo $query_call_spcabgui;
 mysql_query($query_call_spcabgui,Conectar::con());
 
 $codigo_msg1 = "";
@@ -57,7 +61,7 @@ $query_call_spfact = "CALL proc_insertar_fact_cab(".$_cod_suc.",".$_cod_emp.",".
                                                                        .$_fec_pedido."',".$_tipo_doc.",".$_tip_ven.","
                                                                        .$_con_ven.",'".$_ped_usu.
                                                                        "',@n_Flag3, @c_msg3, @cod_generado3,@cod_ser)";
-
+echo $query_call_spfact;
 mysql_query($query_call_spfact,Conectar::con());
 
 $codigo_msg3 = "";
@@ -93,7 +97,11 @@ $var_ped_detalle=$var_ped_detalle.'(lpad("'.$var_cod_ped_det.'",6,"0"),'
    }
    $query_call_sppedd = "CALL proc_insertar_pedi_det(".$var_ped_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
+<<<<<<< HEAD
 
+=======
+ echo $query_call_sppedd;
+>>>>>>> origin/master
 
    mysql_query($query_call_sppedd,Conectar::con());
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
@@ -127,7 +135,11 @@ $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
    }
     $query_call_spguid = "CALL proc_insertar_guia_det(".$var_guia_detalle.", @n_Flag, @c_msg)";
    //Ejecucion del Procedimiento Insertar Detalle
+<<<<<<< HEAD
 
+=======
+  echo $query_call_spguid;
+>>>>>>> origin/master
    mysql_query($query_call_spguid,Conectar::con());
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
@@ -165,7 +177,11 @@ $var_fact_detalle=$var_fact_detalle.'(lpad("'.$var_cod_fact_det.'",6,"0"),'
    $array_flag = mysql_fetch_array(mysql_query("Select @n_Flag",Conectar::con()));
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
    $codigo_msg1 = $array_msg["@c_msg"];}
+   echo $codigo_msg1;
    
-echo $codigo_msg1;
+    //$response = array ("codigo" => "", "mensaje" => "");
+    //$response["mensaje"]=$codigo_msg1;
+    //$response["codigo"]=$codigo_gen3;
+    //echo json_encode($response);
 ?> 
 
