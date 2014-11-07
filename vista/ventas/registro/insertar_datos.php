@@ -141,6 +141,7 @@ $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
        $int_tip_doc_fact=1;
 	   $codigo_libro=$array[$i]->codigo_libro;
        $cantidad_libro = $array[$i]->cantidad_libro;
+       $precio_libro = number_format($array[$i]->precio_libro, 2, '.', '');
        $valor_impuesto = number_format($array[$i]->valor_impuesto, 2, '.', '');
        $valor_descuento = number_format($array[$i]->valor_descuento, 2, '.', '');
        $porcentaje_impuesto = number_format($array[$i]->porcentaje_impuesto, 2, '.', '');
@@ -148,8 +149,8 @@ $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
        $costo_total_libro = number_format($array[$i]->costo_total_libro, 2, '.', '');
 $var_fact_detalle=$var_fact_detalle.'(lpad("'.$var_cod_fact_det.'",6,"0"),'
        										  .'"'.$codigo_gen3.'"'.", ".$int_tip_doc_fact.",".'"'.$_cod_ser.'"'.", ".$_cod_suc.", ".$_cod_emp.", ". 
-       	                                       $codigo_libro.", ".$cantidad_libro.", ".$porcentaje_impuesto.", ".$valor_impuesto. ", ".
-       	                                       $costo_total_libro. ", ".$porcentaje_descuento.",".$valor_descuento.", ".$costo_total_libro.
+       	                                       $codigo_libro.", ".$cantidad_libro.", ".$precio_libro*$cantidad_libro.", ".$porcentaje_impuesto. ", ".
+       	                                       $valor_impuesto. ", ".$porcentaje_descuento.",".$valor_descuento.", ".$costo_total_libro.
        	                                       ',"'.$_ped_usu.'","'.$fecha_hora_actual.'")';
 
        if ($i==count($array)-1){
