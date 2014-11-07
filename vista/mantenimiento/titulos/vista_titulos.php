@@ -226,17 +226,13 @@ $(document).ready(function() {
 						<th><a href="javascript:poptastic('titulos.php');"><img src="../../../css/images/list-add.png" width="98" height="30" /></th>
                         <th>Título</th>
                         <th>Autor</th>
-                        <th>Descripción</th>
-                        <th>ISBN</th>
                         <th>Edición</th>
-                        <th>N° Pag.</th>
                         <th>Editorial</th>
                         <th>Género</th>
                         <th>País</th>
                         <th>Precio Def.</th>
                         <th>Precio Sug.</th>
                         <th>Estado</th>
-                        <th>Cod.Barra</th>
                         <th></th>
 				
 					</tr>
@@ -253,17 +249,13 @@ $(document).ready(function() {
                       
 						<td><?php echo $reg[$i]["var_nom_tit"];?></td>
                         <td><?php echo $reg[$i]["var_autor_tit"];?></td> 
-						<td><?php echo $reg[$i]["var_des_tit"];?></td>
-                        <td><?php echo $reg[$i]["var_isbn_tit"];?></td>
                         <td><?php echo $reg[$i]["var_edic_tit"];?></td>
-                        <td><?php echo $reg[$i]["int_numpag_tit"];?></td>
                         <td><?php echo $reg[$i]["var_nom_edit"];?></td>
                         <td><?php echo $reg[$i]["var_nom_gen"];?></td>
                         <td><?php echo $reg[$i]["var_nom_pais"];?></td>
                         <td><?php echo $reg[$i]["dec_preven_def_tit"];?></td>
                         <td><?php echo $reg[$i]["dec_preven_sug_tit"];?></td>
 						<td><?php echo $reg[$i]["int_est_tit"];?></td>
-						<td><?php echo $reg[$i]["var_cod_bar_tit"];?></td>
 		
                        <td align='center' ><a href=" javascript:elim('eliminar_titulos.php?id=<?php echo $reg[$i]["int_cod_tit"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 
