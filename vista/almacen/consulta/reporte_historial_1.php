@@ -1,3 +1,4 @@
+
 <?php
 
 require_once("../../../conexiones/class_guia_pdf.php");
@@ -133,29 +134,29 @@ $link = $pdf->AddLink();
 
 
     // Logo
-    
+    /*
     // Arial bold 15
     $pdf->SetFont('Arial','',10);
-	//$pdf->SetMargins(10,20,20);
+	$pdf->SetMargins(10,20,20);
     // Movernos a la derecha
-    //$pdf->Cell(140);
+    $pdf->Cell(140);
     // Título
    // $this->Cell(50,10,'R.U.C. Nº 20100488699',1,0,'C');
-	//$pdf->Cell(50,10, iconv('UTF-8', 'ISO-8859-2', '     R.U.C. N° 20100488699'),1);
+	$pdf->Cell(50,10, iconv('UTF-8', 'ISO-8859-2', '     R.U.C. N° 20100488699'),1);
 	//$pdf->Image('img/chart.png',30,10,20,20,'PNG');
 	
-	//$pdf->Ln();
-	//$pdf->Cell(140);
-	//$pdf->Cell(50,18,'GUIA DE REMISION',1,0,'C');
+	$pdf->Ln();
+	$pdf->Cell(140);
+	$pdf->Cell(50,18,'GUIA DE REMISION',1,0,'C');
 	//$this->Image('logo.jpg' , 80 ,22, 35 , 38,'JPG', 'http://www.desarrolloweb.com');
   
     // Salto de línea
-    //$pdf->Ln(20);
+    $pdf->Ln(20);
 
 
 
 
-
+*/
 
 
 
@@ -163,83 +164,88 @@ $link = $pdf->AddLink();
 
 /**********                 **********/	
 	
-$pdf->SetXY(160, 30);
+$pdf->SetXY(140, 49);
 	$pdf->Cell(10, 8,	$reg[0]["var_cod_ser"], 0, 'C');
-	//$pdf->SetXY(165, 30);
-	//$pdf->Cell(10, 8,	'-', 0, 'C');
-	$pdf->SetXY(168, 30);
+	$pdf->SetXY(147, 49);
+	$pdf->Cell(10, 8,	'-', 0, 'C');
+	$pdf->SetXY(149, 49);
 	$pdf->Cell(10, 8,	$reg[0]["var_cod_guia_cab"], 0, 'C');
 
-
-	//$pdf->SetXY(5, 40);
-	//$pdf->Cell(10, 8, 'Suc.Procedencia: ', 0, 'C');
-	//$pdf->SetFontSize(9);
+/*
+	$pdf->SetXY(5, 60);
+	$pdf->Cell(10, 8, 'Suc.Procedencia: ', 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(37, 40);
 	$pdf->Cell(10, 8,	$reg[0]["var_nom_suc"], 0, 'C');
 	
+	*/
 	
 	
 	
 	
-	//$pdf->SetFontSize(10);
-	//$pdf->SetXY(125, 40);
-	//$pdf->Cell(10, 8, utf8_decode('Fecha Translado:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(155, 40);
-	$pdf->Cell(10, 8,$reg[0]["date_fecenv_guia_cab"], 0, 'C');
 	
 
 	
 	
 /**********                 **********/	
 /**********                 **********/	
-	//$pdf->SetXY(5, 47);
-	//$pdf->Cell(10, 8, 'Suc.Envio: ', 0, 'C');
-	
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(22, 47);
+	/*
+	$pdf->SetXY(5, 47);
+	$pdf->Cell(10, 8, 'Suc.Envio: ', 0, 'C');
+	*/
+	$pdf->SetFontSize(9);
+	$pdf->SetXY(25, 67);
 	$pdf->Cell(10, 8,$reg[0]["var_rsoc_cli"], 0, 'C');
 	
 
-
-	//$pdf->SetXY(140, 47);
-	//$pdf->Cell(10, 8, utf8_decode('RUC:'), 0, 'C');
-	//$pdf->SetFontSize(9);
+/*
+	$pdf->SetXY(140, 47);
+	$pdf->Cell(10, 8, utf8_decode('RUC:'), 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(150, 47);
 	$pdf->Cell(10, 8,$reg[0]["var_ruc_cli"], 0, 'C');
-
+*/
 
 	
 	
 /**********                 **********/	
 
 /**********                 **********/	
-	//$pdf->SetXY(5, 54);
-	//$pdf->Cell(10, 8, 'Direccion: ', 0, 'C');
-	//$pdf->SetFontSize(9);
+/*	$pdf->SetXY(5, 54);
+	$pdf->Cell(10, 8, 'Direccion: ', 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(22, 54);
 	$pdf->Cell(10, 8,$reg[0]["var_dir_cli"], 0, 'C');	
-	
+	*/
 	
 	
 /**********                 **********/	
 
 /**********                 **********/	
-	//$pdf->SetXY(5, 60);
-	//$pdf->Cell(10, 8, 'Vendedor:', 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(22, 60);
-	$pdf->Cell(10, 8,$reg[0]["var_nom_usu"], 0, 'C');	
+/*	$pdf->SetXY(5, 60);
+	$pdf->Cell(10, 8, 'Vendedor:', 0, 'C');
+	$pdf->SetFontSize(9);
+	
+	$pdf->SetXY(15, 65);
+	$pdf->Cell(10, 8, utf8_decode('RA.Z:'), 0, 'C');
+	$pdf->SetFontSize(9);
+	
+		$pdf->SetXY(22, 45);
+	$pdf->Cell(10, 8, utf8_decode('Pto.Llegada:'), 0, 'C');
+	$pdf->SetFontSize(9);
+	*/
+/*	$pdf->SetXY(25, 67);
+	$pdf->Cell(10, 8,$reg[0]["var_rsoc_cli"], 0, 'C');	
 
-	//$pdf->SetXY(45, 60);
-	//$pdf->Cell(10, 8,'', 0, 'L');
-
-	//$pdf->SetXY(70, 60);
-	//$pdf->Cell(10, 8, utf8_decode('Condicion:'), 0, 'C');
-	//$pdf->SetFontSize(9);
+	$pdf->SetXY(45, 60);
+	$pdf->Cell(10, 8,'', 0, 'L');
+*/
+	/*$pdf->SetXY(70, 60);
+	$pdf->Cell(10, 8, utf8_decode('Condicion:'), 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(92, 60);
 	$pdf->Cell(10, 8,$reg[0]["var_desc_mov"], 0, 'C');	
-	
+	*/
 
 	
 /**********                 **********/	
@@ -252,107 +258,142 @@ $pdf->SetXY(160, 30);
 	$pdf->SetXY(170, 60);
 	$pdf->Cell(10, 8,$reg[0]["var_telf_guia_cab"], 0, 'C');	*/
 
-	//$pdf->SetXY(5, 67);
-	//$pdf->Cell(10, 8, utf8_decode('Pto.Partida:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(25, 67);
+	
+	$pdf->SetXY(25, 59);
 	$pdf->Cell(10, 8,$reg[0]["var_pun_part_guia_cab"], 0, 'C');
 	
-	//$pdf->SetXY(110, 67);
-	//$pdf->Cell(10, 8,'', 0, 'L');
 
-	//$pdf->SetXY(110, 67);
-	//$pdf->Cell(10, 8, utf8_decode('Pto.Llegada:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(132, 67);
+	
+	
+	
+	
+	$pdf->SetXY(110, 67);
+	$pdf->Cell(10, 8,'', 0, 'L');
+
+
+	$pdf->SetXY(130, 59);
 	$pdf->Cell(10, 8,$reg[0]["var_pun_lleg_guia_cab"], 0, 'C');	
 	
 	
-
-	//$pdf->SetXY(180, 67);
-	//$pdf->Cell(10, 8,'', 0, 'C');
-	
+/*
+	$pdf->SetXY(180, 67);
+	$pdf->Cell(10, 8,'', 0, 'C');
+	*/
 	
 /**********                 **********/
 
 /**********                 **********/	
-	//$pdf->SetXY(5, 75);
-	//$pdf->Cell(10, 8, 'Marca/Placa:', 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(25, 75);
+/*
+
+	
+	
+	$pdf->SetFontSize(10);
+	$pdf->SetXY(5, 75);
+	$pdf->Cell(10, 8, utf8_decode('Fe Tra:'), 0, 'C');
+	*/
+	$pdf->SetFontSize(9);
+	$pdf->SetXY(19, 76);
+	$pdf->Cell(10, 8,$reg[0]["date_fecenv_guia_cab"], 0, 'C');
+	
+		$pdf->SetXY(76, 76);
+	$pdf->Cell(10, 8,$reg[0]["var_ruc_cli"], 0, 'C');
+	
+	
+	
+	$pdf->SetFontSize(9);
+	$pdf->SetXY(59, 85);
 	$pdf->Cell(10, 8,$reg[0]["var_tran_marca_guia_cab"], 0, 'C');	
 	
 
-	//$pdf->SetXY(60, 75);
-	//$pdf->Cell(10, 8, utf8_decode('Const Inscrip:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(82, 75);
+
+	$pdf->SetFontSize(9);
+	$pdf->SetXY(59, 90);
 	$pdf->Cell(10, 8,$reg[0]["var_tran_constancia_guia_cab"], 0, 'C');
 
 
-	//$pdf->SetXY(125, 75);
-	//$pdf->Cell(10, 8, utf8_decode('Licencia conducir:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(145, 75);
+	
+	$pdf->SetFontSize(9);
+	$pdf->SetXY(59, 95);
 	$pdf->Cell(10, 8,$reg[0]["var_tran_licencia_guia_cab"], 0, 'C');
 
-	//$pdf->SetXY(5, 82);
-	//$pdf->Cell(10, 8, utf8_decode('Razon Social Transp.:'), 0, 'C');
-	//$pdf->SetFontSize(9);
-	$pdf->SetXY(28, 82);
+
+/*
+	$pdf->SetXY(139, 85);
+	$pdf->Cell(10, 8, utf8_decode('RS.Tra.:'), 0, 'C');
+	$pdf->SetFontSize(9);
+	*/
+	$pdf->SetXY(135, 85);
 	$pdf->Cell(10, 8,$reg[0]["var_trans_rs_guia_cab"], 0, 'C');
 	
-	//$pdf->SetXY(70, 82);
-	//$pdf->Cell(10, 8, utf8_decode('RUC Transp.:'), 0, 'C');
-	//$pdf->SetFontSize(9);
+	
+	$pdf->SetXY(165, 90);
+	$pdf->Cell(10, 8,$reg[0]["var_trans_ruc_guia_cab"], 0, 'C');
+	
+	$pdf->SetXY(112, 95);
+	$pdf->Cell(10, 8,$reg[0]["var_trans_dir_guia_cab"], 0, 'C');
+	
+	$direc_op=$reg[0]["var_dir_env_guia_cab"];
+	
+	
+	
+	/*
+	$pdf->SetXY(70, 82);
+	$pdf->Cell(10, 8, utf8_decode('RUC Transp.:'), 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(92, 82);
 	$pdf->Cell(10, 8,$reg[0]["var_trans_ruc_guia_cab"], 0, 'C');
 	
-	//$pdf->SetXY(140, 82);
-	//$pdf->Cell(10, 8, utf8_decode('Direccion Transp.:'), 0, 'C');
-	//$pdf->SetFontSize(9);
+	$pdf->SetXY(140, 82);
+	$pdf->Cell(10, 8, utf8_decode('Direccion Transp.:'), 0, 'C');
+	$pdf->SetFontSize(9);
 	$pdf->SetXY(150, 82);
 	$pdf->Cell(10, 8,$reg[0]["var_trans_dir_guia_cab"], 0, 'C');
 	
 
+*/
 
-
-$pdf->Ln(10);
+$pdf->Ln(18);
 	
-	                    
-						//$pdf->SetFillColor(150,50,150);
-                        //$pdf->SetDrawColor(0,0,0);
-                        //$pdf->SetTextColor(0,0,0);
-						//$pdf->SetFontSize(10);
+	                    /*
+						$pdf->SetFillColor(0,0,0);
+                        $pdf->SetDrawColor(0,0,0);
+                        $pdf->SetTextColor(0,0,0);
+						$pdf->SetFontSize(10);
 						
 						
-						//$pdf->Cell(25, 5,'CODIGO', 1,0, 'C');
+						$pdf->Cell(25, 5,'CODIGO', 1,0, 'C');
 					
-						//$pdf->Cell(25, 5,'CANTIDAD', 1,0, 'C');
-						//$pdf->Cell(85, 5,'DESCRIPCION', 1,0, 'C');
+						$pdf->Cell(25, 5,'CANTIDAD', 1,0, 'C');
+						$pdf->Cell(85, 5,'DESCRIPCION', 1,0, 'C');
 						
-						//$pdf->Cell(25, 5,'P. UNITARIO', 1,0, 'C');
-						//$pdf->Cell(25, 5,'P. TOTAL', 1,1, 'C');
+						$pdf->Cell(25, 5,'P. UNITARIO', 1,0, 'C');
+						$pdf->Cell(25, 5,'P. TOTAL', 1,1, 'C');
 						
-						
+						*/
 	
-					$tra= new guia_cabecera();
+$tra= new guia_cabecera();
 					$reg=$tra->get_guia_detalle_por_id($_GET['id']);
 					for ($i=0;$i<count($reg);$i++)
 					{
 						$pdf->SetTextColor(0,0,0);
-						$pdf->SetFontSize(8);
+								$pdf->SetFontSize(8);
 						
 						$pdf->Cell(25, 5,$reg[$i]["int_cod_tit"], 0,0, 'C');
-						$pdf->Cell(25, 5,$reg[$i]["int_cant_guia_det"], 0,0, 'C');
-						$pdf->Cell(85, 5,$reg[$i]["var_nom_tit"], 0,0, 'C');
-						$pdf->Cell(25, 5,$reg[$i]["dec_pvent_guia_det"], 0,0, 'C');
+						$pdf->Cell(30, 5,$reg[$i]["int_cant_guia_det"], 0,0, 'C');
+						$pdf->Cell(95, 5,$reg[$i]["var_nom_tit"], 0,0, 'C');
+						$pdf->Cell(30, 5,$reg[$i]["dec_pvent_guia_det"], 0,0, 'C');
 						
-						$pdf->Cell(25, 5,$reg[$i]["dec_vtotal_guia_det"], 0,1, 'C');
+						$pdf->Cell(15, 5,$reg[$i]["dec_vtotal_guia_det"], 0,1, 'C');
 					}
 
 
      
+	 
+	 
+	 
+	 
+	$pdf->SetXY(50, 268);
+	$pdf->Cell(10, 8,'direcion opcional', 0, 'C'); 
 
 $pdf->Output();
 ?>
