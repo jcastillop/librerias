@@ -190,9 +190,25 @@ $(document).ready(function() {
 					$tra=new factura_cabecera();
 					$reg=$tra->get_factura_cabecera();
 					for ($i=0;$i<count($reg);$i++)
-					{
+				{ if ($reg[$i]["int_tipven_fact_cab"]==2){
 				 ?>  
-					<tr>    
+					<tr style="border:2px solid red;">   
+                    	<td style="color:red"><?php echo $reg[$i]["id"];?></td>              
+						<td style="color:red"><?php echo '00'.$reg[$i]["var_cod_ser"]."-".$reg[$i]["var_cod_fact_cab"];?></td> 
+                        <td style="color:red"><?php echo $reg[$i]["int_tip_doc_fact"];?></td>
+                        <td style="color:red"><?php echo $reg[$i]["var_nom_suc"];?></td>
+						<td style="color:red"><?php echo $reg[$i]["var_rsoc_cli"];?></td>
+						<td style="color:red"><?php echo $reg[$i]["var_nom_usu"];?></td>
+                        <td style="color:red"><?php echo $reg[$i]["date_fecenv_fact_cab"];?></td>
+						<td style="color:red">Pendiente</td>
+                        <td style="color:red"><?php echo $reg[$i]["int_dias_fact_cab"];?></td>
+
+					</tr>
+				
+  <?php
+} else {
+?>     
+<tr>    
                     	<td><?php echo $reg[$i]["id"];?></td>              
 						<td><?php echo '00'.$reg[$i]["var_cod_ser"]."-".$reg[$i]["var_cod_fact_cab"];?></td> 
                         <td><?php echo $reg[$i]["int_tip_doc_fact"];?></td>
@@ -200,12 +216,14 @@ $(document).ready(function() {
 						<td><?php echo $reg[$i]["var_rsoc_cli"];?></td>
 						<td><?php echo $reg[$i]["var_nom_usu"];?></td>
                         <td><?php echo $reg[$i]["date_fecenv_fact_cab"];?></td>
+						<td >Pagado</td>
+                        <td><?php echo $reg[$i]["int_dias_fact_cab"];?></td>
 
-					</tr>
-				
-  <?php
-}
-?>        
+					</tr>   
+					
+					 <?php
+} }
+?> 
                 </tbody>
 			</table>
 			</div>
