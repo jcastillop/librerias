@@ -1,3 +1,9 @@
+            function Abrir_ventana (pagina) {
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=525, top=15, left=140";
+window.open(pagina,"",opciones);
+}
+            
+            
             $(document).ready(function(){
                     
                 //Iniciando el datepicker
@@ -146,7 +152,7 @@
                             
                             var res = jQuery.parseJSON(result);
                            alert(res.mensaje);
-                           alert(res.codigo);
+                             Abrir_ventana('../consulta/reporte_historial.php?id='+res.codigo);
                             limpiarformulario("#form");
                             $("#condiciones").val("Transacción");   
                           },
