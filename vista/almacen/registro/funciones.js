@@ -152,7 +152,7 @@ window.open(pagina,"",opciones);
                             
                             var res = jQuery.parseJSON(result);
                            alert(res.mensaje);
-                             Abrir_ventana('../consulta/reporte_historial.php?id='+res.codigo);
+                             Abrir_ventana('../consulta/reporte_historial_1.php?id='+res.codigo);
                             limpiarformulario("#form");
                             $("#condiciones").val("Transacción");   
                           },
