@@ -135,12 +135,6 @@ function formulario(f) {
 	f.raz_soc.focus(); return false; }  
 	if (f.tip_per.value   == '--Seleccione--') { alert ('El campo Tipo de Persona esta vacío, ingrese un dato porfavor!!');  
 	f.tip_per.focus(); return false; }
-	if (f.pais.value   == '--Seleccione--') { alert ('El campo País esta vacío, ingrese un dato porfavor!!');  
-	f.pais.focus(); return false; } 
-	if (f.departamento.value   == '--Seleccione--') { alert ('El campo Departamento esta vacío, ingrese un dato porfavor!!');  
-	f.departamento.focus(); return false; } 
-	if (f.provincia.value   == '--Seleccione--') { alert ('El campo Provincia esta vacío, ingrese un dato porfavor!!');  
-	f.provincia.focus(); return false; } 
 	if (f.direccion.value   == '') { alert ('El campo Dirección  esta vacío, ingrese un dato porfavor!!');  
 	f.direccion.focus(); return false; }
 	if (f.telefono.value   == '') { alert ('El campo Teléfono esta vacío, ingrese un dato porfavor!!');  
