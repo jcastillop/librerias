@@ -10,7 +10,7 @@ window.close()
 @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../../conexiones/class_cliente1.php");
+require_once("../../../conexiones/class_cliente.php");
 require_once("../../../conexiones/class_pais.php");
 require_once("../../../conexiones/class_departamento.php");
 require_once("../../../conexiones/class_provincia.php");
