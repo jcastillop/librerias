@@ -29,25 +29,21 @@ class proveedor
 		p.int_cod_prov,
 		p.var_rsoc_prov,
 		p.int_nrodoc_prov,
-		case when p.int_tipper_prov=1 then 'Persona Natural' else 'Persona Juridica' end int_tipper_prov,
 		case when p.int_est_prov=1 then 'Activo' else 'Inactivo' end int_est_prov,
 		p.var_dir_prov,
-		p.int_cod_pais,
-		pa.var_nom_pais,
 		p.int_cod_dept,
 		d.var_nom_dept,
 		p.int_cod_provi,
 		pr.var_nom_provi,
 		p.var_dist_prov,
 		p.var_cel_prov,		
-		p.var_telef_prov,		
-		p.var_fax_prov 
+		p.var_telef_prov
 		from T_proveedor p
-		inner join T_pais pa on pa.int_cod_pais=p.int_cod_pais
 		inner join T_departamentos d on d.int_cod_dept=p.int_cod_dept
 		inner join T_provincias pr on pr.int_cod_provi=p.int_cod_provi		
 		where int_est_prov<>0
-		order by int_cod_prov desc";	
+		order by int_cod_prov desc
+		";	
 		
 		$res=mysql_query($sql,Conectar::con());
 		
