@@ -41,6 +41,8 @@ class factura_cabecera
 					c.var_rsoc_cli,
 					f.int_cod_usu,
 					u.var_nom_usu,
+					f.int_tipven_fact_cab,
+					f.int_dias_fact_cab,
 					date(f.date_fecenv_fact_cab) as date_fecenv_fact_cab
 					from T_factura_cabecera f
 					inner join T_serie s on s.var_cod_ser=f.var_cod_ser	
