@@ -1,6 +1,6 @@
 
 <?php
-require_once("../../../conexiones/class_cliente1.php");
+require_once("../../../conexiones/class_cliente.php");
 require_once("../../../conexiones/conexion.php");
 ?>
 <!DOCTYPE html>
