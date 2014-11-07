@@ -113,6 +113,7 @@ class cliente
 				(null,
 				'$rsoc',
 				'$estado',
+				0,
 				'$tip_per',
 				'$ruc',
 				'$dir',
