@@ -142,8 +142,12 @@
                                alert("Error al registrar guia: " + result);
                             } 
                             */
-							limpiarformulario("#form");
-                            alert(result);
+							
+                            
+                            var res = jQuery.parseJSON(result);
+                           alert(res.mensaje);
+                           alert(res.codigo);
+                            limpiarformulario("#form");
                             $("#condiciones").val("Transacción");   
                           },
                           error: function(result){

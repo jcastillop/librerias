@@ -119,6 +119,11 @@ $var_guia_detalle=$var_guia_detalle.'(lpad("'.$var_cod_guia_det.'",6,"0"),'
    $array_msg = mysql_fetch_array(mysql_query("Select @c_msg",Conectar::con()));
    $codigo_msg = $array_msg["@c_msg"];}
    
-echo $codigo_msg;
+
+
+    $response = array ("codigo" => "", "mensaje" => "");
+    $response["mensaje"]=$codigo_msg;
+    $response["codigo"]=$codigo_gen1;
+    echo json_encode($response);
 ?> 
 
