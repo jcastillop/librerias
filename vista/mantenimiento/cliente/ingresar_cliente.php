@@ -2,18 +2,12 @@
  @session_start();
  $user=$_SESSION['usuario'];
  $fecha_actual= date("Y-m-d");
-require_once("../../../conexiones/class_cliente1.php");
+require_once("../../../conexiones/class_cliente.php");
 require_once("../../../conexiones/conexion.php");
 //print_r($_POST);nick_usu
 $tra=new cliente();
-if(isset($_POST['ide_suc'])){$ide_suc=$_POST['ide_suc'];
-					 }else
-					 {$ide_suc=0;
-					 };				 
-					 
 $tra->add_cliente($_POST['rsoc'],
 				 $_POST['estado'],
-				 $ide_suc,
 				 $_POST['tip_per'],
 				 $_POST['ruc'],
 				 $_POST['direccion'],
