@@ -1,7 +1,7 @@
 
 <?php
 require_once("../../../../conexiones/conexion.php");
-require_once("../../../../conexiones/class_cliente.php");
+require_once("../../../../conexiones/class_cliente_autocompletado.php");
 
 
 

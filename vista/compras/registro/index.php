@@ -25,7 +25,7 @@ header('Content-Type: text/html; charset=UTF-8');
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />		
-        <link rel="stylesheet" type="text/css" href="../../../paquetes/responsive/css/style.css" />
+        <link href="../../../css/estilo.css" rel="stylesheet" type="text/css" />
     
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
           <style type="text/css">
@@ -52,31 +52,19 @@ header('Content-Type: text/html; charset=UTF-8');
     
     <body>	
     
-    <div class="wrapper">
-		<div id="main" style="padding:0px 0 0 0;">
-     
-            <form  id="form" class="login-form"  >
-    
-            <h1 align="center">Registro de compras</h1>
-            <div class="content">
-            
-            <div  class="form">
-            <table  class="table_css">
-                <tr>
-                  <td>
-                        <input type="file"  name="file" id="file"/>
-                      <input class="button"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
-                      Fecha de recepción:
-                      <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" />
-                      Fecha de emisión:
+    <form  id="form">
+    <div class="container" >
+            <h4 align="center" >Registro de compras</h4>
+                 
+                
+                        <input type="file"  name="file" id="file" style="width:350px;margin-left:40px;"/>
+                      <input class="enviar"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
+                     <label for="lblfec_rec"style="margin-left:100px" > Fecha de recepción:</label>
+                      <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" /><br>
+                     <label for="lblfec_emi" > Fecha de emisión:</label>
                       <input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:100px" />
-                    </td>  
-                </tr>
-                <tr>
-                    <td>
-                        
-                        
-                        Sucursal:
+                      
+                       <label for="lblsucursal_procedencia"style="margin-left:50px" > Sucursal:</label>
                         <select  name="sucursal" id="sucursal"   class="menu" onchange="from(document.form1.sucursal.value,'midiv','prueba.php')">
                           <option value="">-Seleccione-</option>
                           <?php
@@ -90,84 +78,69 @@ header('Content-Type: text/html; charset=UTF-8');
                                  }
                             ?>
                   </select>
-                        Fecha de caducidad:
-                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username"  />
-			Descripción:
-			<input name ="descripcion" type="text" id="descripcion" class="input username"  />
-			Condición:
+                       <label for="lblfeccad" style="margin-left:99px"> Fecha de caducidad:</label>
+                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:100px"  />
+			<br><label for="lbldesc" style="margin-left:42px" >Descripción:</label>
+			<input name ="descripcion" type="text" id="descripcion" class="input username"style="width:400px"  />
+			<label for="lblcond" style="margin-left:170px" >Condición:</label>
                         <input name="condiciones" type="text" class="input username"  id="condiciones" style="width:100px" value="Compra"></input>
-			</td> 
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                </tr> 
-              </table>
-            </div>
-        
-             <br />
-              <h2 align="center">Registro de productos</h2>
+			
+                </div>
+            
+        <div class="container3" >
+              <h4 align="center">Registro de productos</h4>
             <div id="frm_usu">
-                <table border="0" class="table_css" align="center">
 
                     <tbody>
-           <tr>
-             <td colspan="10">
-            </td>
-             </tr>
-           <tr>
-                            <td>Código Barras</td>
-                            <td><input name="cod_bar_tit" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/></td>
+                     
+                            <label for="lblcod" >Código Barras</label><input name="cod_bar_tit" type="text" id="cod_bar_tit" onkeypress="return tabular(event,this)"/>
        
-                            <td>Edición</td>
-                            <td><input name="edic_tit" type="text" id="edic_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lbled"style="margin-left:10px" >Edición</label>
+                            <input name="edic_tit" type="text" id="edic_tit"style="width:100px"onkeypress="return tabular(event,this">
                    
-                            <td>Titulo</td>
-                            <td><input name="tit_tit" type="text" id="tit_tit" onkeypress="return tabular(event,this)"/></td>
+                           <label for="lbltit" style="margin-left:38px" > Titulo</label><input name="tit_tit" type="text" id="tit_tit" onkeypress="return tabular(event,this)"/>
 
-                            <td>Autor</td>
-                            <td><input name="aut_tit" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lblaut" style="margin-left:43px">Autor</label>
+                            <input name="aut_tit" type="text" id="aut_tit" onkeypress="return tabular(event,this)"/><br>
                                 
-                            <td>ISBN</td>
-                            <td><input name="isbn_tit" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/></td>
-                        </tr>
-                        <tr>
-                            <td>Nro. Pag</td>
-                            <td><input name="nro_tit" type="text" id="nro_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lblISBN" style="margin-left:67px" >ISBN</label>
+                            <input name="isbn_tit" type="text" id="isbn_tit" onkeypress="return tabular(event,this)"/>
+                       
+                       
+                              <label for="lblnro" >Nro. Pag</label>
+                            <input name="nro_tit" type="text" id="nro_tit" onkeypress="return tabular(event,this)" style="width:100px"/>
 
-                            <td>Editorial</td>
-                            <td><input name="edi_tit" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lbledit" style="margin-left:14px" >Editorial</label>
+							<input name="edi_tit" type="text" id="edi_tit" onkeypress="return tabular(event,this)"/>
 
-                            <td>Genero</td>
-                            <td><input name="gen_tit" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lblgen"style="width:100px;margin-left:30px" >Genero</label>
+                            <input name="gen_tit" type="text" id="gen_tit" onkeypress="return tabular(event,this)"/><br>
 
-                            <td>Pais</td>
-                            <td><input name="pai_tit" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lblpais" style="margin-left:71px" >Pais</label>
+                            <input name="pai_tit" type="text" id="pai_tit" onkeypress="return tabular(event,this)"/>
 
-                            <td>Descripción</td>
-                            <td><input name="desc_tit" type="text" id="desc_tit" onkeypress="return tabular(event,this)"/></td>
+                            <label for="lbldesc" style="margin-left:1px" >Descripción</label>
+                            <input name="desc_tit" type="text" id="desc_tit" style="width:335px" onkeypress="return tabular(event,this)"/>
 
-                        </tr>
-                        <tr>
-                          <td>Proveedor</td>
-                          <td><input name="prov_tit" type="text" id="prov_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Moneda</td>
-                          <td><input name="mon_tit" type="text" id="mon_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Precio</td>
-                          <td><input name="pre_tit" type="text" id="pre_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>Cantidad</td>
-                          <td><input name="cant_tit"  type="text" id="cant_tit" onkeypress="return tabular(event,this)"/></td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
+                       
+                          <label for="lblprov" style="margin-left:5px">Proveedor</label>
+                          <input name="prov_tit" type="text" id="prov_tit" style="width:155px" onkeypress="return tabular(event,this)"/><br>
+                          <label for="lblmon" style="margin-left:43px" >Moneda</label>
+                          <input name="mon_tit" type="text" id="mon_tit" style="width:100px" onkeypress="return tabular(event,this)"/>
+                          <label for="lblprec" style="margin-left:70px">Precio</label>
+                          <input name="pre_tit" type="text" id="pre_tit" style="width:100px" onkeypress="return tabular(event,this)"/>
+                          <label for="lblcant" style="margin-left:10px">Cantidad</label>
+                          <input name="cant_tit"  type="text" id="cant_tit" style="width:100px" onkeypress="return tabular(event,this)"/>
+                                           
                        
                     </tbody>
                     <tfoot>
                     </tfoot>
-                </table>
-            </div>
+              
+            </div></div>
             	
-			<div align="center" style="height:250px;overflow:scroll;">
-            <table id="grilla" class="lista"  align="center">
+			<div class="container4">
+            <table id="grilla">
               <thead>
                     <tr>
                         <th style="width:50px;">Cod.Barras</th>
@@ -194,18 +167,18 @@ header('Content-Type: text/html; charset=UTF-8');
                 <tfoot>
                 	<tr>
                         <td colspan="3"><strong>Cantidad:</strong> <span id="span_cantidad">0</span> productos.</td>
-                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="button" value="Enviar" type="submit"></td>
+                        <td><strong>Acción:</strong> <input id="submit" name="Submit" class="enviar" value="Enviar" type="submit"></td>
                         <td><strong>Suma total:</strong> <span id="suma_total">0</span></td>
                     </tr>
                 </tfoot>
             </table>
             </div>
-            </div>
+            
 </form> 
 
         
     
-        </div>
+        
 
      
     </body>

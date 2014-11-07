@@ -10,7 +10,8 @@
         }
 		
         </script>
-<input type="hidden" id="val1" value="" disabled="disabled"/>     
+<input type="hidden" id="val1" value="" disabled="disabled"/> 
+  
 <?php
 
 //******************************************************************

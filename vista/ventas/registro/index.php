@@ -16,11 +16,7 @@ require_once("../../../conexiones/conexion.php");
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
      
- 
-     
-     
-        <link href="../../../paquetes/css ventanas/style_ventana.s" rel="stylesheet" type="text/css" />
-        <link href="responsive/css/style.css" rel="stylesheet">
+  <link href="../../../css/estilo.css" rel="stylesheet" type="text/css" />
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
         
         <script type='text/javascript' src="busquedas/js/jquery.autocomplete.js"></script>
@@ -156,13 +152,6 @@ document.getElementById("cliente").style.borderColor = "#FFF";
         </script>
         
         
-        
-        
-          <style type="text/css">
-    .label {width:100px;text-align:right;float:left;padding-right:10px;font-weight:bold;}
-    #register-form label.error, .output {color:#FF0000;font-weight:bold;}
-  </style>
-
     </head>
 
     
@@ -184,24 +173,20 @@ document.getElementById("cliente").style.borderColor = "#FFF";
 </script> 
     
 <body>	
-        <div id="wrapper" style="zoom:90%">
             <form  id="contact-form" class="login-form">
     
-   
-            <div align="center" class="content">
-            
-               <div id="content" >
-            <table class="mi_tabla">
-                <tr>
-                    <td>Tipo documento: 
+   <div class="container" >
+            <h4 align="center" >Registro de Ventas</h4>
+                
+				<label for="lbltdoc">Tipo documento: </label>
                      <input type="hidden" id="clienteID" name="clienteID"/>
-                        <select  name="tipo_doc" id="tipo_doc"  style="width:150px" class="menu">
+                        <select  name="tipo_doc" id="tipo_doc"  style="width:150px;margin-right:50px;" class="menu">
                             <option value="">-Seleccione-</option>
                             <option value="1">Boleta</option>
                             <option value="2">Factura</option>
                         </select>
-                        Sucursal procedencia    : 
-                        <select  name="sucursal" id="sucursal"  style="width:150px" class="menu" onChange="from(document.form1.sucursal.value,'midiv','prueba.php')">
+                        <label for="lblsuc">Sucursal procedencia    : </label>
+                        <select  name="sucursal" id="sucursal"  style="width:150px;margin-right:50px;" class="menu" onChange="from(document.form1.sucursal.value,'midiv','prueba.php')">
                             <option value="">-Seleccione-</option>
                             <?php
                                  $tra=new sucursal();
@@ -214,29 +199,7 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                                  }
                             ?>
                         </select>
-                        Fecha:
-                        <input name ="fecha_registro" type="text" id="datepicker" class="fecha"  />
-                        Condicion:
-                        <label name="lbl_ventas" id="lbl_ventas"><input name="ventas" type="checkbox" onclick="javascript:validaCondicion(this.checked)" id="ventas"/>Venta a Plazo</label>
-                        <input name="condiciones" class="condiciones" id="condiciones" value="0" disabled type="text" id="condiciones">   
-                    </td>
-
-                </tr>
-                <tr>
-             
-                    <td>Cliente:
-                    <input name="cliente" class="cliente"  type="text" id="cliente"  onKeyDown ="detectar_tecla (event)"  />
-                   
-                    R.U.C:
-                    <input name="ruc" class="input username" style="width:200px" type="text"  id="ruc"  onFocus="validar_cliente()" /></td>
-                </tr>
-                <tr>
-                    <td>Direccion:
-                      <input name="direccion" class="input username"  type="text" id="direccion"  />
-                    Distrito:
-                    <input name="distrito" class="input username"  type="text" id="distrito" ></input>
-                     
-                    Vendedor:
+						 <label for="lblvend">Vendedor:</label>
                     <select  name="vendedor" id="vendedor"   class="menu">
                       <option value="">-Seleccione-</option>
                       <?php
@@ -249,32 +212,46 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                       <?php
                                  }
                             ?>
-                    </select></td>                                         
-                </tr>
-                 
-              </table>
+                    </select><br>
+                        <label for="lblfec" style="margin-left:75px">Fecha:</label>
+                        <input name ="fecha_registro" type="text" id="datepicker" class="fecha"  />
+                        <label for="lblcond" style="margin-left:235px">Condicion:</label>
+                        <label name="lbl_ventas" id="lbl_ventas" style="width:80px;margin-left:40px"><input name="ventas" type="checkbox" style="width:80px;" onclick="javascript:validaCondicion(this.checked)" id="ventas"/>Venta a Plazo: </label>
+                        <input name="condiciones" class="condiciones" id="condiciones" value="0" disabled type="text" id="condiciones">   
+                  <br><label for="lblcli" style="margin-left:68px"> Cliente:</label>
+                    <input name="cliente" class="cliente"  type="text" id="cliente"  onKeyDown ="detectar_tecla (event)"  />
+                   
+                   <label for="lblruc" > R.U.C:</label>
+                    <input name="ruc" class="input username" style="width:150px;margin-left:9px" type="text"  id="ruc"  onFocus="validar_cliente()" /></td>
+                <label for="lbldir">Direccion:</label>
+                      <input name="direccion" class="input username"  type="text" id="direccion"  />
+                 <label for="lbldis">   Distrito:</label>
+                    <input name="distrito" class="input username"  type="text" id="distrito" ></input>
+                    
             <br />
              </div>
             
       
- 
-             <div id="frm_usu" style="width: 1080px; margin-left: 10px; border-radius: 10px;border: 2px solid #B1B1B1;">
-                <table border="0" align="center">
+           </div>  
+     <div class="container3" >
+             <h4 align="center">Registro de productos</h4>
+            <div id="frm_usu">
+                <table>
 
                     <tbody>
                         <tr>
-                            <td>Codigo</td>
-                            <td><input name="valor_ide"  style="width:100px" type="text" id="valor_ide" size="10" onkeypress="return tabular(event,this)"/></td>
+                            <td> <label for="lblcod" style="width:180px">Código</label></td>
+                            <td><input name="valor_ide" class="input username" style="width:100px" type="text" id="valor_ide" size="10" onkeypress="return tabular(event,this)"/></td>
        
-                            <td>Descripcion</td>
-                            <td><input name="valor_uno" style="width:382px" type="text" id="valor_uno" size="50" class='input username'/></td>
+                            <td><label for="lbldesc" style="width:180px">Descripción</label></td>
+                            <td><input name="valor_uno" class="input username"style="width:300px" type="text" id="valor_uno" size="50" class="required"/></td>
                    
-                            <td>Precio</td>
-                            <td><input name="valor_dos" style="width:100px" type="text"  id="valor_dos" size="10"  class='input username'/>
+                            <td><label for="lbldesc" style="width:180px">Precio</label></td>
+                            <td><input name="valor_dos" class="input username" style="width:100px" type="text" id="valor_dos" size="10" class="required"/>
                                 <input type="hidden" id="tituloID" name="tituloID"></input>
                             </td>
                                 
-                            <td>Cantidad</td>
+                            <td><label for="lbldesc" style="width:180px">Cantidad</label></td>
                             <td><input name="valor_tres" class="input username" style="width:100px" type="text" id="valor_tres" size="10" onkeypress="return tabular(event,this)"/></td>
                         </tr>
                        
@@ -285,9 +262,10 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                         </tr>
                     </tfoot>
                 </table>
-            </div>
+            </div>    </div>
+            
             	
-			<div align="center" style="height:250px;overflow:scroll;">
+			<div class="container4">
             <table id="grilla" class="lista" border="0" align="center">
               <thead>
                     <tr>
@@ -314,17 +292,10 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                 </tfoot>
             </table>
             </div>
-            </div>
+         
 </form> 
 
         
-    
-        </div>
-
-
-    
-        </div>
-<script src="responsive/js/scripts.js"></script>
      
     </body>
 </html>
