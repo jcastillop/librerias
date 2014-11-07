@@ -183,6 +183,8 @@ $(document).ready(function() {
                         <th >Cliente</th>
                         <th >Vendedor</th>
                         <th >Fecha Fact.</th>
+                        <th>Estado</th>
+                        <th >Días de Pago.</th>
 					</tr>
 				</thead>
 				<tbody align="center">
