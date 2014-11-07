@@ -6,14 +6,26 @@ require_once("../../../conexiones/class_proveedor.php");
 require_once("../../../conexiones/conexion.php");
 //print_r($_POST);nick_usu
 $tra=new proveedor();
+if($_POST['pais']==999)
+{
+	$pais=184;
+	$departamento=15;
+	$provincia=128;
+}
+else
+{
+	$pais= $_POST['pais'];
+	$departamento= $_POST['departamento'];
+	$provincia= $_POST['provincia'];
+}
 $tra->add_proveedor($_POST["raz_soc"],
 					$_POST["nro_doc"],
 					$_POST["tip_per"],					
 					$_POST["estado"],
 					$_POST["direccion"],
-					$_POST["pais"],
-					$_POST["departamento"],
-					$_POST["provincia"],
+					$pais,
+					$departamento,
+					$provincia,
 					$_POST["distrito"],
 					$_POST["celular"],				
 					$_POST["telefono"],				
