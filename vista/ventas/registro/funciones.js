@@ -20,18 +20,9 @@
                           data: dataString,
                           cache: false,
                           success: function(result){
-                            /*
-                            if(result==0){
-                               limpiarformulario("#form");
-                               alert("Guia registrada correctamente");
-                            } else {
-                               alert("Error al registrar guia: " + result);
-                            } 
-                            */
-
+                   
                             alert(result); 
-                            
-                           
+                   
 
                           },
                           error: function(result){
@@ -153,26 +144,13 @@
                           data: dataString,
                           cache: false,
                           success: function(result){
-                            /*
-                            if(result==0){
-                               limpiarformulario("#form");
-                               alert("Guia registrada correctamente");
-                            } else {
-                               alert("Error al registrar guia: " + result);
-                            } 
-                            */
 
-							//var res = jQuery.parseJSON(result);
+							var res = jQuery.parseJSON(result);
                             alert(result);
                             //alert(res.codigo);
                             limpiarformulario("#contact-form");
-<<<<<<< HEAD
                             $("#condiciones").val("0");
                             
-=======
-                             $("#condiciones").val(0); 
-
->>>>>>> origin/master
                           },
                           error: function(result){
 
