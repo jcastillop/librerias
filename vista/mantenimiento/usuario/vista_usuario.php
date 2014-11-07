@@ -194,6 +194,7 @@ $(document).ready(function() {
                         <th width="9%">Nombres</th>
 						<th width="32%">Apellido Pat.</th>
 						<th width="18%">Apellido Mat.</th>
+						<th width="10%">Rol</th>
 						<th width="10%">Estado</th>
 						<th width="4%"></th>
 				
@@ -215,6 +216,7 @@ for ($i=0;$i<count($reg);$i++)
 						<td><?php echo $reg[$i]["var_nom_usu"];?></td>
 						<td><?php echo $reg[$i]["var_appat_usu"];?></td>
 						<td><?php echo $reg[$i]["var_apmat_usu"];?></td>
+						<td><?php echo $reg[$i]["var_nom_rol"];?></td>
 						<td><?php echo $reg[$i]["int_est_usu"];?></td>
                        <td align='center' ><a href=" javascript:elim('eliminar_usuario.php?id=<?php echo $reg[$i]["int_cod_usu"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 		
