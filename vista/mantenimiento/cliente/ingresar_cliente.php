@@ -22,7 +22,6 @@ else
 					 
 $tra->add_cliente($_POST['rsoc'],
 				 $_POST['estado'],
-				 $ide_suc,
 				 $_POST['tip_per'],
 				 $_POST['ruc'],
 				 $_POST['direccion'],
