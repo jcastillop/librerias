@@ -134,12 +134,6 @@ function formulario(f) {
 	f.cod_emp.focus(); return false; }  
 	if (f.var_nom_suc.value   == '') { alert ('El campo Sucursal esta vacío, ingrese un dato porfavor!!');  
 	f.var_nom_suc.focus(); return false; } 
-	if (f.pais.value   == '--Seleccione--') { alert ('El campo País esta vacío, ingrese un dato porfavor!!');  
-	f.pais.focus(); return false; } 
-	if (f.departamento.value   == '--Seleccione--') { alert ('El campo Departamento esta vacío, ingrese un dato porfavor!!');  
-	f.departamento.focus(); return false; } 
-	if (f.provincia.value   == '--Seleccione--') { alert ('El campo Provincia esta vacío, ingrese un dato porfavor!!');  
-	f.provincia.focus(); return false; } 
 	if (f.telf.value   == '') { alert ('El campo Teléfono esta vacío, ingrese un dato porfavor!!');  
 	f.telf.focus(); return false; }
 
@@ -209,7 +203,7 @@ function formulario(f) {
            <td>País: </td>
           <td>
           <select  name="pais" id="pais" style="width: 160px;" class="input username" onChange="from(document.form1.pais.value,'midiv','sucursal_dep.php')">
-          <option>--Seleccione--</option>
+          <option value="999">--Seleccione--</option>
           <?php
 			$tra=new pais();
 			$reg=$tra->get_combo_pais();
