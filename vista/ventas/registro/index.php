@@ -218,7 +218,7 @@ document.getElementById("cliente").style.borderColor = "#FFF";
                         <input name ="fecha_registro" type="text" id="datepicker" class="fecha"  />
                         Condicion:
                         <label name="lbl_ventas" id="lbl_ventas"><input name="ventas" type="checkbox" onclick="javascript:validaCondicion(this.checked)" id="ventas"/>Venta a Plazo</label>
-                        <input name="condiciones" class="condiciones" disabled type="text" id="condiciones">   
+                        <input name="condiciones" class="condiciones" id="condiciones" value="0" disabled type="text" id="condiciones">   
                     </td>
 
                 </tr>

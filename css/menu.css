@@ -8,6 +8,14 @@ www.freshdesignweb.com
 /* === fontawesome === */
 @import url('font-awesome.css');
 /* === custom icon === */
+html{
+
+margin:0px;
+height:100%;
+width: 100%;
+
+}
+
 body {
   margin: 0;
   font-family:'Open Sans', Arial, sans-serif;

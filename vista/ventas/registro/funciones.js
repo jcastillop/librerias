@@ -165,6 +165,7 @@
                             alert(result); 
 							
                             limpiarformulario("#contact-form");
+                            $("#condiciones").val("0");
                             
                           },
                           error: function(result){
@@ -247,6 +248,7 @@
                     $(this).parents("tr").fadeOut("normal", function(){
                         $(this).remove();
                         fn_cantidad(); 
+
                                                     /*
                                 aqui puedes enviar un conjunto de datos por ajax
                                 $.post("eliminar.php", {ide_usu: id})
@@ -279,9 +281,11 @@
             $(formulario).find('textarea').each(function(){
                 $(this).val('');
             });
+                
                $('#grilla tbody').empty();
                 fn_cantidad(); 
-                fn_sumatotal();
+                
+
             }
             function sumar(){
         
