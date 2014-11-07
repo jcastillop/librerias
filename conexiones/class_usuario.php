@@ -41,20 +41,23 @@ class usuario
 	public function get_usuario()
 	{
 		$sql="select 
-			var_nick_usu,
-			int_cod_usu,
-			int_cod_rol,
-			var_nom_usu,
-			var_appat_usu,
-			var_apmat_usu,
-			case when int_est_usu=1 then 'Activo' else 'Inactivo' end int_est_usu,
-			var_cla_usu,
-			var_usuadd_usu,
-			date_fecadd_usu,
-			var_usumod_usu,
-			date_fecmod_usu from T_usuario 
-			where int_est_usu<>0 
-			order by int_cod_usu desc
+			u.var_nick_usu,
+			u.int_cod_usu,
+			u.int_cod_rol,
+			r.var_nom_rol,
+			u.var_nom_usu,
+			u.var_appat_usu,
+			u.var_apmat_usu,
+			case when u.int_est_usu=1 then 'Activo' else 'Inactivo' end int_est_usu,
+			u.var_cla_usu,
+			u.var_usuadd_usu,
+			u.date_fecadd_usu,
+			u.var_usumod_usu,
+			u.date_fecmod_usu
+			from T_usuario u
+			inner join T_rol r on r.int_cod_rol=u.int_cod_rol
+			where u.int_est_usu<>0 
+			order by u.int_cod_usu desc
 		";
 		
 		$res=mysql_query($sql,Conectar::con());
