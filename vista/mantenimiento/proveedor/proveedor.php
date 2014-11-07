@@ -190,7 +190,7 @@ function formulario(f) {
           <td>País: </td>
           <td>
           <select  name="pais" id="pais" style="width: 160px;" class="input username" onChange="from(document.form1.pais.value,'midiv','proveedor_dep.php')">
-          <option valu="999">--Seleccione--</option>
+          <option value="999">--Seleccione--</option>
           <?php
 			$tra=new pais();
 			$reg=$tra->get_combo_pais();
