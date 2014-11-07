@@ -198,19 +198,16 @@ $(document).ready(function() {
 				<thead>
 					<tr class="cabecera" >						
 						<th><a href="javascript:poptastic('cliente.php');"><img src="../../../css/images/list-add.png" width="80" height="30" /></th>        
-                        <th>T. Persona</th>
-                        <th>R Social</th>
-                        <th>Estado</th>
-                        <th>Ruc</th>
-                        <th>Pais</th>
+                        <th>R Social</th>                  
+                        <th>Ruc</th>                       
                         <th>Depart</th>
                         <th>Prov</th>
                         <th>Dist</th>
                         <th>Direc</th>
-                        <th>DNI</th>
+                        <th>Ref. Domic</th>
                         <th>Tel</th>
-                        <th>Fax</th>
                         <th>Mail</th>
+                        <th>Estado</th>
                         <th></th>
                      </tr>
                  </thead>
@@ -224,21 +221,17 @@ for ($i=0;$i<count($reg);$i++)
 					<tr align="center">
                   <td align='center' ><a href=" javascript:poptastic('mod_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
-						<td><?php echo $reg[$i]["int_tipper_cli"];?></td>
-                         
-						<td><?php echo $reg[$i]["var_rsoc_cli"];?></td>
-						<td><?php echo $reg[$i]["int_est_cli"];?></td>
-						<td><?php echo $reg[$i]["var_ruc_cli"];?></td>
-						<td><?php echo $reg[$i]["var_nom_pais"];?></td>
-                        <td><?php echo $reg[$i]["var_nom_dept"];?></td>
-                        
-                        	<td><?php echo $reg[$i]["var_nom_provi"];?></td>
+			    <td><?php echo $reg[$i]["var_rsoc_cli"];?></td>
+                            
+                            <td><?php echo $reg[$i]["var_ruc_cli"];?></td>
+                            <td><?php echo $reg[$i]["var_nom_dept"];?></td>                        
+                            <td><?php echo $reg[$i]["var_nom_provi"];?></td>
                             <td><?php echo $reg[$i]["var_dist_cli"];?></td>
                             <td><?php echo $reg[$i]["var_dir_cli"];?></td>
-                            <td><?php echo $reg[$i]["var_dni_cli"];?></td>
+                            <td><?php echo $reg[$i]["var_refdom_cli"];?></td>
                             <td><?php echo $reg[$i]["var_telf_cli"];?></td>
-                             <td><?php echo $reg[$i]["var_fax_cli"];?></td>
-							<td><?php echo $reg[$i]["var_cor_cli"];?></td>
+			    <td><?php echo $reg[$i]["var_cor_cli"];?></td>
+                            <td><?php echo $reg[$i]["int_est_cli"];?></td>
 		
                        <td align='center' ><a href=" javascript:elim('eliminar_cliente.php?id=<?php echo $reg[$i]["int_cod_cli"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
 	
