@@ -144,13 +144,14 @@
                           data: dataString,
                           cache: false,
                           success: function(result){
-
+                            
+                         
 							var res = jQuery.parseJSON(result);
-                            alert(result);
-                            //alert(res.codigo);
+                           
+                            alert(res.mensaje);
                             limpiarformulario("#contact-form");
                             $("#condiciones").val("0");
-                            
+                       
                           },
                           error: function(result){
 
