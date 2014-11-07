@@ -143,12 +143,16 @@ function formulario(f) {
 	f.rsoc.focus(); return false; }  
   if (f.ruc.value  != '' && f.ruc.value.length < 11) { alert ('El campo RUC tiene menos de 11 Digitos, Complete los digitos porfavor!!');
   f.ruc.focus(); return false; }
-	if (f.pais.value   == '--Seleccione--') { alert ('El campo País esta vacío, ingrese un dato porfavor!!');  
-	f.pais.focus(); return false; } 
-	if (f.departamento.value   == '--Seleccione--') { alert ('El campo Departamento esta vacío, ingrese un dato porfavor!!');  
-	f.departamento.focus(); return false; } 
-	if (f.provincia.value   == '--Seleccione--') { alert ('El campo Provincia esta vacío, ingrese un dato porfavor!!');  
-	f.provincia.focus(); return false; } 
+	
+	
+
+	
+	
+
+	
+	
+	
+
 	if (f.distrito.value   == '') { alert ('El campo Distrito esta vacío, ingrese un dato porfavor!!');  
 	f.distrito.focus(); return false; }
 	if (f.telefono.value   == '') { alert ('El campo Teléfono esta vacío, ingrese un dato porfavor!!');  
