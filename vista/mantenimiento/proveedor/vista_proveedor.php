@@ -230,17 +230,14 @@ $(document).ready(function() {
 						
 						<th><a href="javascript:poptastic('proveedor.php');"><img src="../../../css/images/list-add.png" width="98" height="30" /></a></th>
 						<th>Razón Social</th>
-                        <th>Tipo de persona</th>
-                        <th>N° Documento</th>
-                        <th>Direccion</th>
-                        <th>País</th>
-                        <th>Departamento</th>
-                        <th>Provincia</th>
-                        <th>Distrito</th>                      
-                        <th>Telefono</th>
-                        <th>Celular</th>
-                        <th>Fax</th>
-                        <th>Estado</th>
+			                        <th>RUC</th>
+			                        <th>Direccion</th>
+			                        <th>Departamento</th>
+			                        <th>Provincia</th>
+			                        <th>Distrito</th>                      
+			                        <th>Telefono</th>
+			                        <th>Celular</th>
+			                        <th>Estado</th>
 						<th></th>
 				
 					</tr>
@@ -259,18 +256,14 @@ for ($i=0;$i<count($reg);$i++)
                   <td align='center' ><a href=" javascript:poptastic('mod_proveedor.php?id=<?php echo $reg[$i]["int_cod_prov"];?>'); " ><img src='../../../img/images/edit.png' width='15px' height='15px' title='Actualizar'></a></td>
                       
 						<td><?php echo $reg[$i]["var_rsoc_prov"];?></td>
-                         
-						<td><?php echo $reg[$i]["int_tipper_prov"];?></td>
-                        <td><?php echo $reg[$i]["int_nrodoc_prov"];?></td>
+                        			<td><?php echo $reg[$i]["int_nrodoc_prov"];?></td>
 						<td><?php echo $reg[$i]["var_dir_prov"];?></td>
-                        <td><?php echo $reg[$i]["var_nom_pais"];?></td>
-                        <td><?php echo $reg[$i]["var_nom_dept"];?></td> 
-                        <td><?php echo $reg[$i]["var_nom_provi"];?></td>
+                        			<td><?php echo $reg[$i]["var_nom_dept"];?></td> 
+                        			<td><?php echo $reg[$i]["var_nom_provi"];?></td>
 						<td><?php echo $reg[$i]["var_dist_prov"];?></td>
 						<td><?php echo $reg[$i]["var_telef_prov"];?></td>
-                        <td><?php echo $reg[$i]["var_cel_prov"];?></td>
-                        <td><?php echo $reg[$i]["var_fax_prov"];?></td>
-                        <td><?php echo $reg[$i]["int_est_prov"];?></td>
+                        			<td><?php echo $reg[$i]["var_cel_prov"];?></td>
+                        			<td><?php echo $reg[$i]["int_est_prov"];?></td>
 						
 		
                        <td align='center' ><a href=" javascript:elim('eliminar_proveedor.php?id=<?php echo $reg[$i]["int_cod_prov"];?>'); " ><img src='../../../img/images/delete.png' width='15px' height='15px' title='Eliminar'></a></td>
