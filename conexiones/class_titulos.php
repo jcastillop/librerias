@@ -30,10 +30,7 @@ class titulos
 				t.int_cod_tit,
 				t.var_nom_tit,
 				t.var_autor_tit,
-				t.var_des_tit,
-				t.var_isbn_tit,
 				t.var_edic_tit,
-				t.int_numpag_tit,
 				t.int_cod_edit,
 				e.var_nom_edit,
 				t.int_cod_gen,
@@ -42,8 +39,7 @@ class titulos
 				p.var_nom_pais,		
 				t.dec_preven_def_tit,
 				t.dec_preven_sug_tit,
-				case when t.int_est_tit=1 then 'Activo' else 'Inactivo' end int_est_tit,
-				t.var_cod_bar_tit
+				case when t.int_est_tit=1 then 'Activo' else 'Inactivo' end int_est_tit
 				from T_titulos t
 				inner join T_editoriales e on e.int_cod_edit=t.int_cod_edit
 				inner join T_generos g on g.int_cod_gen=t.int_cod_gen
@@ -51,7 +47,7 @@ class titulos
 				where t.int_est_tit<>0
 				order by int_cod_tit desc
 		
-		";	
+		";		
 		
 		$res=mysql_query($sql,Conectar::con());
 		
