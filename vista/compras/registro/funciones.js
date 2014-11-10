@@ -2,8 +2,6 @@ $(document).ready(function(){
 //Iniciando el datepicker
 $.datepicker.setDefaults($.datepicker.regional["es"]);
     $( "#fecha_recepcion" ).datepicker();
-    $( "#fecha_emision" ).datepicker();
-    $( "#fecha_caducidad" ).datepicker();
 //Validaciones y envio del formulario
 	$("#form").validate({
     //Especificando las reglas de validacion
@@ -14,13 +12,7 @@ $.datepicker.setDefaults($.datepicker.regional["es"]);
         fecha_recepcion: {
             required: true
         },
-        fecha_emision: {
-            required: true
-        },
         sucursal: {
-            required: true
-        },
-        fecha_caducidad: {
             required: true
         },
         descripcion: {
@@ -32,13 +24,7 @@ $.datepicker.setDefaults($.datepicker.regional["es"]);
         fecha_recepcion: {
             required: "*"
         },
-        fecha_emision: {
-            required: "*"
-        },
         sucursal: {
-            required: "*"
-        },
-        fecha_caducidad: {
             required: "*"
         },
         descripcion: {
@@ -52,9 +38,7 @@ $.datepicker.setDefaults($.datepicker.regional["es"]);
        
         var cod_emp=1;
         var cod_suc = $("#sucursal").val();
-        var fec_rec = $("#fecha_recepcion").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
-        var fec_emi = $("#fecha_emision").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
-        var fec_cad = $("#fecha_caducidad").datepicker("option", "dateFormat", "yy-mm-dd ").val() + " 12:36:05";
+        var fec_rec = $("#fecha_recepcion").datepicker("option", "dateFormat", "yy-mm-dd ").val();
         var desc = $("#descripcion").val();
         var compra_detalle = "[";
                     
@@ -107,8 +91,6 @@ $.datepicker.setDefaults($.datepicker.regional["es"]);
         var dataString= 'cod_emp='+cod_emp+
                         '&cod_suc='+cod_suc+
                         '&fec_rec='+fec_rec+
-                        '&fec_emi='+fec_emi+
-                        '&fec_cad='+fec_cad+
                         '&desc='+desc+
                         '&compra_detalle='+compra_detalle;
                       
