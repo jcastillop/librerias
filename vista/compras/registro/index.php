@@ -57,12 +57,10 @@ header('Content-Type: text/html; charset=UTF-8');
             <h4 align="center" >Registro de compras</h4>
                  
                 
-                        <input type="file"  name="file" id="file" style="width:350px;margin-left:40px;"/>
-                      <input class="enviar"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
+                     <input type="file"  name="file" id="file" style="width:350px;margin-left:40px;"/>
+                     <input class="enviar"  type="button"  id="cargarxls" name="cargarxls" value="CARGAR"/>
                      <label for="lblfec_rec"style="margin-left:100px" > Fecha de recepción:</label>
-                      <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" /><br>
-                     <label for="lblfec_emi" > Fecha de emisión:</label>
-                      <input name ="fecha_emision" type="text" id="fecha_emision" class="input username" style="width:100px" />
+                     <input name ="fecha_recepcion" type="text" id="fecha_recepcion" class="input username" style="width:100px" /><br>
                       
                        <label for="lblsucursal_procedencia"style="margin-left:50px" > Sucursal:</label>
                         <select  name="sucursal" id="sucursal"   class="menu" onchange="from(document.form1.sucursal.value,'midiv','prueba.php')">
@@ -78,8 +76,6 @@ header('Content-Type: text/html; charset=UTF-8');
                                  }
                             ?>
                   </select>
-                       <label for="lblfeccad" style="margin-left:99px"> Fecha de caducidad:</label>
-                        <input name ="fecha_caducidad" type="text" id="fecha_caducidad" class="input username" style="width:100px"  />
 			<br><label for="lbldesc" style="margin-left:42px" >Descripción:</label>
 			<input name ="descripcion" type="text" id="descripcion" class="input username"style="width:400px"  />
 			<label for="lblcond" style="margin-left:170px" >Condición:</label>
