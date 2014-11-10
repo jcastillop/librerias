@@ -1,6 +1,11 @@
 
 <?php
 require_once("../../../conexiones/class_historico_compras.php");
+function nombremes($mes){
+setlocale(LC_TIME, 'spanish');
+$nombre=strftime("%B",mktime(0, 0, 0, $mes, 1, 2000));
+return $nombre;
+} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,7 +91,8 @@ $(document).ready(function() {
 	var table = $('#example').DataTable();
 
 	$('#example tbody').on( 'dblclick', 'tr', function () {
-		$(this).toggleClass('selected');
+		//$(this).toggleClass('selected');
+		alert($('#example tbody td:nth-child(1)'));
 	} );
 
 	$('#button').click( function () {
@@ -176,10 +182,12 @@ $(document).ready(function() {
 					<tr class="cabecera" >
 						
 				    	<th ></th>
-                        <th >N°Documento</th>
+                        <th style="width: 200px;">N°Documento</th>
+                        <th style="width: 200px;">Proveedor</th>
                         <th style="width: 200px;">Sucursal</th>
                         <th style="width: 200px;">Empresa</th>
-                        <th style="width: 300px;">Fecha Emis.</th>
+                        <th style="width: 150px;">Mes</th>
+                        <th style="width: 100px;">Año</th>
 					</tr>
 				</thead>
 				<tbody align="center">
@@ -190,11 +198,13 @@ $(document).ready(function() {
 					{
 				 ?>  
 					<tr>    
-						<td><?php echo $reg[$i]["id"];?></td>                  
+						<td></td>                  
 						<td><?php echo $reg[$i]["var_cod_comp_cab"];?></td>
+						<td><?php echo $reg[$i]["var_rsoc_prov"];?></td>
                         <td><?php echo $reg[$i]["var_nom_suc"];?></td>
                         <td><?php echo $reg[$i]["var_nom_emp"];?></td>
-                        <td><?php echo $reg[$i]["date_fec_emi_comp_cab"];?></td>
+                        <td><?php echo nombremes($reg[$i]["mes"]);?></td>
+                        <td><?php echo $reg[$i]["año"];?></td>
 
 					</tr>
 				

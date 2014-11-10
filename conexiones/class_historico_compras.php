@@ -29,18 +29,17 @@ class ordcomp_cabecera
 	{
 			
 			$sk=mysql_query("set @a:=0;");
-			$sql="select 
-					@a11:=@a+1 as id,
-					c.var_cod_comp_cab,
-					c.int_cod_suc,
-					z.var_nom_suc,
-					c.int_cod_emp,
-					e.var_nom_emp,
-					c.date_fec_emi_comp_cab
-					from T_ordcomp_cab  c
-					inner join T_sucursal z on z.int_cod_suc=c.int_cod_suc
-					inner join T_empresa e on e.int_cod_emp=c.int_cod_emp
-					order by var_cod_comp_cab desc
+			$sql="select o.var_cod_comp_cab,p.var_rsoc_prov,od.int_cod_suc,
+				s.var_nom_suc,o.int_cod_emp,e.var_nom_emp,month(o.date_fec_rec_comp_cab) as mes,year(o.date_fec_rec_comp_cab) as año   
+				from T_ordcomp_cab o, T_ordcomp_det od
+				inner join T_proveedor p on od.int_cod_prov=p.int_cod_prov 
+				inner join T_sucursal s on s.int_cod_suc=od.int_cod_suc  
+				inner join T_empresa e on e.int_cod_emp=od.int_cod_emp 
+				where o.var_cod_comp_cab=od.var_cod_comp_cab 
+				and o.int_cod_emp=od.int_cod_emp 
+				and o.int_cod_suc=od.int_cod_suc
+				group by CONCAT(o.var_cod_comp_cab, '_', p.var_rsoc_prov) 
+				order by o.var_cod_comp_cab desc;
 		
 		";	
 		
