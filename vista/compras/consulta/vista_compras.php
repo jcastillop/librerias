@@ -89,27 +89,32 @@ function elim(url)
 	
 $(document).ready(function() {
 	var table = $('#example').DataTable();
-
-	$('#example tbody').on( 'dblclick', 'tr', function () {
+/*
+	$('#example tbody tr td').on( 'dblclick', 'tr', function () {
 		//$(this).toggleClass('selected');
-		alert($('#example tbody td:nth-child(1)'));
+		alert($('#example tbody td:nth-child(0)'));
+		//var children = $(this)[0].innerHTML;
+		//alert(children);
+
+	} );
+*/
+	$('#example tbody').on( 'dblclick', 'tr', function () {
+	
+		//var children = $(this).find("td:first").innerHTML;
+		var name = $('td', this).eq(1).text();
+		alert(name);
+		$('#tt').tabs('select', 'Registro Ventas');
+		//addTab('Registro Ventas','vista/almacen/registro/index.php');
+	
+
 	} );
 
 	$('#button').click( function () {
 		alert( table.rows('.selected').data().length +' row(s) selected' );
 	} );
-} );
 
-/*
-$(document).ready(function() {
-	$('#example').dataTable();
-	
-	$('#example tbody').on('dblclick', 'tr', function () {
-		var name = $('td', this).eq(0).text();
-		alert( 'You clicked on '+name+'\'s row' );
-	} );
+
 } );
-*/
 
 
 $(document).ready( function () {
@@ -165,7 +170,7 @@ $(document).ready(function() {
 
 	</script>
 </head>
-
+<script src="../../js/funciones_principal.js"></script>
 <body class="dt-example" >
 	
     
