@@ -42,13 +42,13 @@ header('Content-Type: text/html; charset=UTF-8');
 var newwindow;
 function poptastic(url)
 {
-	newwindow=window.open(url,'name','height=640,width=650,left=100,padding=500');
+	newwindow=window.open(url,'name','height=640,width=800,left=300,padding=500');
 	if (window.focus) {newwindow.focus()}
 }
 var newwindow;
 function elim(url)
 {
-	newwindow=window.open(url,'name','height=550,width=650,left=400,padding=700');
+	newwindow=window.open(url,'name','height=200,width=400,left=400,padding=700');
 	if (window.focus) {newwindow.focus()}
 }
 </script>
@@ -232,7 +232,7 @@ $(document).ready(function() {
 						<td><?php echo $reg[$i]["date_fecadd_guia_cab"];?></td>
 						<td align='center' ><a href=" javascript:poptastic('reporte_historial.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='../../../img/images/pdf.png' width='15px' height='15px'></a></td>
 						<td align='center' ><a href=" javascript:poptastic('reporte_historial_1.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='../../../img/images/impre.gif' width='15px' height='15px'></a></td>
-						<td align='center' ><a href=" javascript:poptastic('eliminar_guia.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='../../../img/images/close_delete.png' width='15px' height='15px'></a></td>
+						<td align='center' ><a href=" javascript:elim('eliminar_guia.php?id=<?php echo $reg[$i]["var_cod_guia_cab"];?>'); " ><img src='../../../img/images/close_delete.png' width='15px' height='15px'></a></td>
 					
 					</tr>
 				
