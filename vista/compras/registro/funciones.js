@@ -1,5 +1,6 @@
 $(document).ready(function(){
 //Iniciando el datepicker
+$.datepicker.setDefaults($.datepicker.regional["es"]);
     $( "#fecha_recepcion" ).datepicker();
     $( "#fecha_emision" ).datepicker();
     $( "#fecha_caducidad" ).datepicker();
