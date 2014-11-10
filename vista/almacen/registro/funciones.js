@@ -7,7 +7,7 @@ window.open(pagina,"",opciones);
             $(document).ready(function(){
                     
                 //Iniciando el datepicker
-                $( "#datepicker" ).datepicker();
+                $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
                 //Iniciando las validaciones del formulario
 				$("#form").validate({
                 //Especificando las reglas de validacion
