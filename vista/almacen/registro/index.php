@@ -19,6 +19,9 @@ require_once("../../../conexiones/class_cliente.php");
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
         <link href="../../../css/estilo.css" rel="stylesheet" type="text/css" />
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="../../../paquetes/alertas/lib/alertify.js"></script>
+	<link rel="stylesheet" href="../../../paquetes/alertas/themes/alertify.core.css" />
+	<link rel="stylesheet" href="../../../paquetes/alertas/themes/alertify.default.css" />
 
     </head>
 <script>
