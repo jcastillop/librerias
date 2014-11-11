@@ -2,7 +2,10 @@
 var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=525, top=15, left=140";
 window.open(pagina,"",opciones);
 }
-            
+            function notificacion(){
+				alertify.log("No se puede registrar mas Títulos"); 
+				return false;
+			} 
             
             $(document).ready(function(){
                     
@@ -273,7 +276,17 @@ window.open(pagina,"",opciones);
 			function fn_cantidad(){
 				cantidad = $("#grilla tbody").find("tr").length;
 				$("#span_cantidad").html(cantidad);
+				if(cantidad>2){
+					notificacion();
+					$("#valor_ide").prop('disabled', true);
+					$("#valor_uno").prop('disabled', true);
+					$("#valor_dos").prop('disabled', true);
+					$("#valor_tres").prop('disabled', true);
+					}
+				
 			};
+			
+			
             function fn_sumatotal(){
                     var total=0;
                     for (var i=1;i<document.getElementById('grilla').rows.length-1;i++){ 
