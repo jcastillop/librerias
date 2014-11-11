@@ -276,7 +276,7 @@ window.open(pagina,"",opciones);
 			function fn_cantidad(){
 				cantidad = $("#grilla tbody").find("tr").length;
 				$("#span_cantidad").html(cantidad);
-				if(cantidad>2){
+				if(cantidad>27){
 					notificacion();
 					$("#valor_ide").prop('disabled', true);
 					$("#valor_uno").prop('disabled', true);
