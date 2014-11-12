@@ -273,7 +273,7 @@ window.open(pagina,"",opciones);
                         $("#telefono").val(res.telefono);
                         $("#referencia").val(res.referencia);
                         $("#direccion_compra").focus();
-                        
+                        $('#ruc').prop('readonly', true);
                         },
                         error: function(datos) {
                         alert("Data not founds");
