@@ -104,22 +104,25 @@ require_once("../../../conexiones/class_cliente.php");
             <label for="lblllegada">Punto de llegada:</label>
             <input name="punto_llegada" class="input username" style="width:300px;margin-top:10px;margin-left:0px" type="text" id="punto_llegada" ></div>
 			    <div class="container1" >
-            <h4 align="center" >Unidad de transporte</h4>
+            <h4 align="center" >Unidad de transporte <input type="checkbox" name="transporte" value="1" id="transporte"></h4>
+          <div id="trans_dat">
          
 
                 
 						    <label for="lblplaca" style="width:180px">Marca y Placa:</label><input name="transporte_mn" class="input username" style="width:180px" type="text" id="transporte_mn"/>
                             <label for="lblconstancia" style="width:220px">Nª de constancia: </label><input name="transporte_c" class="input username" style="width:180px" type="text" id="transporte_c"/>
                             <label for="lblcondruc" style="width:180px">Nº de licencia :</label><input name="transporte_l" class="input username" style="width:180px" type="text" id="transporte_l"/><br>
-							   </div><div class="container2" >
-							<h4 align="center">Empresa de transporte</h4>
+							   </div></div>
+	 <div class="container2" >
+							<h4 align="center">Empresa de transporte <input type="checkbox" name="transporte1" value="1" id="transporte"></h4>
+          <div id="trans_dat1">
            
 
 						   <label for="lbltransrs" style="width:150px"> Razon Social de Transportista:</label><input name="transportista_rs" class="input username" style="width:400px" type="text" id="transportista_rs"/>
                             <label for="lbltransruc" style="width:150px">R.U.C.</label><input name="transportista_ruc" class="input username" style="width:220px" type="text" id="transportista_ruc"/>
                             
 						<br><label for="lbltransdir" style="width:150px">Dirección de Transportista</label><input name="transportista_dir" class="input username" style="width:700px;margin-left:30px;margin-top:10px" type="text" id="transportista_dir"/>
-          </div>  
+          </div>   </div>  
      <div class="container3" >
              <h4 align="center">Registro de productos</h4>
             <div id="frm_usu">
