@@ -84,7 +84,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 </div>
             
         <div class="container3" >
-              <h4 align="center">Registro de productos</h4>
+              <h4 align="center">Registro de productos <input type="checkbox" name="transporte" value="1" id="transporte"></h4>
             <div id="frm_usu">
 
                     <tbody>
@@ -135,7 +135,7 @@ header('Content-Type: text/html; charset=UTF-8');
               
             </div></div>
             	
-			<div class="container4">
+			<div class="container4" style="height:115px; overflow: scroll;" >
             <table id="grilla">
               <thead>
                     <tr>
