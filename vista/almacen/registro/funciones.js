@@ -11,7 +11,7 @@ window.open(pagina,"",opciones);
                  $("#trans_dat").css("display", "none");
 		 $("#trans_dat1").css("display", "none");   
                 //Iniciando el datepicker
-                $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
+                $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});
                 //Iniciando las validaciones del formulario
 				$("#form").validate({
                 //Especificando las reglas de validacion
