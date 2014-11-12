@@ -85,13 +85,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Eliminar Guía</title>
 </head>
-<script language="Javascript"> 
-function confirmar(){ 
-if (confirmar) 
-// si pulsamos en aceptar
-window.location.assign("")
-} 
-</script>
 <body>
 
 <p>
