@@ -30,7 +30,7 @@ if (isset($_GET["grabar"]) and $_GET["grabar"]=="si")
 }
 
 
-$reg=$tra->get_tipocambio_por_id($_GET["id"] , $_GET["var_fec_Tc"]);
+$reg=$tra->get_tipocambio_por_id($_GET["id"] , $_GET["fecha"]);
     $id=$reg[0]["int_cod_mon"];
 		$fecha=$reg[0]["date_fecha_tipcam"];
     $var_nom_mon=$reg[0]["var_nom_mon"];
@@ -243,6 +243,7 @@ function validar(e) { // 1
 
 </body>
 </html>
+
 
 
 
