@@ -53,6 +53,7 @@ $().ready(function() {
 		$("#ruc").val(data[2]);
 		$("#direccion").val(data[3]);
 		$("#distrito").val(data[4]);
+		$('#ruc').prop('readonly', true);
 	
 	});
 });
