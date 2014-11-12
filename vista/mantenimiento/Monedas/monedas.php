@@ -163,7 +163,7 @@ function formulario(f) {
     <div class="content">
       <table width="80%" border="1">
         <tr>
-          <td height="20">Nombre Monedas: </td>
+          <td height="20">Nombre de Moneda: </td>
           <td><input name="var_nom_mon" type="text" maxlength="10" style="width: 400px;" class="input username" onKeyPress="return tab(event,this)" /></td>	
            </tr>
         <tr>
