@@ -8,7 +8,8 @@ window.open(pagina,"",opciones);
 			} 
             
             $(document).ready(function(){
-                    
+                 $("#trans_dat").css("display", "none");
+		 $("#trans_dat1").css("display", "none");   
                 //Iniciando el datepicker
                 $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
                 //Iniciando las validaciones del formulario
@@ -167,6 +168,21 @@ window.open(pagina,"",opciones);
                     return false;   
                     }
                 });
+                //Ocultar y Mostrar 
+                 $("#transporte").click(function(evento){
+                  if ($("#transporte").attr("checked")){
+                  $("#trans_dat").css("display", "block");
+		  }else{
+                  $("#trans_dat").css("display", "none");
+                  }
+                  });
+                 $("#transporte1").click(function(evento){
+                  if ($("#transporte1").attr("checked")){
+                  $("#trans_dat1").css("display", "block");
+                  }else{
+                  $("#trans_dat1").css("display", "none");
+                  }
+                  });
                 //Busqueda de titulos segun el codgo de barra proporcionado
                 $("#valor_ide").change(function() {
                     
