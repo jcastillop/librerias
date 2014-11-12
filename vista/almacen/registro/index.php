@@ -114,7 +114,7 @@ require_once("../../../conexiones/class_cliente.php");
                             <label for="lblcondruc" style="width:180px">Nº de licencia :</label><input name="transporte_l" class="input username" style="width:180px" type="text" id="transporte_l"/><br>
 							   </div></div>
 	 <div class="container2" >
-							<h4 align="center">Empresa de transporte <input type="checkbox" name="transporte1" value="1" id="transporte"></h4>
+							<h4 align="center">Empresa de transporte <input type="checkbox" name="transporte1" value="1" id="transporte1"></h4>
           <div id="trans_dat1">
            
 
