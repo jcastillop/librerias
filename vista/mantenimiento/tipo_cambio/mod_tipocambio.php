@@ -23,13 +23,14 @@ $tra=new tipocambio();
 
 if (isset($_GET["grabar"]) and $_GET["grabar"]=="si")
 {
-	$tra->edit_tipocambio($_GET['id'],$_GET["fecha"],$_GET["dec_val_tc"],$_GET["var_desc_tc"],$user
+	 
+    $tra->edit_tipocambio($_GET['id'],$_GET["var_fec_Tc"],$_GET["dec_val_tc"],$_GET["var_desc_tc"],$user
 	);
 	exit;
 }
 
 
-$reg=$tra->get_tipocambio_por_id($_GET["id"] , $_GET["fecha"]);
+$reg=$tra->get_tipocambio_por_id($_GET["id"] , $_GET["var_fec_Tc"]);
     $id=$reg[0]["int_cod_mon"];
 		$fecha=$reg[0]["date_fecha_tipcam"];
     $var_nom_mon=$reg[0]["var_nom_mon"];
@@ -242,5 +243,6 @@ function validar(e) { // 1
 
 </body>
 </html>
+
 
 
