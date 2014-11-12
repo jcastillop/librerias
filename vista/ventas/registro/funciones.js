@@ -33,7 +33,7 @@
                 });
 
                 //Iniciando el datepicker
-                $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
+                $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});
                 //Iniciando las validaciones del formulario
 				$("#contact-form").validate({
                 //Especificando las reglas de validacion
