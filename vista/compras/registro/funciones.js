@@ -2,6 +2,7 @@ $(document).ready(function(){
 //Iniciando el datepicker
 $.datepicker.setDefaults($.datepicker.regional["es"]);
     $( "#fecha_recepcion" ).datepicker({dateFormat: 'dd/mm/yy'});
+    $("#frm_usu").css("display", "none");
 //Validaciones y envio del formulario
 	$("#form").validate({
     //Especificando las reglas de validacion
@@ -122,6 +123,15 @@ $.datepicker.setDefaults($.datepicker.regional["es"]);
         return false;   
         }
     });
+    
+    $("#transporte").click(function(evento){
+                  if ($("#transporte").attr("checked")){
+                  $("#frm_usu").css("display", "block");
+		  }else{
+                  $("#frm_usu").css("display", "none");
+                  }
+                  });
+                  
                 //Carga xls a la tabla
     $("#cargarxls").click(function() {
        
