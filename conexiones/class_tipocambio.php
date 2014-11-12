@@ -1,4 +1,4 @@
-        <script type="text/javascript">
+   <script type="text/javascript">
         function cerrar() {
             var data = window.document.getElementById('val1').value;
             window.opener.document.getElementById('deHijo').innerHTML = "Este texto viene de la página hijo: "+data;        
